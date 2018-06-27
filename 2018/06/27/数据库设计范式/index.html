@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+<!-- Tencent Speed -->
+<script>var _speedMark = new Date()</script>
+<!-- End Tencent Speed -->
+<!-- Tencent Analysis -->
+<script async src="//tajs.qq.com/stats?sId=Liyzy.github.io"></script>
+<!-- End Tencent Analysis -->
+
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>数据库设计范式 | 李三岁他很皮 | 学习干嘛 愣着啊</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="数据库">
+    <meta name="description" content="1.第一范式(1NF) 定义：如果关系模式R的所有属性的域都是原子的，那么称关系模式R属于第一范式。  通俗的讲，第一范式就是属性不可再分。比如地址属性，可以再分为省、市、县等属性，所以在这种情况下，地址属性所在的关系模式就不符合第一范式。 2.第二范式(2NF) 定义：若R满足第一范式，且每一个非主属性完全函数依赖于主码，则R满足第二范式。   这里首先补充函数依赖的知识 平凡依赖和非平凡依赖如">
+<meta name="keywords" content="数据库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库设计范式">
+<meta property="og:url" content="http://liyzy.github.io/2018/06/27/数据库设计范式/index.html">
+<meta property="og:site_name" content="李三岁他很皮">
+<meta property="og:description" content="1.第一范式(1NF) 定义：如果关系模式R的所有属性的域都是原子的，那么称关系模式R属于第一范式。  通俗的讲，第一范式就是属性不可再分。比如地址属性，可以再分为省、市、县等属性，所以在这种情况下，地址属性所在的关系模式就不符合第一范式。 2.第二范式(2NF) 定义：若R满足第一范式，且每一个非主属性完全函数依赖于主码，则R满足第二范式。   这里首先补充函数依赖的知识 平凡依赖和非平凡依赖如">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://my.csdn.net/uploads/201204/27/1335509637_4564.jpg">
+<meta property="og:image" content="http://my.csdn.net/uploads/201204/27/1335509651_4573.jpg">
+<meta property="og:image" content="http://my.csdn.net/uploads/201204/30/1335793674_5124.GIF">
+<meta property="og:updated_time" content="2018-06-27T06:39:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据库设计范式">
+<meta name="twitter:description" content="1.第一范式(1NF) 定义：如果关系模式R的所有属性的域都是原子的，那么称关系模式R属于第一范式。  通俗的讲，第一范式就是属性不可再分。比如地址属性，可以再分为省、市、县等属性，所以在这种情况下，地址属性所在的关系模式就不符合第一范式。 2.第二范式(2NF) 定义：若R满足第一范式，且每一个非主属性完全函数依赖于主码，则R满足第二范式。   这里首先补充函数依赖的知识 平凡依赖和非平凡依赖如">
+<meta name="twitter:image" content="http://my.csdn.net/uploads/201204/27/1335509637_4564.jpg">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">lihui</h5>
+          <a href="mailto:2469660964@qq.com" title="2469660964@qq.com" class="mail">2469660964@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Liyzy" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">数据库设计范式</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">数据库设计范式</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-06-27T06:40:33.845Z" itemprop="datePublished" class="page-time">
+  2018-06-27
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-第一范式-1NF"><span class="post-toc-text">1.第一范式(1NF)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-第二范式-2NF"><span class="post-toc-text">2.第二范式(2NF)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#平凡依赖和非平凡依赖"><span class="post-toc-text">平凡依赖和非平凡依赖</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#完全依赖和部分依赖"><span class="post-toc-text">完全依赖和部分依赖</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#传递依赖"><span class="post-toc-text">传递依赖</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-第三范式-3NF"><span class="post-toc-text">3.第三范式(3NF)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-BC范式-BCNF"><span class="post-toc-text">4.BC范式(BCNF)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#BCNF分解算法"><span class="post-toc-text">BCNF分解算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3NF分解算法"><span class="post-toc-text">3NF分解算法</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-数据库设计范式"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">数据库设计范式</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-06-27 14:40:33" datetime="2018-06-27T06:40:33.845Z"  itemprop="datePublished">2018-06-27</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="1-第一范式-1NF"><a href="#1-第一范式-1NF" class="headerlink" title="1.第一范式(1NF)"></a>1.第一范式(1NF)</h3><blockquote>
+<p>定义：如果关系模式R的所有属性的域都是原子的，那么称关系模式R属于第一范式。</p>
+</blockquote>
+<p>通俗的讲，第一范式就是属性不可再分。比如地址属性，可以再分为省、市、县等属性，所以在这种情况下，地址属性所在的关系模式就不符合第一范式。</p>
+<h3 id="2-第二范式-2NF"><a href="#2-第二范式-2NF" class="headerlink" title="2.第二范式(2NF)"></a>2.第二范式(2NF)</h3><blockquote>
+<p>定义：若R满足第一范式，且每一个非主属性完全函数依赖于主码，则R满足第二范式。</p>
+</blockquote>
+<hr>
+<p>这里首先补充函数依赖的知识</p>
+<h4 id="平凡依赖和非平凡依赖"><a href="#平凡依赖和非平凡依赖" class="headerlink" title="平凡依赖和非平凡依赖"></a>平凡依赖和非平凡依赖</h4><p>如果A-&gt;B，A是B的超集，则称此函数依赖为平凡的。<br>举个例子：A-&gt;A   AB-&gt;A    ABC-&gt;AB都是平凡依赖（此处的A、B、C为原子属性）<br>非平凡依赖就是不包含自己或包含自己的集决定自己的函数依赖。</p>
+<h4 id="完全依赖和部分依赖"><a href="#完全依赖和部分依赖" class="headerlink" title="完全依赖和部分依赖"></a>完全依赖和部分依赖</h4><p>函数依赖A-&gt;B称为部分依赖的条件是存在A的真子集C使得C-&gt;B。即A中的一部分就可以决定B，不需要所有的属性来决定B。<br>反之，需要A中所有的属性才能来决定B，缺一不可，那么A-&gt;B就是一个完全依赖。</p>
+<h4 id="传递依赖"><a href="#传递依赖" class="headerlink" title="传递依赖"></a>传递依赖</h4><p>如果A、B是两个属性集，存在A-&gt;B，如果c是一个属性，并且c不属于A或B，并且存在B-&gt;c，那么c就传递依赖于A。</p>
+<hr>
+<p>根据2NF的定义，我们可以知道，单属性主键的关系模式一定符合第二范式。</p>
+<h3 id="3-第三范式-3NF"><a href="#3-第三范式-3NF" class="headerlink" title="3.第三范式(3NF)"></a>3.第三范式(3NF)</h3><blockquote>
+<p>定义：对于F*(F的闭包)中所有形如A-&gt;B的函数依赖（其中A、B都包含于R），以下至少一项成立：<br>    · A-&gt;B是一个平凡的函数依赖<br>    · A是R的一个超码<br>    · B-A中的每个属性c都包含于R的一个候选码中</p>
+</blockquote>
+<p>简单的说，若R满足第二范式，且每一个非主属性都不传递函数依赖于主码，则R满足第三范式。<br>即不存在如下依赖关系：<br>　　 关键字段 → 非关键字段x → 非关键字段y<br>举个例子：<br>假定学生关系表为Student(学号, 姓名, 年龄, 所在学院, 学院地点, 学院电话)，关键字为单一关键字”学号”，因为存在如下决定关系：<br>　　 (学号) → (姓名, 年龄, 所在学院, 学院地点, 学院电话)<br>　　 这个数据库是符合2NF的，但是不符合3NF，因为存在如下决定关系：<br>　　 (学号) → (所在学院) → (学院地点, 学院电话)<br>　　 即存在非关键字段”学院地点”、”学院电话”对关键字段”学号”的传递函数依赖。 </p>
+<h3 id="4-BC范式-BCNF"><a href="#4-BC范式-BCNF" class="headerlink" title="4.BC范式(BCNF)"></a>4.BC范式(BCNF)</h3><blockquote>
+<p>定义：若R满足第三范式，且每一个主属性都不部分函数依赖或传递函数依赖于主码，则R满足第三范式。<br>· 每一个决定属性集（因素）都包含（候选）码<br>· R中的所有属性（主，非主属性）都完全函数依赖于码</p>
+</blockquote>
+<p>举个例子：<br>假设仓库管理关系表为StorehouseManage(仓库ID, 存储物品ID, 管理员ID, 数量)，且有一个管理员只在一个仓库工作；一个仓库可以存储多种物品。这个数据库表中存在如下决定关系：<br>　　 (仓库ID, 存储物品ID) →(管理员ID, 数量)<br>　　 (管理员ID, 存储物品ID) → (仓库ID, 数量)<br>　　 所以，(仓库ID, 存储物品ID)和(管理员ID, 存储物品ID)都是StorehouseManage的候选关键字，表中的唯一非关键字段为数量，它是符合第三范式的。但是，由于存在如下决定关系：<br>　　 (仓库ID) → (管理员ID)<br>　　 (管理员ID) → (仓库ID)  即存在关键字段决定关键字段的情况，所以其不符合BCNF范式。</p>
+<hr>
+<h3 id="BCNF分解算法"><a href="#BCNF分解算法" class="headerlink" title="BCNF分解算法"></a>BCNF分解算法</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(有违反BCNF的函数依赖)</span><br><span class="line">&#123;</span><br><span class="line">    找出违反BCNF的函数依赖A-&gt;B；</span><br><span class="line">    先计算A的闭包，且用A的闭包(除去A)替换B，并将其分解为&#123;A+&#125;和&#123;AU(R-(A+)&#125;;   <span class="comment">//比如A-&gt;B ，而&#123;A&#125;+=&#123;A,B,C&#125;，则用A-&gt;BC替换A-&gt;B;</span></span><br><span class="line">    求出分解后的关系满足的投影FD集合；</span><br><span class="line">    再看分解后的关系的FD集合是否满足BCNF，如果不满足，则继续分解</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>举个例子：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://my.csdn.net/uploads/201204/27/1335509637_4564.jpg" alt="enter image description here" title="">
+                </div>
+                <div class="image-caption">enter image description here</div>
+            </figure></p>
+<h3 id="3NF分解算法"><a href="#3NF分解算法" class="headerlink" title="3NF分解算法"></a>3NF分解算法</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://my.csdn.net/uploads/201204/27/1335509651_4573.jpg" alt="enter image description here" title="">
+                </div>
+                <div class="image-caption">enter image description here</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://my.csdn.net/uploads/201204/30/1335793674_5124.GIF" alt="enter image description here" title="">
+                </div>
+                <div class="image-caption">enter image description here</div>
+            </figure>
+<p>分解算法参考博客：<a href="https://blog.csdn.net/xiazdong/article/details/7517438" target="_blank" rel="noopener">https://blog.csdn.net/xiazdong/article/details/7517438</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-06-27T06:39:38.000Z" itemprop="dateUpdated">2018-06-27 14:39:38</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://liyzy.github.io">
+            <img src="/img/avatar.jpg" alt="lihui">
+            lihui
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liyzy.github.io/2018/06/27/数据库设计范式/&title=《数据库设计范式》 — 李三岁他很皮&pic=http://liyzy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liyzy.github.io/2018/06/27/数据库设计范式/&title=《数据库设计范式》 — 李三岁他很皮&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liyzy.github.io/2018/06/27/数据库设计范式/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据库设计范式》 — 李三岁他很皮&url=http://liyzy.github.io/2018/06/27/数据库设计范式/&via=http://liyzy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liyzy.github.io/2018/06/27/数据库设计范式/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/06/13/数据库练习题(比较基础)/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">数据库练习题(比较基础)</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'true';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        一角一元都是情~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>lihui &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liyzy.github.io/2018/06/27/数据库设计范式/&title=《数据库设计范式》 — 李三岁他很皮&pic=http://liyzy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liyzy.github.io/2018/06/27/数据库设计范式/&title=《数据库设计范式》 — 李三岁他很皮&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liyzy.github.io/2018/06/27/数据库设计范式/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据库设计范式》 — 李三岁他很皮&url=http://liyzy.github.io/2018/06/27/数据库设计范式/&via=http://liyzy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liyzy.github.io/2018/06/27/数据库设计范式/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://liyzy.github.io/2018/06/27/数据库设计范式/" alt="微信分享二维码">
+</div>
+
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '去哪里了?';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又回来了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
