@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+<!-- Tencent Speed -->
+<script>var _speedMark = new Date()</script>
+<!-- End Tencent Speed -->
+<!-- Tencent Analysis -->
+<script async src="//tajs.qq.com/stats?sId=Liyzy.github.io"></script>
+<!-- End Tencent Analysis -->
+
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Java_1 | 李三岁他很皮 | 学习干嘛 愣着啊</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JAVA">
+    <meta name="description" content="数组 运算符 包 访问权限 修饰符   数组1. 数组的声明：int[] a; 2. 数组的创建使用new运算符数组的创建int[] a = new int[100] 数组的长度不要求是常量：new int[n]会创建一个长度为n的数组 3. 数组的初始化可以使用for循环进行赋值，或者直接int[] a = {1, 2, 3}进行赋值；数组创建时，数字数组所有元素初始化为0，Boolean数组">
+<meta name="keywords" content="JAVA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java_1">
+<meta property="og:url" content="http://liyzy.github.io/2018/07/08/java-1/index.html">
+<meta property="og:site_name" content="李三岁他很皮">
+<meta property="og:description" content="数组 运算符 包 访问权限 修饰符   数组1. 数组的声明：int[] a; 2. 数组的创建使用new运算符数组的创建int[] a = new int[100] 数组的长度不要求是常量：new int[n]会创建一个长度为n的数组 3. 数组的初始化可以使用for循环进行赋值，或者直接int[] a = {1, 2, 3}进行赋值；数组创建时，数字数组所有元素初始化为0，Boolean数组">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12649311-cb0925715b3bdaae.jpg?imageMogr2/auto-orient/">
+<meta property="og:updated_time" content="2018-07-08T09:53:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java_1">
+<meta name="twitter:description" content="数组 运算符 包 访问权限 修饰符   数组1. 数组的声明：int[] a; 2. 数组的创建使用new运算符数组的创建int[] a = new int[100] 数组的长度不要求是常量：new int[n]会创建一个长度为n的数组 3. 数组的初始化可以使用for循环进行赋值，或者直接int[] a = {1, 2, 3}进行赋值；数组创建时，数字数组所有元素初始化为0，Boolean数组">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/12649311-cb0925715b3bdaae.jpg?imageMogr2/auto-orient/">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">lihui</h5>
+          <a href="mailto:2469660964@qq.com" title="2469660964@qq.com" class="mail">2469660964@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Liyzy" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Java_1</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Java_1</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-07-08T09:53:51.036Z" itemprop="datePublished" class="page-time">
+  2018-07-08
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组"><span class="post-toc-text">数组</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-数组的声明："><span class="post-toc-text">1. 数组的声明：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-数组的创建"><span class="post-toc-text">2. 数组的创建</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-数组的初始化"><span class="post-toc-text">3. 数组的初始化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-数组长度"><span class="post-toc-text">4. 数组长度</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-数组的遍历输出"><span class="post-toc-text">5. 数组的遍历输出</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-数组拷贝"><span class="post-toc-text">6. 数组拷贝</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-数组排序"><span class="post-toc-text">7. 数组排序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-多维数组"><span class="post-toc-text">8. 多维数组</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运算符"><span class="post-toc-text">运算符</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#除法"><span class="post-toc-text">除法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#取模"><span class="post-toc-text">取模</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#算术运算的结果不低于int型"><span class="post-toc-text">算术运算的结果不低于int型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#移位运算"><span class="post-toc-text">移位运算</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#位逻辑运算"><span class="post-toc-text">位逻辑运算</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#三目运算符？：的第二第三操作数必须是可以赋值的"><span class="post-toc-text">三目运算符？：的第二第三操作数必须是可以赋值的</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#包"><span class="post-toc-text">包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#访问权限"><span class="post-toc-text">访问权限</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修饰符"><span class="post-toc-text">修饰符</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-java-1"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Java_1</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-07-08 17:53:51" datetime="2018-07-08T09:53:51.036Z"  itemprop="datePublished">2018-07-08</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <ol>
+<li>数组</li>
+<li>运算符</li>
+<li>包</li>
+<li>访问权限</li>
+<li>修饰符</li>
+</ol>
+<hr>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="1-数组的声明："><a href="#1-数组的声明：" class="headerlink" title="1. 数组的声明："></a>1. 数组的声明：</h4><p><code>int[] a;</code></p>
+<h4 id="2-数组的创建"><a href="#2-数组的创建" class="headerlink" title="2. 数组的创建"></a>2. 数组的创建</h4><p>使用new运算符数组的创建<code>int[] a = new int[100]</code> 数组的长度不要求是常量：<code>new int[n]</code>会创建一个长度为n的数组</p>
+<h4 id="3-数组的初始化"><a href="#3-数组的初始化" class="headerlink" title="3. 数组的初始化"></a>3. 数组的初始化</h4><p>可以使用for循环进行赋值，或者直接<code>int[] a = {1, 2, 3}</code>进行赋值；数组创建时，数字数组所有元素初始化为0，Boolean数组所有元素初始化为false，对象数组则初始化为null值。</p>
+<h4 id="4-数组长度"><a href="#4-数组长度" class="headerlink" title="4. 数组长度"></a>4. 数组长度</h4><p>每一个数组都有成员属性length，使用<code>a.length</code>获得数组a的长度</p>
+<h4 id="5-数组的遍历输出"><a href="#5-数组的遍历输出" class="headerlink" title="5. 数组的遍历输出"></a>5. 数组的遍历输出</h4><p> a. 传统for循环<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++)</span><br><span class="line">    System.out.print(a[i] + <span class="string">" "</span>);</span><br></pre></td></tr></table></figure></p>
+<p>b. for each循环<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> element : a)</span><br><span class="line">    System.out.print(element + <span class="string">" "</span>);</span><br><span class="line"><span class="comment">//对于在for循环语句中需要使用元素下标的程序来说不合适</span></span><br></pre></td></tr></table></figure></p>
+<p>c. 利用Arrays类的toString方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(Arrays.toString(a));</span><br><span class="line"><span class="comment">//a为数值型的数组或Boolean数组</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="6-数组拷贝"><a href="#6-数组拷贝" class="headerlink" title="6. 数组拷贝"></a>6. 数组拷贝</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] b = a;  <span class="comment">//b和a引用同一个数组</span></span><br><span class="line">b[<span class="number">1</span>] = <span class="number">7</span>;  <span class="comment">//此时访问a[1]也是7</span></span><br></pre></td></tr></table></figure>
+<p>如果希望把一个数组的所有值拷贝到一个新的数组,使用Arrays类的copyOf方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] b = Arrays.copyOf(a, a.length);</span><br></pre></td></tr></table></figure></p>
+<p>第二个参数表示新数组的长度，比原数组长，则多余的元素被赋值为0或者false或者null，比原数组短，则只复制前面的对应长度的元素。<br>方法<code>Arrays.copyOfRange(type[] a, int start, int end)</code><br>type为int, short, byte, long, double, float, Boolean 类型</p>
+<h4 id="7-数组排序"><a href="#7-数组排序" class="headerlink" title="7. 数组排序"></a>7. 数组排序</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Arrays.sort(a);  <span class="comment">//使用优化的快速排序</span></span><br></pre></td></tr></table></figure>
+<h4 id="8-多维数组"><a href="#8-多维数组" class="headerlink" title="8. 多维数组"></a>8. 多维数组</h4><p>多维数组创建<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>][<span class="number">3</span>]; <span class="comment">//正确</span></span><br><span class="line"><span class="keyword">int</span>[][] b = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>][]; <span class="comment">//正确, 第二维的长度可以动态申请，可以不同</span></span><br><span class="line"><span class="keyword">int</span>[][] c = <span class="keyword">new</span> <span class="keyword">int</span>[][<span class="number">3</span>]; <span class="comment">//错误</span></span><br></pre></td></tr></table></figure></p>
+<p>多维数组遍历<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] b = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>][];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length; i++) &#123;</span><br><span class="line">    b[i] = <span class="keyword">new</span> <span class="keyword">int</span>[i + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; b[i].length; j++)</span><br><span class="line">	    b[i][j] = i + j;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//第一种方式</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++)</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; a[i].length)</span><br><span class="line">		System.out.print(a[i][j] + <span class="string">" "</span>);</span><br><span class="line"><span class="comment">//第二种方式</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span>[] row : b)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> value : row)</span><br><span class="line">        System.out.print(value + <span class="string">" "</span>);</span><br><span class="line"><span class="comment">//第三种方式</span></span><br><span class="line">System.out.println(Arrays.deepToString(b));</span><br></pre></td></tr></table></figure></p>
+<p>多维数组的每一行是可以通过引用进行交换的。</p>
+<hr>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a = <span class="number">12.3f</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">5</span>;</span><br><span class="line">a = a / <span class="number">0</span>;  <span class="comment">//得到Infinity或者NaN</span></span><br><span class="line">b = b / <span class="number">0</span>;  <span class="comment">//除零异常</span></span><br><span class="line">System.out.println(a);</span><br></pre></td></tr></table></figure>
+<h4 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> b = -<span class="number">5</span>;</span><br><span class="line">a = a % <span class="number">3</span>;</span><br><span class="line">b = b % <span class="number">3</span>;</span><br><span class="line">System.out.println(a + <span class="string">","</span> + b);  <span class="comment">//2,-2</span></span><br><span class="line">a = a % -<span class="number">3</span>;</span><br><span class="line">b = b % -<span class="number">3</span>;</span><br><span class="line">System.out.print(a + <span class="string">","</span> + b);  <span class="comment">//2,-2</span></span><br><span class="line"><span class="comment">/*求模运算的结果与左操作数符号相同，与右操作数符号无关*/</span></span><br></pre></td></tr></table></figure>
+<h4 id="算术运算的结果不低于int型"><a href="#算术运算的结果不低于int型" class="headerlink" title="算术运算的结果不低于int型"></a>算术运算的结果不低于int型</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">byte</span> b = <span class="number">2</span>;</span><br><span class="line">b = a + b;  <span class="comment">//错误，a+b返回int型，int不能赋值给byte</span></span><br><span class="line">b = (<span class="keyword">byte</span>)(a + b);  <span class="comment">//正确，强制转换</span></span><br><span class="line">b += a; <span class="comment">//正确，b += a等价于b = (byte)(b + a)</span></span><br><span class="line"><span class="keyword">int</span> c = <span class="number">7</span>;</span><br><span class="line">c = c + <span class="number">5.2</span>; <span class="comment">//错误</span></span><br><span class="line">c += <span class="number">5.2</span>;  <span class="comment">//正确</span></span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/12649311-cb0925715b3bdaae.jpg?imageMogr2/auto-orient/" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>虚箭头表示可能有精度损失的转换，实箭头表示无信息丢失的转换。</p>
+<p>基本数据类型的数组之间不能相互赋值，因为java中数组是类。</p>
+<h4 id="移位运算"><a href="#移位运算" class="headerlink" title="移位运算"></a>移位运算</h4><p><strong>&lt;&lt;</strong>左移，低位补0，移位中可能会出现符号变换<br><strong>&gt;&gt;</strong>右移，高位补符号位<br><strong>&gt;&gt;&gt;</strong>无符号右移，高位补0<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="comment">// a &gt;&gt; 33等价于a &gt;&gt; 1，移的位数和数值类型的位数取模</span></span><br><span class="line"><span class="keyword">byte</span> b = <span class="number">5</span>;</span><br><span class="line"><span class="comment">// b &gt;&gt; 33等价于b &gt;&gt; 1,在b &gt;&gt; 33操作中，b自动提升为int型</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>~</strong>位反运算，每一位取反</p>
+<h4 id="位逻辑运算"><a href="#位逻辑运算" class="headerlink" title="位逻辑运算"></a>位逻辑运算</h4><p>位逻辑运算优先级  <strong>&amp; ^  |</strong></p>
+<h4 id="三目运算符？：的第二第三操作数必须是可以赋值的"><a href="#三目运算符？：的第二第三操作数必须是可以赋值的" class="headerlink" title="三目运算符？：的第二第三操作数必须是可以赋值的"></a>三目运算符？：的第二第三操作数必须是可以赋值的</h4><hr>
+<h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><p>一个类可以使用所属包中所有的类，以及其他包中的公有类。<br>访问其他包中公有类的两种方式：在每个类前添加完整的包名；使用import语句(放在源文件的顶部，package语句的后面)。<br>package语句对整个源文件有效，即同一个源文件里的所有类都属于这个包。</p>
+<hr>
+<h3 id="访问权限"><a href="#访问权限" class="headerlink" title="访问权限"></a>访问权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//public</span><br><span class="line">//private</span><br><span class="line">//protected</span><br><span class="line">//没有指定则为同包可访问</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><p>static 静态修饰符<br>final 常量修饰符，也可以表示一个类不允许继承<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> j;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		i = <span class="number">3</span>; <span class="comment">//错误，i只有在new了一个对象后才会存在</span></span><br><span class="line">		j = <span class="number">7</span>; <span class="comment">//正确，j是静态的，不需要创建对象就存在</span></span><br><span class="line">		A a = <span class="keyword">new</span> A();</span><br><span class="line">		a.i = <span class="number">3</span>; <span class="comment">//正确</span></span><br><span class="line">		A.i = <span class="number">3</span>; <span class="comment">//错误</span></span><br><span class="line">		A.j = <span class="number">4</span>; <span class="comment">//正确，j是所有的A类对象所共有的，所以可以通过类名来访问</span></span><br><span class="line">		a.j = <span class="number">4</span>; <span class="comment">//正确</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-07-08T09:53:40.000Z" itemprop="dateUpdated">2018-07-08 17:53:40</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://liyzy.github.io">
+            <img src="/img/avatar.jpg" alt="lihui">
+            lihui
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liyzy.github.io/2018/07/08/java-1/&title=《Java_1》 — 李三岁他很皮&pic=http://liyzy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liyzy.github.io/2018/07/08/java-1/&title=《Java_1》 — 李三岁他很皮&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liyzy.github.io/2018/07/08/java-1/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java_1》 — 李三岁他很皮&url=http://liyzy.github.io/2018/07/08/java-1/&via=http://liyzy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liyzy.github.io/2018/07/08/java-1/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/07/06/Gitee(码云)、Github同时配置ssh key/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Gitee(码云)、Github同时配置ssh key</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'true';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        一角一元都是情~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>lihui &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liyzy.github.io/2018/07/08/java-1/&title=《Java_1》 — 李三岁他很皮&pic=http://liyzy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liyzy.github.io/2018/07/08/java-1/&title=《Java_1》 — 李三岁他很皮&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liyzy.github.io/2018/07/08/java-1/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java_1》 — 李三岁他很皮&url=http://liyzy.github.io/2018/07/08/java-1/&via=http://liyzy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liyzy.github.io/2018/07/08/java-1/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://liyzy.github.io/2018/07/08/java-1/" alt="微信分享二维码">
+</div>
+
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '去哪里了?';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又回来了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
