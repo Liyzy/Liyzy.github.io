@@ -36,12 +36,12 @@
 <meta property="og:site_name" content="李三岁他很皮">
 <meta property="og:description" content="词法分析 In computer science, lexical analysis, lexing or tokenization is the process of converting a sequence of characters (such as in a computer program or web page) into a sequence of tokens (strings">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://liyzy.github.io/2018/09/23/词法分析/1537585155536.png">
-<meta property="og:updated_time" content="2018-09-23T12:25:58.000Z">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1420941/201809/1420941-20180923203713765-315786048.png">
+<meta property="og:updated_time" content="2018-09-23T12:38:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="词法分析器Lexer">
 <meta name="twitter:description" content="词法分析 In computer science, lexical analysis, lexing or tokenization is the process of converting a sequence of characters (such as in a computer program or web page) into a sequence of tokens (strings">
-<meta name="twitter:image" content="http://liyzy.github.io/2018/09/23/词法分析/1537585155536.png">
+<meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1420941/201809/1420941-20180923203713765-315786048.png">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -128,7 +128,7 @@
         <h1 class="title">词法分析器Lexer</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-09-23T12:26:21.239Z" itemprop="datePublished" class="page-time">
+                <time datetime="2018-09-23T12:38:58.017Z" itemprop="datePublished" class="page-time">
   2018-09-23
 </time>
 
@@ -159,7 +159,7 @@
     <div class="post-card">
         <h1 class="post-card-title">词法分析器Lexer</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-09-23 20:26:21" datetime="2018-09-23T12:26:21.239Z"  itemprop="datePublished">2018-09-23</time>
+            <time class="post-time" title="2018-09-23 20:38:58" datetime="2018-09-23T12:38:58.017Z"  itemprop="datePublished">2018-09-23</time>
 
             
 
@@ -180,9 +180,9 @@
 <h2 id="程序流程图"><a href="#程序流程图" class="headerlink" title="程序流程图"></a>程序流程图</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="./1537585155536.png" alt="Alt text" title="">
+                    <img src="https://img2018.cnblogs.com/blog/1420941/201809/1420941-20180923203713765-315786048.png" alt="程序流程图" title="">
                 </div>
-                <div class="image-caption">Alt text</div>
+                <div class="image-caption">程序流程图</div>
             </figure>
 <p>对于运算符等符号，这里只考虑两个字符的组合情况，不考虑三个字符组成的运算符。之所以要在读到特殊字符之后在往后读一个字符是因为有可能在表中存在类似<code>&gt;=</code>和<code>&gt;</code>的运算符，要保证最长字符匹配。</p>
 <h2 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h2><h3 id="首字符类型判断"><a href="#首字符类型判断" class="headerlink" title="首字符类型判断"></a>首字符类型判断</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getCharType</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        String regex_Letter = <span class="string">"[a-zA-Z]"</span>;</span><br><span class="line">        String regex_Number = <span class="string">"[0-9]"</span>;</span><br><span class="line">        String regex_Blank = <span class="string">"\\s"</span>;</span><br><span class="line">        Pattern pattern;</span><br><span class="line"></span><br><span class="line">        pattern = Pattern.compile(regex_Letter);</span><br><span class="line">        Matcher matcher = pattern.matcher(str);</span><br><span class="line">        <span class="keyword">if</span> (matcher.find())</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"LETTER"</span>;</span><br><span class="line"></span><br><span class="line">        pattern = Pattern.compile(regex_Number);</span><br><span class="line">        matcher = pattern.matcher(str);</span><br><span class="line">        <span class="keyword">if</span> (matcher.find())</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"NUMBER"</span>;</span><br><span class="line"></span><br><span class="line">        pattern = Pattern.compile(regex_Blank);</span><br><span class="line">        matcher = pattern.matcher(str);</span><br><span class="line">        <span class="keyword">if</span> (matcher.find())</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"BLANK"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"SPECIAL"</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -199,7 +199,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-09-23T12:25:58.000Z" itemprop="dateUpdated">2018-09-23 20:25:58</time>
+    最后更新时间：<time datetime="2018-09-23T12:38:46.000Z" itemprop="dateUpdated">2018-09-23 20:38:46</time>
 </span><br>
 
 
