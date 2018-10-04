@@ -1,34 +1,114 @@
 <!DOCTYPE html>
-<html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
-    
-
-    
-<!-- Tencent Speed -->
-<script>var _speedMark = new Date()</script>
-<!-- End Tencent Speed -->
-<!-- Tencent Analysis -->
-<script async src="//tajs.qq.com/stats?sId=Liyzy.github.io"></script>
-<!-- End Tencent Analysis -->
-
-
-    
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
 
 
 
-    <meta charset="utf-8">
-    
-    
-    
-    
-    <title>Java_1 | 李三岁他很皮 | 学习干嘛 愣着啊</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="JAVA">
-    <meta name="description" content="数组 运算符 包 访问权限 修饰符   数组1. 数组的声明：int[] a; 2. 数组的创建使用new运算符数组的创建int[] a = new int[100] 数组的长度不要求是常量：new int[n]会创建一个长度为n的数组 3. 数组的初始化可以使用for循环进行赋值，或者直接int[] a = {1, 2, 3}进行赋值；数组创建时，数字数组所有元素初始化为0，Boolean数组">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="数组 运算符 包 访问权限 修饰符   数组1. 数组的声明：int[] a; 2. 数组的创建使用new运算符数组的创建int[] a = new int[100] 数组的长度不要求是常量：new int[n]会创建一个长度为n的数组 3. 数组的初始化可以使用for循环进行赋值，或者直接int[] a = {1, 2, 3}进行赋值；数组创建时，数字数组所有元素初始化为0，Boolean数组">
 <meta name="keywords" content="JAVA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java_1">
@@ -42,137 +122,252 @@
 <meta name="twitter:title" content="Java_1">
 <meta name="twitter:description" content="数组 运算符 包 访问权限 修饰符   数组1. 数组的声明：int[] a; 2. 数组的创建使用new运算符数组的创建int[] a = new int[100] 数组的长度不要求是常量：new int[n]会创建一个长度为n的数组 3. 数组的初始化可以使用for循环进行赋值，或者直接int[] a = {1, 2, 3}进行赋值；数组创建时，数字数组所有元素初始化为0，Boolean数组">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/12649311-cb0925715b3bdaae.jpg?imageMogr2/auto-orient/">
-    
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
-    <script>window.lazyScripts=[]</script>
 
-    <!-- custom head -->
-    
+
+
+
+
+
+  <link rel="canonical" href="http://liyzy.github.io/2018/07/08/java-1/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Java_1 | 李三岁他很皮</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
-<body>
-    <div id="loading" class="active"></div>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-    <aside id="menu" class="hide" >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.png">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">lihui</h5>
-          <a href="mailto:2469660964@qq.com" title="2469660964@qq.com" class="mail">2469660964@qq.com</a>
-        </hgroup>
-      </div>
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">李三岁他很皮</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                归档
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/Liyzy" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-      </ul>
-    </div>
+    
+      
+        <p class="site-subtitle">学习干嘛 愣着啊</p>
+      
+    
   </div>
-</aside>
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">Java_1</div>
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
         
-    </div>
-</header>
-<header class="content-header post-header">
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
-    <div class="container fade-scale">
-        <h1 class="title">Java_1</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2018-07-08T09:53:51.036Z" itemprop="datePublished" class="page-time">
-  2018-07-08
-</time>
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
 
 
-            
-        </h5>
-    </div>
+
+  
+
+
+
+</div>
+    </header>
 
     
 
 
-</header>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
 
-
-<div class="container body-wrap">
+  <div id="posts" class="posts-expand">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组"><span class="post-toc-text">数组</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-数组的声明："><span class="post-toc-text">1. 数组的声明：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-数组的创建"><span class="post-toc-text">2. 数组的创建</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-数组的初始化"><span class="post-toc-text">3. 数组的初始化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-数组长度"><span class="post-toc-text">4. 数组长度</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-数组的遍历输出"><span class="post-toc-text">5. 数组的遍历输出</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-数组拷贝"><span class="post-toc-text">6. 数组拷贝</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-数组排序"><span class="post-toc-text">7. 数组排序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-多维数组"><span class="post-toc-text">8. 多维数组</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运算符"><span class="post-toc-text">运算符</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#除法"><span class="post-toc-text">除法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#取模"><span class="post-toc-text">取模</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#算术运算的结果不低于int型"><span class="post-toc-text">算术运算的结果不低于int型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#移位运算"><span class="post-toc-text">移位运算</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#位逻辑运算"><span class="post-toc-text">位逻辑运算</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#三目运算符？：的第二第三操作数必须是可以赋值的"><span class="post-toc-text">三目运算符？：的第二第三操作数必须是可以赋值的</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#包"><span class="post-toc-text">包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#访问权限"><span class="post-toc-text">访问权限</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修饰符"><span class="post-toc-text">修饰符</span></a></li></ol>
-        </nav>
-    </aside>
 
+  
 
-<article id="post-java-1"
-  class="post-article article-type-post fade" itemprop="blogPost">
+  
+  
+  
 
-    <div class="post-card">
-        <h1 class="post-card-title">Java_1</h1>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyzy.github.io/2018/07/08/java-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lihui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李三岁他很皮">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java_1
+              
+            
+          </h1>
+        
+
         <div class="post-meta">
-            <time class="post-time" title="2018-07-08 17:53:51" datetime="2018-07-08T09:53:51.036Z"  itemprop="datePublished">2018-07-08</time>
+          <span class="post-time">
 
             
-
+            
+            
 
             
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
-</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
+              
+                
+              
+
+              <time title="创建时间：2018-07-08 17:53:51 / 修改时间：17:53:40" itemprop="dateCreated datePublished" datetime="2018-07-08T17:53:51+08:00">2018-07-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
         </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            <ol>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ol>
 <li>数组</li>
 <li>运算符</li>
 <li>包</li>
@@ -198,14 +393,7 @@
 <h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a = <span class="number">12.3f</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">5</span>;</span><br><span class="line">a = a / <span class="number">0</span>;  <span class="comment">//得到Infinity或者NaN</span></span><br><span class="line">b = b / <span class="number">0</span>;  <span class="comment">//除零异常</span></span><br><span class="line">System.out.println(a);</span><br></pre></td></tr></table></figure>
 <h4 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> b = -<span class="number">5</span>;</span><br><span class="line">a = a % <span class="number">3</span>;</span><br><span class="line">b = b % <span class="number">3</span>;</span><br><span class="line">System.out.println(a + <span class="string">","</span> + b);  <span class="comment">//2,-2</span></span><br><span class="line">a = a % -<span class="number">3</span>;</span><br><span class="line">b = b % -<span class="number">3</span>;</span><br><span class="line">System.out.print(a + <span class="string">","</span> + b);  <span class="comment">//2,-2</span></span><br><span class="line"><span class="comment">/*求模运算的结果与左操作数符号相同，与右操作数符号无关*/</span></span><br></pre></td></tr></table></figure>
 <h4 id="算术运算的结果不低于int型"><a href="#算术运算的结果不低于int型" class="headerlink" title="算术运算的结果不低于int型"></a>算术运算的结果不低于int型</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">byte</span> b = <span class="number">2</span>;</span><br><span class="line">b = a + b;  <span class="comment">//错误，a+b返回int型，int不能赋值给byte</span></span><br><span class="line">b = (<span class="keyword">byte</span>)(a + b);  <span class="comment">//正确，强制转换</span></span><br><span class="line">b += a; <span class="comment">//正确，b += a等价于b = (byte)(b + a)</span></span><br><span class="line"><span class="keyword">int</span> c = <span class="number">7</span>;</span><br><span class="line">c = c + <span class="number">5.2</span>; <span class="comment">//错误</span></span><br><span class="line">c += <span class="number">5.2</span>;  <span class="comment">//正确</span></span><br></pre></td></tr></table></figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/12649311-cb0925715b3bdaae.jpg?imageMogr2/auto-orient/" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<p>虚箭头表示可能有精度损失的转换，实箭头表示无信息丢失的转换。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12649311-cb0925715b3bdaae.jpg?imageMogr2/auto-orient/" alt=""><br>虚箭头表示可能有精度损失的转换，实箭头表示无信息丢失的转换。</p>
 <p>基本数据类型的数组之间不能相互赋值，因为java中数组是类。</p>
 <h4 id="移位运算"><a href="#移位运算" class="headerlink" title="移位运算"></a>移位运算</h4><p><strong>&lt;&lt;</strong>左移，低位补0，移位中可能会出现符号变换<br><strong>&gt;&gt;</strong>右移，高位补符号位<br><strong>&gt;&gt;&gt;</strong>无符号右移，高位补0<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="comment">// a &gt;&gt; 33等价于a &gt;&gt; 1，移的位数和数值类型的位数取模</span></span><br><span class="line"><span class="keyword">byte</span> b = <span class="number">5</span>;</span><br><span class="line"><span class="comment">// b &gt;&gt; 33等价于b &gt;&gt; 1,在b &gt;&gt; 33操作中，b自动提升为int型</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>~</strong>位反运算，每一位取反</p>
@@ -217,289 +405,372 @@
 <hr>
 <h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><p>static 静态修饰符<br>final 常量修饰符，也可以表示一个类不允许继承<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> j;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		i = <span class="number">3</span>; <span class="comment">//错误，i只有在new了一个对象后才会存在</span></span><br><span class="line">		j = <span class="number">7</span>; <span class="comment">//正确，j是静态的，不需要创建对象就存在</span></span><br><span class="line">		A a = <span class="keyword">new</span> A();</span><br><span class="line">		a.i = <span class="number">3</span>; <span class="comment">//正确</span></span><br><span class="line">		A.i = <span class="number">3</span>; <span class="comment">//错误</span></span><br><span class="line">		A.j = <span class="number">4</span>; <span class="comment">//正确，j是所有的A类对象所共有的，所以可以通过类名来访问</span></span><br><span class="line">		a.j = <span class="number">4</span>; <span class="comment">//正确</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
-        </div>
-
-        <blockquote class="post-copyright">
-    
-    <div class="content">
-        
-<span class="post-time">
-    最后更新时间：<time datetime="2018-07-08T09:53:40.000Z" itemprop="dateUpdated">2018-07-08 17:53:40</time>
-</span><br>
-
-
-        
+      
     </div>
+
     
-    <footer>
-        <a href="http://liyzy.github.io">
-            <img src="/img/avatar.png" alt="lihui">
-            lihui
-        </a>
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/06/Gitee(码云)、Github同时配置ssh key/" rel="next" title="Gitee(码云)、Github同时配置ssh key">
+                <i class="fa fa-chevron-left"></i> Gitee(码云)、Github同时配置ssh key
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/06/java-2/" rel="prev" title="Java_2">
+                Java_2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
     </footer>
-</blockquote>
-
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
+  </div>
+  
+  
+  
+  </article>
 
 
-        <div class="post-footer">
-            
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li></ul>
+  </div>
 
 
-            
-<div class="page-share-wrap">
-    
+          </div>
+          
 
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liyzy.github.io/2018/07/08/java-1/&title=《Java_1》 — 李三岁他很皮&pic=http://liyzy.github.io/img/avatar.png" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liyzy.github.io/2018/07/08/java-1/&title=《Java_1》 — 李三岁他很皮&source=" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liyzy.github.io/2018/07/08/java-1/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java_1》 — 李三岁他很皮&url=http://liyzy.github.io/2018/07/08/java-1/&via=http://liyzy.github.io" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liyzy.github.io/2018/07/08/java-1/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
-    </a>
-</div>
+  
 
 
 
         </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
+  </div>
 
+  <aside id="sidebar" class="sidebar">
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/08/06/java-2/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Java_2</h4>
-      </a>
-    </div>
-  
+    <div class="sidebar-inner">
 
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2018/07/06/Gitee(码云)、Github同时配置ssh key/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Gitee(码云)、Github同时配置ssh key</h4>
-      </a>
-    </div>
-  
-</nav>
+      
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-
-    
-
-
-<section class="comments" id="comments">
-    <div id="disqus_thread"></div>
-    <script>
-    var disqus_shortname = 'true';
-    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</article>
-
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        一角一元都是情~
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
-        </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
-    </div>
-</div>
-
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-        <p>
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>lihui &copy; 2018</span>
-            <span>
+              <p class="site-author-name" itemprop="name">lihui</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
                 
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-数组的声明："><span class="nav-number">1.1.</span> <span class="nav-text">1. 数组的声明：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-数组的创建"><span class="nav-number">1.2.</span> <span class="nav-text">2. 数组的创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-数组的初始化"><span class="nav-number">1.3.</span> <span class="nav-text">3. 数组的初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-数组长度"><span class="nav-number">1.4.</span> <span class="nav-text">4. 数组长度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-数组的遍历输出"><span class="nav-number">1.5.</span> <span class="nav-text">5. 数组的遍历输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-数组拷贝"><span class="nav-number">1.6.</span> <span class="nav-text">6. 数组拷贝</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-数组排序"><span class="nav-number">1.7.</span> <span class="nav-text">7. 数组排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-多维数组"><span class="nav-number">1.8.</span> <span class="nav-text">8. 多维数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符"><span class="nav-number">2.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#除法"><span class="nav-number">2.1.</span> <span class="nav-text">除法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取模"><span class="nav-number">2.2.</span> <span class="nav-text">取模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算术运算的结果不低于int型"><span class="nav-number">2.3.</span> <span class="nav-text">算术运算的结果不低于int型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移位运算"><span class="nav-number">2.4.</span> <span class="nav-text">移位运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#位逻辑运算"><span class="nav-number">2.5.</span> <span class="nav-text">位逻辑运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三目运算符？：的第二第三操作数必须是可以赋值的"><span class="nav-number">2.6.</span> <span class="nav-text">三目运算符？：的第二第三操作数必须是可以赋值的</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包"><span class="nav-number">3.</span> <span class="nav-text">包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问权限"><span class="nav-number">4.</span> <span class="nav-text">访问权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修饰符"><span class="nav-number">5.</span> <span class="nav-text">修饰符</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
     </div>
-</footer>
+  </aside>
 
+
+        
+      </div>
     </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lihui</span>
 
+  
 
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liyzy.github.io/2018/07/08/java-1/&title=《Java_1》 — 李三岁他很皮&pic=http://liyzy.github.io/img/avatar.png" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liyzy.github.io/2018/07/08/java-1/&title=《Java_1》 — 李三岁他很皮&source=" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liyzy.github.io/2018/07/08/java-1/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java_1》 — 李三岁他很皮&url=http://liyzy.github.io/2018/07/08/java-1/&via=http://liyzy.github.io" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liyzy.github.io/2018/07/08/java-1/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://liyzy.github.io/2018/07/08/java-1/" alt="微信分享二维码">
+  
 </div>
 
 
 
 
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.4.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
 
 
 
 
 
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '去哪里了?';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又回来了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
