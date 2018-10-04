@@ -88,7 +88,7 @@
     root: '/',
     scheme: 'Muse',
     version: '6.4.2',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -465,6 +465,43 @@
     </div>
 
     
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/07/03/java-0/" rel="bookmark">Java_0</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/08/06/java-2/" rel="bookmark">Java_2</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/09/06/利用ZXing工具生成二维码以及解析二维码/" rel="bookmark">利用ZXing工具生成二维码以及解析二维码</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/10/01/词法分析/" rel="bookmark">词法分析器</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
 
     
     
@@ -544,6 +581,8 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 
@@ -636,16 +675,6 @@
                   
                 </span>
               
-                <span class="links-of-author-item">
-                  <a href="2469660964" target="_blank" title="QQ"><i class="fa fa-fw fa-qq"></i>QQ</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="Li2469660964" target="_blank" title="wechat"><i class="fa fa-fw fa-weixin"></i>wechat</a>
-                  
-                </span>
-              
             </div>
           
 
@@ -670,7 +699,7 @@
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://liyzy.github.io/about/" title="关于此博客" target="_blank">关于此博客</a>
+                    <a href="https://liyzy.github.io/about/" title="关于" target="_blank">关于</a>
                   </li>
                 
               </ul>
@@ -766,6 +795,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     

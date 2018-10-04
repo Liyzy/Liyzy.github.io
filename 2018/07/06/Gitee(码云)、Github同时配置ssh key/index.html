@@ -88,7 +88,7 @@
     root: '/',
     scheme: 'Muse',
     version: '6.4.2',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -436,6 +436,10 @@
     </div>
 
     
+      
+
+
+    
 
     
     
@@ -515,6 +519,8 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 
@@ -607,16 +613,6 @@
                   
                 </span>
               
-                <span class="links-of-author-item">
-                  <a href="2469660964" target="_blank" title="QQ"><i class="fa fa-fw fa-qq"></i>QQ</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="Li2469660964" target="_blank" title="wechat"><i class="fa fa-fw fa-weixin"></i>wechat</a>
-                  
-                </span>
-              
             </div>
           
 
@@ -641,7 +637,7 @@
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://liyzy.github.io/about/" title="关于此博客" target="_blank">关于此博客</a>
+                    <a href="https://liyzy.github.io/about/" title="关于" target="_blank">关于</a>
                   </li>
                 
               </ul>
@@ -737,6 +733,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
