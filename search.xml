@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【java学习笔记】全系列内容提要篇]]></title>
+    <url>%2F2018%2F10%2F06%2F%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E5%85%A8%E7%B3%BB%E5%88%97%E5%86%85%E5%AE%B9%E6%8F%90%E8%A6%81%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[【java学习笔记1】基本数据类型对象和类数据声明函数声明参数传递 【java学习笔记2】数组运算符包访问权限修饰符 【java学习笔记3】继承多态 【java学习笔记4】异常处理 【java学习笔记5】抽象类、抽象函数接口 【java学习笔记6】Object类Class类String类System类包装类 【java学习笔记7】泛型 【java学习笔记8】集合类，集合接口Collection类List LinkedList ArrayListMap HashMap TreeMapSet HashSet TreeSet 【java学习笔记9】FileRandomAccessFile文本流Preoperties // 配置文件的使用多线程 【java学习笔记10】线程同步、锁 【java学习笔记11】网络编程 【java学习笔记12】数据库编程 我比较懒，另一方面由于还在上学，时间比较少，慢慢更新~]]></content>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[双系统安装Ubuntu18.04]]></title>
     <url>%2F2018%2F10%2F01%2F%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%2F</url>
     <content type="text"><![CDATA[制作启动盘以Ubuntu18.04为例 方式一工具为软碟通UltraISO。 准备一个U盘，格式化。 以管理员身份运行软碟通，菜单栏里选择“启动-&gt;写入硬盘映像”，写入方式选择“usb-HDD+”，“便捷启动-&gt;写入新的驱动程序引导扇区-&gt;Syslinux”。方式二工具为rufus。 这是一个Ubuntu官方推荐的工具，用起来还是很方便的。唯一需要注意的就是选择Partition schema为MBR还是GPT。 查看硬盘分区表类型可以使用windows下的磁盘管理。点击要查看的硬盘，右键，“属性-&gt;卷”就能看到了。还有很多其他的工具可用，不一一赘述了。安装系统 首先，重启电脑进入BIOS，关闭安全启动(如果之前装过双系统的话应该关掉了)，设置第一启动项为U盘启动，设置完成后保存退出。 这时候电脑应该会自动重启，重启之后应该就是Ubuntu的安装引导了，选择Install Ubuntu。 选择语言和键盘布局。 在联网这一项上，选择暂不连接网络，这样可以加快安装的进度，一些东西可以安好系统后自己选择安装。 选择最小安装，其他的不用选。 如果要装双系统，选择与Windows共存就好了，Ubuntu可以自己选择你未分配的空间作为安装空间(前提是你有未分配的空间)。网上的一些教程都交了如何自己分区，非老手且没有什么特殊需求建议不要尝试了，没什么用。如果只保留Ubuntu，选择只保留Ubuntu就好了。 接下来就是一些时区，用户名的设置了。 设置完后，安装就开始了，大约需要30分钟左右吧(当然这要视电脑情况而定qwq)。系统升级如果之前你是16.04或者17.10等其他的版本，也可以升级到18.04版本。(注意提前做好备份，万一装崩了呢/doge) 首先，更新升级已安装的软件包。 1234sudo apt upgradesudo apt updatesudo apt dist-upgradesudo apt autoremove 在软件更新器里选择更新版本为长期支持版本。 安装update-manager-core sudo apt-get install update-manager-core 执行sudo do-release-upgrade -d等待完成就ok了，我大概用了100分钟的时间。安装Gnome插件Ubuntu18.04回归了gnome桌面，意味着我们可以使用很多有用的插件来使它更加的高效和炫酷。如何安装gnome插件呢？网上说了很多方法，有用Tweaks的，有在官网下载后解压的。这些方法首先肯定都没错。但是我一开始也是用的这两种方法进行尝试，然鹅并没有成功。万念俱灰之际，我发现在Ubuntu的软件中心有一个附加组件项，点进去，卧槽，这不就是现成的嘛…推荐几个插件吧：Simple net speed 顶栏实时网速显示Openweather 顶栏显示天气EasyScreenCast 录屏Coverflow alt-tab 效果超赞的 alt-tab 切换效果……更多有趣的插件自己探索吧~]]></content>

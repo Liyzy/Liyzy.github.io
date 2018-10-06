@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyzy.github.io/"/>
-  <updated>2018-10-06T13:49:00.273Z</updated>
+  <updated>2018-10-06T14:10:26.751Z</updated>
   <id>http://liyzy.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【java学习笔记】全系列内容提要篇</title>
+    <link href="http://liyzy.github.io/2018/10/06/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E5%85%A8%E7%B3%BB%E5%88%97%E5%86%85%E5%AE%B9%E6%8F%90%E8%A6%81%E7%AF%87/"/>
+    <id>http://liyzy.github.io/2018/10/06/【java学习笔记】全系列内容提要篇/</id>
+    <published>2018-10-06T13:58:03.611Z</published>
+    <updated>2018-10-06T14:10:26.751Z</updated>
+    
+    <content type="html"><![CDATA[<p><br><br><a id="more"></a></p><h2 id="【java学习笔记1】"><a href="#【java学习笔记1】" class="headerlink" title="【java学习笔记1】"></a>【java学习笔记1】</h2><p>基本数据类型<br>对象和类<br>数据声明<br>函数声明<br>参数传递 </p><h2 id="【java学习笔记2】"><a href="#【java学习笔记2】" class="headerlink" title="【java学习笔记2】"></a>【java学习笔记2】</h2><p>数组<br>运算符<br>包<br>访问权限<br>修饰符</p><h2 id="【java学习笔记3】"><a href="#【java学习笔记3】" class="headerlink" title="【java学习笔记3】"></a>【java学习笔记3】</h2><p>继承<br>多态</p><h2 id="【java学习笔记4】"><a href="#【java学习笔记4】" class="headerlink" title="【java学习笔记4】"></a>【java学习笔记4】</h2><p>异常处理</p><h2 id="【java学习笔记5】"><a href="#【java学习笔记5】" class="headerlink" title="【java学习笔记5】"></a>【java学习笔记5】</h2><p>抽象类、抽象函数<br>接口</p><h2 id="【java学习笔记6】"><a href="#【java学习笔记6】" class="headerlink" title="【java学习笔记6】"></a>【java学习笔记6】</h2><p>Object类<br>Class类<br>String类<br>System类<br>包装类</p><h2 id="【java学习笔记7】"><a href="#【java学习笔记7】" class="headerlink" title="【java学习笔记7】"></a>【java学习笔记7】</h2><p>泛型</p><h2 id="【java学习笔记8】"><a href="#【java学习笔记8】" class="headerlink" title="【java学习笔记8】"></a>【java学习笔记8】</h2><p>集合类，集合接口<br>Collection类<br>List LinkedList ArrayList<br>Map HashMap TreeMap<br>Set HashSet TreeSet</p><h2 id="【java学习笔记9】"><a href="#【java学习笔记9】" class="headerlink" title="【java学习笔记9】"></a>【java学习笔记9】</h2><p>File<br>RandomAccessFile<br>文本流<br>Preoperties  // 配置文件的使用<br>多线程</p><h2 id="【java学习笔记10】"><a href="#【java学习笔记10】" class="headerlink" title="【java学习笔记10】"></a>【java学习笔记10】</h2><p>线程同步、锁</p><h2 id="【java学习笔记11】"><a href="#【java学习笔记11】" class="headerlink" title="【java学习笔记11】"></a>【java学习笔记11】</h2><p>网络编程</p><h2 id="【java学习笔记12】"><a href="#【java学习笔记12】" class="headerlink" title="【java学习笔记12】"></a>【java学习笔记12】</h2><p>数据库编程</p><p>我比较懒，另一方面由于还在上学，时间比较少，慢慢更新~</p>]]></content>
+    
+    <summary type="html">
+    
+      这是【java学习笔记】这个系列的一个内容提要，相当于是一个目录吧，方便更快找到要找的知识点
+    
+    </summary>
+    
+    
+      <category term="JAVA" scheme="http://liyzy.github.io/tags/JAVA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>双系统安装Ubuntu18.04</title>
     <link href="http://liyzy.github.io/2018/10/01/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
     <id>http://liyzy.github.io/2018/10/01/双系统安装/</id>
     <published>2018-10-01T06:24:25.819Z</published>
-    <updated>2018-10-06T13:49:00.273Z</updated>
+    <updated>2018-10-06T13:53:26.965Z</updated>
     
     <content type="html"><![CDATA[<p></p><p></p><br><a id="more"></a><p></p><h1 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h1><p>以<a href="https://www.ubuntu.com/download/desktop" target="_blank" rel="noopener">Ubuntu18.04</a>为例</p><h2 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h2><p>工具为<a href="https://cn.ultraiso.net/xiazai.html" target="_blank" rel="noopener">软碟通UltraISO</a>。</p><ul><li>准备一个U盘，格式化。</li><li>以管理员身份运行软碟通，菜单栏里选择“启动-&gt;写入硬盘映像”，写入方式选择“usb-HDD+”，“便捷启动-&gt;写入新的驱动程序引导扇区-&gt;Syslinux”。<h2 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h2>工具为<a href="http://rufus.akeo.ie/" target="_blank" rel="noopener">rufus</a>。</li><li>这是一个Ubuntu官方推荐的工具，用起来还是很方便的。唯一需要注意的就是选择Partition schema为MBR还是GPT。</li><li>查看硬盘分区表类型可以使用windows下的磁盘管理。点击要查看的硬盘，右键，“属性-&gt;卷”就能看到了。<br>还有很多其他的工具可用，不一一赘述了。<h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1></li><li>首先，重启电脑进入BIOS，关闭安全启动(如果之前装过双系统的话应该关掉了)，设置第一启动项为U盘启动，设置完成后保存退出。</li><li>这时候电脑应该会自动重启，重启之后应该就是Ubuntu的安装引导了，选择Install Ubuntu。</li><li>选择语言和键盘布局。</li><li>在联网这一项上，选择暂不连接网络，这样可以加快安装的进度，一些东西可以安好系统后自己选择安装。</li><li>选择最小安装，其他的不用选。</li><li>如果要装双系统，选择与Windows共存就好了，Ubuntu可以自己选择你未分配的空间作为安装空间(前提是你有未分配的空间)。网上的一些教程都交了如何自己分区，非老手且没有什么特殊需求建议不要尝试了，没什么用。如果只保留Ubuntu，选择只保留Ubuntu就好了。</li><li>接下来就是一些时区，用户名的设置了。</li><li>设置完后，安装就开始了，大约需要30分钟左右吧(当然这要视电脑情况而定qwq)。<h1 id="系统升级"><a href="#系统升级" class="headerlink" title="系统升级"></a>系统升级</h1>如果之前你是16.04或者17.10等其他的版本，也可以升级到18.04版本。(注意提前做好备份，万一装崩了呢/doge)</li><li><p>首先，更新升级已安装的软件包。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt upgrade</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt dist-upgrade</span><br><span class="line">sudo apt autoremove</span><br></pre></td></tr></table></figure></li><li><p>在软件更新器里选择更新版本为长期支持版本。</p></li><li>安装update-manager-core <code>sudo apt-get install update-manager-core</code></li><li>执行<code>sudo do-release-upgrade -d</code>等待完成就ok了，我大概用了100分钟的时间。<h1 id="安装Gnome插件"><a href="#安装Gnome插件" class="headerlink" title="安装Gnome插件"></a>安装Gnome插件</h1>Ubuntu18.04回归了gnome桌面，意味着我们可以使用很多有用的插件来使它更加的高效和炫酷。<br>如何安装gnome插件呢？<br>网上说了很多方法，有用Tweaks的，有在官网下载后解压的。这些方法首先肯定都没错。但是我一开始也是用的这两种方法进行尝试，然鹅并没有成功。万念俱灰之际，我发现在Ubuntu的软件中心有一个附加组件项，点进去，卧槽，这不就是现成的嘛…<br>推荐几个插件吧：<br>Simple net speed    顶栏实时网速显示<br>Openweather            顶栏显示天气<br>EasyScreenCast        录屏<br>Coverflow alt-tab    效果超赞的 alt-tab 切换效果<br>……<br>更多有趣的插件自己探索吧~</li></ul>]]></content>
     
@@ -263,7 +283,7 @@
     <link href="http://liyzy.github.io/2018/06/04/hello-world/"/>
     <id>http://liyzy.github.io/2018/06/04/hello-world/</id>
     <published>2018-06-04T07:44:10.983Z</published>
-    <updated>2018-10-06T10:03:16.514Z</updated>
+    <updated>2018-10-06T13:51:07.418Z</updated>
     
     <summary type="html">
     
