@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://liyzy.github.io/2018/06/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/</loc>
+    <lastmod>2018-10-06T10:34:18.099Z</lastmod>
+  </url>  <url>
     <loc>http://liyzy.github.io/2018/06/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%83%E4%B9%A0%E9%A2%98(%E6%AF%94%E8%BE%83%E5%9F%BA%E7%A1%80)/</loc>
-    <lastmod>2018-10-06T10:17:11.574Z</lastmod>
+    <lastmod>2018-10-06T10:21:35.169Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/06/04/hello-world/</loc>
     <lastmod>2018-10-06T10:03:16.514Z</lastmod>
@@ -33,9 +36,6 @@
   </url>  <url>
     <loc>http://liyzy.github.io/2018/07/03/java-0/</loc>
     <lastmod>2018-07-03T11:28:38.000Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/06/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/</loc>
-    <lastmod>2018-06-27T06:39:38.000Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/06/06/python%E5%AD%A6%E4%B9%A0-000%20%E4%BB%8EHello%20World!%E5%BC%80%E5%A7%8B%EF%BC%88print()%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90%EF%BC%89/</loc>
     <lastmod>2018-06-06T11:10:42.364Z</lastmod>
