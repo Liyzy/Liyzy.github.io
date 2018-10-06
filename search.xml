@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【python学习笔记1】数据类型篇]]></title>
+    <url>%2F2018%2F10%2F06%2Fpython%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%2F</url>
+    <content type="text"><![CDATA[python简单介绍 作为一种解释型语言，Python的设计哲学强调代码的可读性和简洁的语法（尤其是使用空格缩进划分代码块，而非使用大括号或者关键词）。与Scheme、Ruby、Perl、Tcl等动态类型编程语言一样，Python拥有动态类型系统和垃圾回收功能，能够自动管理内存使用，并且支持多种编程范式，包括面向对象、命令式、函数式和过程式编程。其本身拥有一个巨大而广泛的标准库。Python是完全物件导向的语言。函数、模组、数字、字串都是物件。并且完全支持继承、重载、派生、多重继承，有益于增强原始码的复用性。Python支持重载运算符，因此Python也支持泛型设计。Python编译器本身也可以被集成到其它需要脚本语言的程式内。因此，有很多人把Python作为一种“胶水语言”使用。使用Python将其他语言编写的程式进行集成和封装。Python属于动态类型语言，动态类型语言是在运行期间检查数据的类型，不得不保持描述变量值的实际类型标记，程序在每次操作变量时，需要执行数据依赖分支，而静态类型语言相对于动态类型语言，在声明变量时已经指定了数据类型和表示方法，根据这一原理导致Python相对于C、Visual Basic等静态类型语言来说运行速度较慢。 摘录自Wikipedia python数据类型1. 常量python中没有关键字表示常量，用大写来代表这是一个常量。例如NUM=5，NUM就是一个常量。因此，在编写python代码时，要严格区分大小写。 2. 变量python中变量声明不需要声明变量类型。但是，python是一种强类型语言，不能因此而判断python是弱类型的。python是动态的、强类型的语言。Why is Python a dynamic language and also a strongly typed language？ 3. 数据类型3.1 分为两大类：内置数据类型、自定义数据类型内置数据类型分为：数值、序列、集合、字典、特殊、其他 数值数据类型：整数、浮点数、布尔、复数 序列数据类型：字符串、元组、字节序列、列表、字节数组 集合数据类型：集、不可变集 2.2 内置的type()函数可以用来查询变量所指的对象类型123&gt;&gt;&gt; a, b, c, d = 20, 5.5, True, 4+3j&gt;&gt;&gt; print(type(a), type(b), type(c), type(d))&lt;type 'int'&gt; &lt;type 'float'&gt; &lt;type 'bool'&gt; &lt;type 'complex'&gt; 3.3 int类型12345myInt = 5 myInt = int(5) #int对象方式int(5.4) #自动类型转换int("123") #自动类型转换#二进制以0b开头，八进制以0开头，十六进制以0x开头 3.4 float类型12myFloat = float(3.14)myFloat = float(4) #自动类型转换，输出结果4.0 3.5 复数数据类型 虚部必须用j1234561+1j #不可写成1+j0+0j #0不能省略complex(1,2) #其中1为实部，2为虚部c1=complex(6) #输出c1为6+0j,等同于complex(6,0) complex(6,)c2=complex(2.1,3.2) #实部与虚部可以为浮点数#real:复数的实部 imag:复数的虚部 c2.real输出结果2.1,c2.imag输出结果3.2 3.6 bool类型12345"""True False开头首字母必须大写bool对象 bool(False)bool(0),bool(0.0) 结果为False,任何非零均为True例如 bool('0'),bool(5),bool(2.3),bool("abc")""" 3.7 String类型3.7.1 表现形式“abc” ‘abc’ ‘’‘abc’‘’ “””abc””” 前两个表示一行，后两个表示可以跨行 3.7.2 字符串拼接与重复123456&gt;&gt;&gt; "abc"+'def' #使用+进行字符串连接'abcdef'&gt;&gt;&gt; "abc" 'def' #默认自动连接'abcdef'&gt;&gt;&gt; "abc"*2 # *表示重复，*后的整数表示重复次数'abcabc' 2.7.3 转义字符 转义字符 含义 \n 换行 \r 回车 \t 水平制表符 \v 垂直制表符 \b 退格 \f 换页 使用r或R为开头的字符串成为原始字符串，其中包含的任何字符都不可进行转义。123&gt;&gt;&gt; myStr = r"abc\n"&gt;&gt;&gt; print(myStr)'abc\n' 3.7.4 str对象str()str(.14) 输出结果为 ‘0.14’ ，浮点数前导0可省略,隐式类型转换。 3.7.5 字符串索引Python中的字符串有两种索引方式，第一种是从左往右，从0开始依次增加；第二种是从右往左，从-1开始依次减少。注意，没有单独的字符类型，一个字符就是长度为1的字符串。12345&gt;&gt;&gt; word = 'Python'&gt;&gt;&gt; print(word[0], word[5])P n&gt;&gt;&gt; print(word[-1], word[-6])n P 3.7.6 字符串截取子串用冒号分隔两个索引，形式为变量[头下标:尾下标]。截取的范围是前闭后开的，并且两个索引都可以省略：123456789&gt;&gt;&gt; word = 'ilovepython'&gt;&gt;&gt; word[1:5]'love'&gt;&gt;&gt; word[:]'ilovepython'&gt;&gt;&gt; word[5:]'python'&gt;&gt;&gt; word[-10:-6]'love' Python字符串不能被改变。向一个索引位置赋值，比如word[0] = ‘m’会导致错误。]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[双系统安装]]></title>
     <url>%2F2018%2F10%2F01%2F%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%2F</url>
     <content type="text"><![CDATA[制作启动盘以Ubuntu18.04为例，工具为软碟通UltraISO。 准备一个U盘，格式化。 以管理员身份运行软碟通，菜单栏里选择“启动-&gt;写入硬盘映像”，写入方式选择“usb-HDD+”，“便捷启动-&gt;写入新的驱动程序引导扇区-&gt;Syslinux”。 安装系统]]></content>
@@ -26,8 +34,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[python学习-数据类型(包含python简单介绍)]]></title>
-    <url>%2F2018%2F09%2F22%2Fpython%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%2F</url>
+    <title><![CDATA[【python学习笔记1】数据类型篇]]></title>
+    <url>%2F2018%2F09%2F22%2F%E3%80%90python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91%2F</url>
     <content type="text"><![CDATA[python简单介绍 作为一种解释型语言，Python的设计哲学强调代码的可读性和简洁的语法（尤其是使用空格缩进划分代码块，而非使用大括号或者关键词）。与Scheme、Ruby、Perl、Tcl等动态类型编程语言一样，Python拥有动态类型系统和垃圾回收功能，能够自动管理内存使用，并且支持多种编程范式，包括面向对象、命令式、函数式和过程式编程。其本身拥有一个巨大而广泛的标准库。Python是完全物件导向的语言。函数、模组、数字、字串都是物件。并且完全支持继承、重载、派生、多重继承，有益于增强原始码的复用性。Python支持重载运算符，因此Python也支持泛型设计。Python编译器本身也可以被集成到其它需要脚本语言的程式内。因此，有很多人把Python作为一种“胶水语言”使用。使用Python将其他语言编写的程式进行集成和封装。Python属于动态类型语言，动态类型语言是在运行期间检查数据的类型，不得不保持描述变量值的实际类型标记，程序在每次操作变量时，需要执行数据依赖分支，而静态类型语言相对于动态类型语言，在声明变量时已经指定了数据类型和表示方法，根据这一原理导致Python相对于C、Visual Basic等静态类型语言来说运行速度较慢。 摘录自Wikipedia python数据类型1. 常量python中没有关键字表示常量，用大写来代表这是一个常量。例如NUM=5，NUM就是一个常量。因此，在编写python代码时，要严格区分大小写。 2. 变量python中变量声明不需要声明变量类型。但是，python是一种强类型语言，不能因此而判断python是弱类型的。python是动态的、强类型的语言。Why is Python a dynamic language and also a strongly typed language？ 3. 数据类型3.1 分为两大类：内置数据类型、自定义数据类型内置数据类型分为：数值、序列、集合、字典、特殊、其他 数值数据类型：整数、浮点数、布尔、复数 序列数据类型：字符串、元组、字节序列、列表、字节数组 集合数据类型：集、不可变集 2.2 内置的type()函数可以用来查询变量所指的对象类型123&gt;&gt;&gt; a, b, c, d = 20, 5.5, True, 4+3j&gt;&gt;&gt; print(type(a), type(b), type(c), type(d))&lt;type 'int'&gt; &lt;type 'float'&gt; &lt;type 'bool'&gt; &lt;type 'complex'&gt; 3.3 int类型12345myInt = 5 myInt = int(5) #int对象方式int(5.4) #自动类型转换int("123") #自动类型转换#二进制以0b开头，八进制以0开头，十六进制以0x开头 3.4 float类型12myFloat = float(3.14)myFloat = float(4) #自动类型转换，输出结果4.0 3.5 复数数据类型 虚部必须用j1234561+1j #不可写成1+j0+0j #0不能省略complex(1,2) #其中1为实部，2为虚部c1=complex(6) #输出c1为6+0j,等同于complex(6,0) complex(6,)c2=complex(2.1,3.2) #实部与虚部可以为浮点数#real:复数的实部 imag:复数的虚部 c2.real输出结果2.1,c2.imag输出结果3.2 3.6 bool类型12345"""True False开头首字母必须大写bool对象 bool(False)bool(0),bool(0.0) 结果为False,任何非零均为True例如 bool('0'),bool(5),bool(2.3),bool("abc")""" 3.7 String类型3.7.1 表现形式“abc” ‘abc’ ‘’‘abc’‘’ “””abc””” 前两个表示一行，后两个表示可以跨行 3.7.2 字符串拼接与重复123456&gt;&gt;&gt; "abc"+'def' #使用+进行字符串连接'abcdef'&gt;&gt;&gt; "abc" 'def' #默认自动连接'abcdef'&gt;&gt;&gt; "abc"*2 # *表示重复，*后的整数表示重复次数'abcabc' 2.7.3 转义字符 转义字符 含义 \n 换行 \r 回车 \t 水平制表符 \v 垂直制表符 \b 退格 \f 换页 使用r或R为开头的字符串成为原始字符串，其中包含的任何字符都不可进行转义。123&gt;&gt;&gt; myStr = r"abc\n"&gt;&gt;&gt; print(myStr)'abc\n' 3.7.4 str对象str()str(.14) 输出结果为 ‘0.14’ ，浮点数前导0可省略,隐式类型转换。 3.7.5 字符串索引Python中的字符串有两种索引方式，第一种是从左往右，从0开始依次增加；第二种是从右往左，从-1开始依次减少。注意，没有单独的字符类型，一个字符就是长度为1的字符串。12345&gt;&gt;&gt; word = 'Python'&gt;&gt;&gt; print(word[0], word[5])P n&gt;&gt;&gt; print(word[-1], word[-6])n P 3.7.6 字符串截取子串用冒号分隔两个索引，形式为变量[头下标:尾下标]。截取的范围是前闭后开的，并且两个索引都可以省略：123456789&gt;&gt;&gt; word = 'ilovepython'&gt;&gt;&gt; word[1:5]'love'&gt;&gt;&gt; word[:]'ilovepython'&gt;&gt;&gt; word[5:]'python'&gt;&gt;&gt; word[-10:-6]'love' Python字符串不能被改变。向一个索引位置赋值，比如word[0] = ‘m’会导致错误。]]></content>
       <tags>
         <tag>python</tag>
@@ -90,8 +98,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python学习-000从Hello world!开始（print()函数解析）]]></title>
-    <url>%2F2018%2F06%2F06%2Fpython%E5%AD%A6%E4%B9%A0-000%20%E4%BB%8EHello%20World!%E5%BC%80%E5%A7%8B%EF%BC%88print()%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90%EF%BC%89%2F</url>
+    <title><![CDATA[【python learning 1】从Hello world!开始（print()函数解析）]]></title>
+    <url>%2F2018%2F06%2F06%2F%E3%80%90python%20learning%201%E3%80%91%2F</url>
     <content type="text"><![CDATA[老规矩，学习一门语言，肯定要从Hello world开始啦 python2print &quot;Hello world!&quot; python3print(&quot;Hello world!&quot;)不同的原因是，在python3中，print只作为一个函数调用，括号中的内容作为函数的参数。 但是，在python2中使用括号也没有问题。 print()函数: print（*objects,sep=&#39; &#39;,end=&#39;\n&#39;,file=sys.stdout,flush=False） 参数意义 *objects 表示要输出的值，可以是多个，用逗号分隔 sep 表示多个输出值之间的间隔，可以自己赋值，默认为一个空格 end 表示输出语句最末尾附加的字符串，默认为’\n’，即换行 #ps: 在Python2中，如果不想换行则在输出语句的末尾加一个逗号，Python3中写成print(“hhh”,end=’’)就好了。 file 表示输出的对象，可以是文件也可以是数据流，默认是sys.stdout flush 表示是否立刻将输出语句输出的目标对象，默认为False]]></content>
       <tags>
         <tag>python</tag>
