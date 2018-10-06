@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyzy.github.io/"/>
-  <updated>2018-10-06T14:10:26.751Z</updated>
+  <updated>2018-10-06T14:16:57.650Z</updated>
   <id>http://liyzy.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://liyzy.github.io/2018/10/06/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E5%85%A8%E7%B3%BB%E5%88%97%E5%86%85%E5%AE%B9%E6%8F%90%E8%A6%81%E7%AF%87/"/>
     <id>http://liyzy.github.io/2018/10/06/【java学习笔记】全系列内容提要篇/</id>
     <published>2018-10-06T13:58:03.611Z</published>
-    <updated>2018-10-06T14:10:26.751Z</updated>
+    <updated>2018-10-06T14:16:57.650Z</updated>
     
-    <content type="html"><![CDATA[<p><br><br><a id="more"></a></p><h2 id="【java学习笔记1】"><a href="#【java学习笔记1】" class="headerlink" title="【java学习笔记1】"></a>【java学习笔记1】</h2><p>基本数据类型<br>对象和类<br>数据声明<br>函数声明<br>参数传递 </p><h2 id="【java学习笔记2】"><a href="#【java学习笔记2】" class="headerlink" title="【java学习笔记2】"></a>【java学习笔记2】</h2><p>数组<br>运算符<br>包<br>访问权限<br>修饰符</p><h2 id="【java学习笔记3】"><a href="#【java学习笔记3】" class="headerlink" title="【java学习笔记3】"></a>【java学习笔记3】</h2><p>继承<br>多态</p><h2 id="【java学习笔记4】"><a href="#【java学习笔记4】" class="headerlink" title="【java学习笔记4】"></a>【java学习笔记4】</h2><p>异常处理</p><h2 id="【java学习笔记5】"><a href="#【java学习笔记5】" class="headerlink" title="【java学习笔记5】"></a>【java学习笔记5】</h2><p>抽象类、抽象函数<br>接口</p><h2 id="【java学习笔记6】"><a href="#【java学习笔记6】" class="headerlink" title="【java学习笔记6】"></a>【java学习笔记6】</h2><p>Object类<br>Class类<br>String类<br>System类<br>包装类</p><h2 id="【java学习笔记7】"><a href="#【java学习笔记7】" class="headerlink" title="【java学习笔记7】"></a>【java学习笔记7】</h2><p>泛型</p><h2 id="【java学习笔记8】"><a href="#【java学习笔记8】" class="headerlink" title="【java学习笔记8】"></a>【java学习笔记8】</h2><p>集合类，集合接口<br>Collection类<br>List LinkedList ArrayList<br>Map HashMap TreeMap<br>Set HashSet TreeSet</p><h2 id="【java学习笔记9】"><a href="#【java学习笔记9】" class="headerlink" title="【java学习笔记9】"></a>【java学习笔记9】</h2><p>File<br>RandomAccessFile<br>文本流<br>Preoperties  // 配置文件的使用<br>多线程</p><h2 id="【java学习笔记10】"><a href="#【java学习笔记10】" class="headerlink" title="【java学习笔记10】"></a>【java学习笔记10】</h2><p>线程同步、锁</p><h2 id="【java学习笔记11】"><a href="#【java学习笔记11】" class="headerlink" title="【java学习笔记11】"></a>【java学习笔记11】</h2><p>网络编程</p><h2 id="【java学习笔记12】"><a href="#【java学习笔记12】" class="headerlink" title="【java学习笔记12】"></a>【java学习笔记12】</h2><p>数据库编程</p><p>我比较懒，另一方面由于还在上学，时间比较少，慢慢更新~</p>]]></content>
+    <content type="html"><![CDATA[<p></p><p></p><br><a id="more"></a><p></p><h2 id="【java学习笔记1】"><a href="#【java学习笔记1】" class="headerlink" title="【java学习笔记1】"></a>【java学习笔记1】</h2><p>基本数据类型<br>对象和类<br>数据声明<br>函数声明<br>参数传递 </p><h2 id="【java学习笔记2】"><a href="#【java学习笔记2】" class="headerlink" title="【java学习笔记2】"></a>【java学习笔记2】</h2><p>数组<br>运算符<br>包<br>访问权限<br>修饰符</p><h2 id="【java学习笔记3】"><a href="#【java学习笔记3】" class="headerlink" title="【java学习笔记3】"></a>【java学习笔记3】</h2><p>继承<br>多态</p><h2 id="【java学习笔记4】"><a href="#【java学习笔记4】" class="headerlink" title="【java学习笔记4】"></a>【java学习笔记4】</h2><p>异常处理</p><h2 id="【java学习笔记5】"><a href="#【java学习笔记5】" class="headerlink" title="【java学习笔记5】"></a>【java学习笔记5】</h2><p>抽象类、抽象函数<br>接口</p><h2 id="【java学习笔记6】"><a href="#【java学习笔记6】" class="headerlink" title="【java学习笔记6】"></a>【java学习笔记6】</h2><p>Object类<br>Class类<br>String类<br>System类<br>包装类</p><h2 id="【java学习笔记7】"><a href="#【java学习笔记7】" class="headerlink" title="【java学习笔记7】"></a>【java学习笔记7】</h2><p>泛型</p><h2 id="【java学习笔记8】"><a href="#【java学习笔记8】" class="headerlink" title="【java学习笔记8】"></a>【java学习笔记8】</h2><p>集合类，集合接口<br>Collection类<br>List LinkedList ArrayList<br>Map HashMap TreeMap<br>Set HashSet TreeSet</p><h2 id="【java学习笔记9】"><a href="#【java学习笔记9】" class="headerlink" title="【java学习笔记9】"></a>【java学习笔记9】</h2><p>File<br>RandomAccessFile<br>文本流<br>Preoperties  // 配置文件的使用<br>多线程</p><h2 id="【java学习笔记10】"><a href="#【java学习笔记10】" class="headerlink" title="【java学习笔记10】"></a>【java学习笔记10】</h2><p>线程同步、锁</p><h2 id="【java学习笔记11】"><a href="#【java学习笔记11】" class="headerlink" title="【java学习笔记11】"></a>【java学习笔记11】</h2><p>网络编程</p><h2 id="【java学习笔记12】"><a href="#【java学习笔记12】" class="headerlink" title="【java学习笔记12】"></a>【java学习笔记12】</h2><p>数据库编程</p><p><em>我比较懒，另一方面由于还在上学，时间比较少，慢慢更新~</em></p>]]></content>
     
     <summary type="html">
     
@@ -263,7 +263,7 @@
     <link href="http://liyzy.github.io/2018/06/06/%E3%80%90python%20learning%201%E3%80%91/"/>
     <id>http://liyzy.github.io/2018/06/06/【python learning 1】/</id>
     <published>2018-06-06T10:40:37.079Z</published>
-    <updated>2018-10-06T13:07:34.527Z</updated>
+    <updated>2018-10-06T14:15:34.868Z</updated>
     
     <content type="html"><![CDATA[<p></p><p></p><br><a id="more"></a><br>老规矩，学习一门语言，肯定要从Hello world开始啦<p></p><p>python2<br><code>print &quot;Hello world!&quot;</code></p><p>python3<br><code>print(&quot;Hello world!&quot;)</code><br>不同的原因是，在python3中，print只作为一个函数调用，括号中的内容作为函数的参数。</p><p>但是，在python2中使用括号也没有问题。</p><p>print()函数:</p><p><code>print（*objects,sep=&#39; &#39;,end=&#39;\n&#39;,file=sys.stdout,flush=False）</code></p><p>参数意义</p><p>*objects 表示要输出的值，可以是多个，用逗号分隔</p><p>sep 表示多个输出值之间的间隔，可以自己赋值，默认为一个空格</p><p>end 表示输出语句最末尾附加的字符串，默认为’\n’，即换行    #ps: 在Python2中，如果不想换行则在输出语句的末尾加一个逗号，Python3中写成print(“hhh”,end=’’)就好了。</p><p>file 表示输出的对象，可以是文件也可以是数据流，默认是sys.stdout</p><p>flush 表示是否立刻将输出语句输出的目标对象，默认为False</p>]]></content>
     
