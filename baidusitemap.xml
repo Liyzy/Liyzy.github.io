@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://liyzy.github.io/2018/08/06/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03%E3%80%91/</loc>
+    <lastmod>2018-10-06T11:54:35.955Z</lastmod>
+  </url>  <url>
     <loc>http://liyzy.github.io/2018/07/03/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91/</loc>
-    <lastmod>2018-10-06T11:37:22.193Z</lastmod>
+    <lastmod>2018-10-06T11:54:26.989Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/07/08/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02%E3%80%91/</loc>
+    <lastmod>2018-10-06T11:54:14.975Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/06/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/</loc>
     <lastmod>2018-10-06T11:31:04.358Z</lastmod>
@@ -30,12 +36,6 @@
   </url>  <url>
     <loc>http://liyzy.github.io/2018/09/22/python%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/</loc>
     <lastmod>2018-09-22T01:51:24.000Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/08/06/java-2/</loc>
-    <lastmod>2018-08-06T05:35:04.000Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/07/08/java-1/</loc>
-    <lastmod>2018-07-08T09:53:40.000Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/06/06/python%E5%AD%A6%E4%B9%A0-000%20%E4%BB%8EHello%20World!%E5%BC%80%E5%A7%8B%EF%BC%88print()%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90%EF%BC%89/</loc>
     <lastmod>2018-06-06T11:10:42.364Z</lastmod>
