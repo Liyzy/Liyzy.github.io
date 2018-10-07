@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://liyzy.github.io/about/index.html</loc>
+    
+    <lastmod>2018-10-07T13:22:20.111Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://liyzy.github.io/music/index.html</loc>
     
     <lastmod>2018-10-07T12:09:45.633Z</lastmod>
@@ -110,13 +117,6 @@
     <loc>http://liyzy.github.io/tags/index.html</loc>
     
     <lastmod>2018-10-05T12:00:32.697Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://liyzy.github.io/about/index.html</loc>
-    
-    <lastmod>2018-10-05T12:00:05.873Z</lastmod>
     
   </url>
   
