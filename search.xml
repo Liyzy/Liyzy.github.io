@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[僕が死のうと思ったのは]]></title>
+    <url>%2F2018%2F10%2F12%2F%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF%2F</url>
+    <content type="text"><![CDATA[(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"http://pg60us30v.bkt.clouddn.com//video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.mp4","pic":"http://pg60us30v.bkt.clouddn.com//image/image-video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.jpg"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[【java学习笔记】全系列内容提要篇]]></title>
     <url>%2F2018%2F10%2F06%2F%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E5%85%A8%E7%B3%BB%E5%88%97%E5%86%85%E5%AE%B9%E6%8F%90%E8%A6%81%E7%AF%87%2F</url>
     <content type="text"><![CDATA[【java学习笔记1】基本数据类型对象和类数据声明函数声明参数传递 【java学习笔记2】数组运算符包访问权限修饰符 【java学习笔记3】继承多态 【java学习笔记4】异常处理 【java学习笔记5】抽象类、抽象函数接口 【java学习笔记6】Object类Class类String类System类包装类 【java学习笔记7】泛型 【java学习笔记8】集合类，集合接口Collection类List LinkedList ArrayListMap HashMap TreeMapSet HashSet TreeSet 【java学习笔记9】FileRandomAccessFile文本流Preoperties // 配置文件的使用多线程 【java学习笔记10】线程同步、锁 【java学习笔记11】网络编程 【java学习笔记12】数据库编程 我比较懒，另一方面由于还在上学，时间比较少，慢慢更新~]]></content>
