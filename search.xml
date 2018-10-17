@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[僕が死のうと思ったのは]]></title>
     <url>%2F2018%2F10%2F12%2F%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF%2F</url>
-    <content type="text"><![CDATA[(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"http://liyzy.oss-cn-qingdao.aliyuncs.com/video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.mp4?Expires=1539357355&OSSAccessKeyId=TMP.AQFnxKEZEn4UwzDvB0B7-yyrLmXnOgz7X1aV1zLp1l-1pZTy-sYpz4RTC1GsMC4CFQCp-oxF5K7NzaLMj9t8pOyULNyCDwIVAIBZovFnWHU_wXRn0n4q5Z_z2naj&Signature=QW8ul2bz4ciM1C5Jjl5rek%2FNOFc%3D","pic":"http://pg60us30v.bkt.clouddn.com//image/image-video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.jpg"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()]]></content>
+    <content type="text"><![CDATA[(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"http://pg60us30v.bkt.clouddn.com//vedio/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.mp4","pic":"http://pg60us30v.bkt.clouddn.com//image/image-video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.jpg"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()]]></content>
       <tags>
         <tag>music</tag>
         <tag>video</tag>

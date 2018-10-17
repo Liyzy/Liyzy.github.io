@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyzy.github.io/"/>
-  <updated>2018-10-12T14:17:33.300Z</updated>
+  <updated>2018-10-17T05:39:38.350Z</updated>
   <id>http://liyzy.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://liyzy.github.io/2018/10/12/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF/"/>
     <id>http://liyzy.github.io/2018/10/12/僕が死のうと思ったのは/</id>
     <published>2018-10-12T13:04:24.154Z</published>
-    <updated>2018-10-12T14:17:33.300Z</updated>
+    <updated>2018-10-17T05:39:38.350Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"http://liyzy.oss-cn-qingdao.aliyuncs.com/video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.mp4?Expires=1539357355&OSSAccessKeyId=TMP.AQFnxKEZEn4UwzDvB0B7-yyrLmXnOgz7X1aV1zLp1l-1pZTy-sYpz4RTC1GsMC4CFQCp-oxF5K7NzaLMj9t8pOyULNyCDwIVAIBZovFnWHU_wXRn0n4q5Z_z2naj&Signature=QW8ul2bz4ciM1C5Jjl5rek%2FNOFc%3D","pic":"http://pg60us30v.bkt.clouddn.com//image/image-video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.jpg"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"http://pg60us30v.bkt.clouddn.com//vedio/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.mp4","pic":"http://pg60us30v.bkt.clouddn.com//image/image-video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.jpg"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>]]></content>
     
     <summary type="html">
     
