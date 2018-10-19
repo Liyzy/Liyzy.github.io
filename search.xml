@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【python learning】词法结构]]></title>
+    <url>%2F2018%2F10%2F17%2F%E3%80%90python%20learning%E3%80%91%E8%AF%8D%E6%B3%95%E7%BB%93%E6%9E%84%2F</url>
+    <content type="text"><![CDATA[字符集通常，python的源代码必须完全由ASCII码组成。若想在程序中的注释和字符串常量中使用非ASCII字符，需在源代码的第一行添加注释# -*- coding: &lt;encoding-name&gt; -*- 标识符通常python的风格是类名称以大写字母开始，其他的标识符都是小写字母。以单个下划线开始的标识符是私有的，以两个下划线开始的标识符是非常强的私有标识符；如果标识符还以两个下划线结尾，则表示该标志符是python语言定义的特殊名称。 关键字(3.7.1版本)False await else import pass None break except in raise True class finally is return and continue for lambda try as def from nonlocal while assert del global not with async elif if or yield 逻辑行与物理行逻辑行由一个或多个物理行组成。 当某一物理行以backslash(\)结束，并且后面没有注释，就会连接到下一个物理行作为一个逻辑行。 1234if 1900 &lt; year &lt; 2100 and 1 &lt;= month &lt;= 12 \ and 1 &lt;= day &lt;= 31 and 0 &lt;= hour &lt; 24 \ and 0 &lt;= minute &lt; 60 and 0 &lt;= second &lt; 60: # Looks like a valid date print("It's a valid date.") 如果一个左边的圆括号、方括号、花括号还没有对应的右括号，则python会自动把多个物理行连接成一个逻辑行。 1234month_names = ['January', 'February', 'March', # These are the 'April', 'May', 'June', # Dutch names 'July', 'August', 'September', # for the months 'October', 'November', 'December'] # of the year]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[僕が死のうと思ったのは]]></title>
     <url>%2F2018%2F10%2F12%2F%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF%2F</url>
     <content type="text"><![CDATA[(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"http://pg60us30v.bkt.clouddn.com//vedio/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.mp4","pic":"http://pg60us30v.bkt.clouddn.com//image/image-video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.jpg"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()]]></content>
@@ -108,7 +116,7 @@
   </entry>
   <entry>
     <title><![CDATA[【python learning 1】从Hello world!开始（print()函数解析）]]></title>
-    <url>%2F2018%2F06%2F06%2F%E3%80%90python%20learning%201%E3%80%91%2F</url>
+    <url>%2F2018%2F06%2F06%2F%E3%80%90python%20learning%E3%80%91hello%20world%2F</url>
     <content type="text"><![CDATA[老规矩，学习一门语言，肯定要从Hello world开始啦 python2print &quot;Hello world!&quot; python3print(&quot;Hello world!&quot;)不同的原因是，在python3中，print只作为一个函数调用，括号中的内容作为函数的参数。 但是，在python2中使用括号也没有问题。 print()函数: print（*objects,sep=&#39; &#39;,end=&#39;\n&#39;,file=sys.stdout,flush=False） 参数意义 *objects 表示要输出的值，可以是多个，用逗号分隔 sep 表示多个输出值之间的间隔，可以自己赋值，默认为一个空格 end 表示输出语句最末尾附加的字符串，默认为’\n’，即换行 #ps: 在Python2中，如果不想换行则在输出语句的末尾加一个逗号，Python3中写成print(“hhh”,end=’’)就好了。 file 表示输出的对象，可以是文件也可以是数据流，默认是sys.stdout flush 表示是否立刻将输出语句输出的目标对象，默认为False]]></content>
       <tags>
         <tag>python</tag>

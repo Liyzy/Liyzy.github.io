@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyzy.github.io/"/>
-  <updated>2018-10-17T05:39:38.350Z</updated>
+  <updated>2018-10-17T07:36:55.606Z</updated>
   <id>http://liyzy.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【python learning】词法结构</title>
+    <link href="http://liyzy.github.io/2018/10/17/%E3%80%90python%20learning%E3%80%91%E8%AF%8D%E6%B3%95%E7%BB%93%E6%9E%84/"/>
+    <id>http://liyzy.github.io/2018/10/17/【python learning】词法结构/</id>
+    <published>2018-10-17T07:05:28.324Z</published>
+    <updated>2018-10-17T07:36:55.606Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><p></p><br><a id="more"></a><p></p><h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><p>通常，python的源代码必须完全由ASCII码组成。若想在程序中的注释和字符串常量中使用非ASCII字符，需在源代码的第一行添加注释<code># -*- coding: &lt;encoding-name&gt; -*-</code></p><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>通常python的风格是类名称以大写字母开始，其他的标识符都是小写字母。以单个下划线开始的标识符是私有的，以两个下划线开始的标识符是非常强的私有标识符；如果标识符还以两个下划线结尾，则表示该标志符是python语言定义的特殊名称。</p><h3 id="关键字-3-7-1版本"><a href="#关键字-3-7-1版本" class="headerlink" title="关键字(3.7.1版本)"></a>关键字(3.7.1版本)</h3><pre><code>False      await      else       import     passNone       break      except     in         raiseTrue       class      finally    is         returnand        continue   for        lambda     tryas         def        from       nonlocal   whileassert     del        global     not        withasync      elif       if         or         yield</code></pre><h3 id="逻辑行与物理行"><a href="#逻辑行与物理行" class="headerlink" title="逻辑行与物理行"></a>逻辑行与物理行</h3><p>逻辑行由一个或多个物理行组成。</p><ul><li><p>当某一物理行以backslash(\)结束，并且后面没有注释，就会连接到下一个物理行作为一个逻辑行。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">1900</span> &lt; year &lt; <span class="number">2100</span> <span class="keyword">and</span> <span class="number">1</span> &lt;= month &lt;= <span class="number">12</span> \</span><br><span class="line">        <span class="keyword">and</span> <span class="number">1</span> &lt;= day &lt;= <span class="number">31</span> <span class="keyword">and</span> <span class="number">0</span> &lt;= hour &lt; <span class="number">24</span> \</span><br><span class="line">        <span class="keyword">and</span> <span class="number">0</span> &lt;= minute &lt; <span class="number">60</span> <span class="keyword">and</span> <span class="number">0</span> &lt;= second &lt; <span class="number">60</span>:  <span class="comment"># Looks like a valid date</span></span><br><span class="line">    print(<span class="string">"It's a valid date."</span>)</span><br></pre></td></tr></table></figure></li><li><p>如果一个左边的圆括号、方括号、花括号还没有对应的右括号，则python会自动把多个物理行连接成一个逻辑行。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">month_names = [<span class="string">'January'</span>, <span class="string">'February'</span>, <span class="string">'March'</span>,      <span class="comment"># These are the</span></span><br><span class="line">               <span class="string">'April'</span>,   <span class="string">'May'</span>,      <span class="string">'June'</span>,       <span class="comment"># Dutch names</span></span><br><span class="line">               <span class="string">'July'</span>,    <span class="string">'August'</span>, <span class="string">'September'</span>,  <span class="comment"># for the months</span></span><br><span class="line">               <span class="string">'October'</span>, <span class="string">'November'</span>, <span class="string">'December'</span>]   <span class="comment"># of the year</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      本篇学习python词法结构
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://liyzy.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>僕が死のうと思ったのは</title>
@@ -282,8 +302,8 @@
   
   <entry>
     <title>【python learning 1】从Hello world!开始（print()函数解析）</title>
-    <link href="http://liyzy.github.io/2018/06/06/%E3%80%90python%20learning%201%E3%80%91/"/>
-    <id>http://liyzy.github.io/2018/06/06/【python learning 1】/</id>
+    <link href="http://liyzy.github.io/2018/06/06/%E3%80%90python%20learning%E3%80%91hello%20world/"/>
+    <id>http://liyzy.github.io/2018/06/06/【python learning】hello world/</id>
     <published>2018-06-06T10:40:37.079Z</published>
     <updated>2018-10-06T14:15:34.868Z</updated>
     
