@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://liyzy.github.io/2018/11/04/review/</loc>
+    <loc>http://liyzy.github.io/about/index.html</loc>
     
-    <lastmod>2018-11-11T08:36:12.965Z</lastmod>
+    <lastmod>2018-11-16T09:06:04.187Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://liyzy.github.io/about/index.html</loc>
+    <loc>http://liyzy.github.io/music/index.html</loc>
     
-    <lastmod>2018-11-11T07:07:06.364Z</lastmod>
+    <lastmod>2018-11-16T09:05:32.565Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://liyzy.github.io/2018/11/04/review/</loc>
+    
+    <lastmod>2018-11-11T08:36:12.965Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>http://liyzy.github.io/2018/08/06/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03%E3%80%91/</loc>
     
     <lastmod>2018-11-04T14:32:41.978Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://liyzy.github.io/music/index.html</loc>
-    
-    <lastmod>2018-10-23T10:21:19.632Z</lastmod>
     
   </url>
   
