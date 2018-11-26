@@ -18,8 +18,8 @@
   
   <entry>
     <title>FISRT集和FOLLOW集</title>
-    <link href="http://liyzy.github.io/2018/11/25/First%E9%9B%86%E5%92%8CFollow%E9%9B%86/"/>
-    <id>http://liyzy.github.io/2018/11/25/First集和Follow集/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-11-25T12:34:34.725Z</published>
     <updated>2018-11-26T11:06:41.858Z</updated>
     
@@ -38,10 +38,10 @@
   
   <entry>
     <title>由NFA转DFA以及DFA的化简</title>
-    <link href="http://liyzy.github.io/2018/11/25/NFA%E5%92%8CDFA/"/>
-    <id>http://liyzy.github.io/2018/11/25/NFA和DFA/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-11-25T12:34:34.721Z</published>
-    <updated>2018-11-26T10:33:35.591Z</updated>
+    <updated>2018-11-26T11:13:29.348Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><a id="more"></a><h3 id="NFA-Non-deterministic-Finite-Automata"><a href="#NFA-Non-deterministic-Finite-Automata" class="headerlink" title="NFA(Non-deterministic Finite Automata)"></a>NFA(Non-deterministic Finite Automata)</h3><p>不确定有限自动机<br>构造NFA分成两步：画出每一个小单元的NFA；将每一个小单元的NFA组合。</p><h4 id="小单元的NFA"><a href="#小单元的NFA" class="headerlink" title="小单元的NFA"></a>小单元的NFA</h4><ul><li>单个输入符号a<br><img src="https://img-blog.csdnimg.cn/20181125161553706.png" alt="img 1"></li><li>连接运算ab<br><img src="https://img-blog.csdnimg.cn/20181125161613431.png" alt="img 2"></li><li>选择运算a|b<br>添加两个状态（选择运算开始状态和结束状态），在开始状态引两个路径通过$\varepsilon$分别到两个单输入符号的NFA，同时两个NFA都通过$\varepsilon$到结束状态。<br><img src="https://img-blog.csdnimg.cn/20181125161629455.png" alt="img 3"></li><li>闭包运算<br>添加两个状态（闭包运算开始状态和结束状态），四条线：闭包运算开始状态到单元开始状态；单元结束状态到闭包运算结束状态；闭包运算开始状态到闭包运算结束状态；单元结束状态到单元开始状态。<br>(a|b)<em><br><img src="https://img-blog.csdnimg.cn/20181125161647383.jpg" alt="img 4"><br>(ab)</em><br><img src="https://img-blog.csdnimg.cn/20181125161700774.png" alt="img 5"><br>a*<br><img src="https://img-blog.csdnimg.cn/2018112516172383.png" alt="img 6"><h4 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h4>在组合时，每一个小单元的NFA的开始状态不变，结束状态和下一个单元的开始状态合并。<br>(a|b)*ab<br><img src="https://img-blog.csdnimg.cn/2018112516241477.png" alt="img 7"><h3 id="NFA转DFA-Deterministic-Finite-Automata"><a href="#NFA转DFA-Deterministic-Finite-Automata" class="headerlink" title="NFA转DFA(Deterministic Finite Automata)"></a>NFA转DFA(Deterministic Finite Automata)</h3><h4 id="两个概念"><a href="#两个概念" class="headerlink" title="两个概念"></a>两个概念</h4>$\varepsilon$-$closure(\{1,2,…,n\})$：状态集{1,2,…,n}的$\varepsilon$闭包。<br>上式的含义为求1，2，…，n状态仅通过<strong>零个或多个</strong>$\varepsilon$可以到达的所有状态组成的集合。<br>$move(A,a)$：状态转换集。<br>A中的所有状态通过a可以到达的所有状态组成的集合。<h4 id="以-a-b-ab-为例"><a href="#以-a-b-ab-为例" class="headerlink" title="以$(a|b)*ab$为例"></a>以$(a|b)*ab$为例</h4></li><li>标记A集合<br>A集合为开始状态（即0状态）的$\varepsilon$闭包。<br>如img-7中，0状态通过$\varepsilon$可以到达1状态，7状态；1状态通过$\varepsilon$又可以到达2状态和4状态；再加上本身：故A={0, 1, 2, 4, 7}。</li><li>找出所有的输入字母<br>如$(a|b)*ab$中，所有的输入字母为{a, b}</li><li>根据输入字母寻找A集合的$\varepsilon$闭包<br>如img-7中，A集合中遇到a能发生状态转变的只有2和7，转换到状态3和8，所以$move(A,a)$={3,8}；<br>然后求$\varepsilon$-$closure(move(A,a))$，即$\varepsilon$-$closure(\{3,8\})$，可以得到结果为{3, 8, 6, 1, 2, 4, 7}=B。<br>$move(A,b)$={5},然后求$\varepsilon$-$closure(\{5\})$={5, 6, 1, 2, 4, 7}=C。</li><li>根据输入字母寻找所有新产生的集合的$\varepsilon$闭包<br>$\varepsilon$-$closure(move(B,a))$={1,2,3,4,6,7,8}=B<br>$\varepsilon$-$closure(move(B,a))$={1,2,4,5,6,7,9}=D<br>$\varepsilon$-$closure(move(C,a))$={1,2,3,4,6,7,8}=B<br>$\varepsilon$-$closure(move(C,a))$={1,2,4,5,6,7}=C<br>$\varepsilon$-$closure(move(D,a))$={1,2,3,4,6,7,8}=B<br>$\varepsilon$-$closure(move(D,a))$={1,2,4,5,6,7}=C<br>包含NFA结束状态的集合为DFA结束状态，在例子中D状态为结束状态；A状态为开始状态。</li><li>根据以上的计算结果画出DFA<br><img src="https://img-blog.csdnimg.cn/20181125172010693.PNG" alt="img 8"><h3 id="DFA的化简"><a href="#DFA的化简" class="headerlink" title="DFA的化简"></a>DFA的化简</h3></li><li>加入死状态<br>如果一个DFA的转换函数不是全函数，那么<strong>必须</strong>加入一个死状态$S_d$，死状态只有输入而没有输出。例如一个状态S对a没有转换，即move(S,a)=$\varnothing$，则$\varepsilon$-$closure(move(S,a))$=$S_d$。</li><li>把状态集分为接受状态集和非接受状态集<br>接受状态集指包含NFA结束状态的集合；非接受状态集指不包含NFA结束状态的状态集。<br>例如，在例子中，可以把状态机划分为{A,B,C}和{D}。</li><li>合并不可区分状态<br>对上一个步骤中的每一个集合的进行划分。如果集合中只有一个元素，那就不必再划分，如{D}；如果集合中有多个元素，则寻找哪几个元素经过所有输入字母的转换后可以产生非本集合的元素，则将其分离成一个新的集合，如果两个状态通过所有的输入字母都转换到该集合的相同元素，那么它们不必再分。</li><li>对于上一个步骤中产生的新划分，重复上一步骤，直至不可再分。</li><li>如果结果中有死状态，则去除死状态，把所有到死状态的转换都改为无定义。<h4 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h4><strong>其实可以把划分的过程看成是一个集合内部排异的过程。</strong><br>栗子🌰：<br><img src="https://img-blog.csdnimg.cn/20181125194333482.png" alt="img 9"><br>首先根据接受和非接受划分为集合{A,B,C}和{D,E,F,G,H,I}<br>对于集合{A,B,C}，A说我可以到B和C，C说我可以到B和C，B说我可以到B和D。A和C听了就不高兴了，我们两个不论怎么变都是到我们这个小集体里，你咋还跑出去了呢，我俩不和你好了。于是就分成了{A,C}和{B}。A和C又开始继续交流，但是他俩通过变换都跑到了{A,C}的外边，一起叛变，<strong>而且对于每一个输入符号，两人都是到同一个元素</strong>，只有这样，两人还是朋友，嗯，{A,C}成为一个集合。<br>对于集合{D,E,F,G,H,I}，兄弟六人怎么变都还是在这兄弟六人内部，于是六个人是一个团结的集体。<br>所以，原来的9个状态，经过划分之后，就变成了3个状态。<br><img src="https://img-blog.csdnimg.cn/20181125195946818.png" alt="img 10"><br>栗子🌰🌰：<br>再给一个栗子自己体会吧<br><img src="https://img-blog.csdnimg.cn/20181125201307732.png" alt="img 11"><br>化简之后：<br><img src="https://img-blog.csdnimg.cn/20181125201346466.png" alt="img 12"><h3 id="安利"><a href="#安利" class="headerlink" title="安利"></a>安利</h3>安利一个求NFA,DFA,Min-DFA的工具：<a href="https://cyberzhg.github.io/toolbox/" target="_blank" rel="noopener">Toolbox</a></li></ul><hr>]]></content>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>Pyhton GUI编程之tkinter</title>
-    <link href="http://liyzy.github.io/2018/11/16/tkinter/"/>
-    <id>http://liyzy.github.io/2018/11/16/tkinter/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-11-16T12:47:28.403Z</published>
     <updated>2018-11-18T04:38:24.546Z</updated>
     
@@ -80,8 +80,8 @@
   
   <entry>
     <title>网络与信息安全复习</title>
-    <link href="http://liyzy.github.io/2018/11/04/%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0/"/>
-    <id>http://liyzy.github.io/2018/11/04/网络信息安全复习/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-11-04T14:27:37.492Z</published>
     <updated>2018-11-26T10:33:59.768Z</updated>
     
@@ -100,8 +100,8 @@
   
   <entry>
     <title>【python learning】词法结构</title>
-    <link href="http://liyzy.github.io/2018/10/17/%E3%80%90python%20learning%E3%80%91%E8%AF%8D%E6%B3%95%E7%BB%93%E6%9E%84/"/>
-    <id>http://liyzy.github.io/2018/10/17/【python learning】词法结构/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-10-17T07:05:28.324Z</published>
     <updated>2018-10-17T07:36:55.606Z</updated>
     
@@ -120,8 +120,8 @@
   
   <entry>
     <title>僕が死のうと思ったのは</title>
-    <link href="http://liyzy.github.io/2018/10/12/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF/"/>
-    <id>http://liyzy.github.io/2018/10/12/僕が死のうと思ったのは/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-10-12T13:04:24.154Z</published>
     <updated>2018-11-10T11:53:08.146Z</updated>
     
@@ -142,8 +142,8 @@
   
   <entry>
     <title>【java学习笔记】全系列内容提要篇</title>
-    <link href="http://liyzy.github.io/2018/10/06/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E5%85%A8%E7%B3%BB%E5%88%97%E5%86%85%E5%AE%B9%E6%8F%90%E8%A6%81%E7%AF%87/"/>
-    <id>http://liyzy.github.io/2018/10/06/【java学习笔记】全系列内容提要篇/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-10-06T13:58:03.611Z</published>
     <updated>2018-10-06T14:16:57.650Z</updated>
     
@@ -162,8 +162,8 @@
   
   <entry>
     <title>双系统安装Ubuntu18.04</title>
-    <link href="http://liyzy.github.io/2018/10/01/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
-    <id>http://liyzy.github.io/2018/10/01/双系统安装/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-10-01T06:24:25.819Z</published>
     <updated>2018-10-06T15:10:11.648Z</updated>
     
@@ -182,8 +182,8 @@
   
   <entry>
     <title>词法分析器</title>
-    <link href="http://liyzy.github.io/2018/10/01/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/"/>
-    <id>http://liyzy.github.io/2018/10/01/词法分析/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-10-01T06:18:20.686Z</published>
     <updated>2018-11-04T15:00:04.968Z</updated>
     
@@ -204,8 +204,8 @@
   
   <entry>
     <title>双系统卸载</title>
-    <link href="http://liyzy.github.io/2018/09/23/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%8D%B8%E8%BD%BD/"/>
-    <id>http://liyzy.github.io/2018/09/23/双系统卸载/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-09-23T12:38:58.017Z</published>
     <updated>2018-10-06T12:02:29.635Z</updated>
     
@@ -224,8 +224,8 @@
   
   <entry>
     <title>【python学习笔记1】数据类型篇</title>
-    <link href="http://liyzy.github.io/2018/09/22/%E3%80%90python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91/"/>
-    <id>http://liyzy.github.io/2018/09/22/【python学习笔记1】/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-09-22T01:53:58.495Z</published>
     <updated>2018-10-17T07:11:12.986Z</updated>
     
@@ -244,8 +244,8 @@
   
   <entry>
     <title>利用ZXing工具生成二维码以及解析二维码</title>
-    <link href="http://liyzy.github.io/2018/09/06/%E5%88%A9%E7%94%A8ZXing%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81%E4%BB%A5%E5%8F%8A%E8%A7%A3%E6%9E%90%E4%BA%8C%E7%BB%B4%E7%A0%81/"/>
-    <id>http://liyzy.github.io/2018/09/06/利用ZXing工具生成二维码以及解析二维码/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-09-06T10:40:52.971Z</published>
     <updated>2018-10-06T09:27:12.460Z</updated>
     
@@ -264,8 +264,8 @@
   
   <entry>
     <title>【java学习笔记3】继承&amp;多态篇</title>
-    <link href="http://liyzy.github.io/2018/08/06/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03%E3%80%91/"/>
-    <id>http://liyzy.github.io/2018/08/06/【java学习笔记3】/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-08-06T05:36:10.024Z</published>
     <updated>2018-11-04T14:32:41.978Z</updated>
     
@@ -284,8 +284,8 @@
   
   <entry>
     <title>【java学习笔记2】数组&amp;运算符&amp;权限篇</title>
-    <link href="http://liyzy.github.io/2018/07/08/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02%E3%80%91/"/>
-    <id>http://liyzy.github.io/2018/07/08/【java学习笔记2】/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-07-08T09:53:51.036Z</published>
     <updated>2018-10-06T11:54:14.975Z</updated>
     
@@ -304,8 +304,8 @@
   
   <entry>
     <title>Gitee(码云)、Github同时配置ssh key</title>
-    <link href="http://liyzy.github.io/2018/07/06/Gitee(%E7%A0%81%E4%BA%91)%E3%80%81Github%E5%90%8C%E6%97%B6%E9%85%8D%E7%BD%AEssh%20key/"/>
-    <id>http://liyzy.github.io/2018/07/06/Gitee(码云)、Github同时配置ssh key/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-07-06T13:25:17.666Z</published>
     <updated>2018-10-06T07:15:04.641Z</updated>
     
@@ -324,8 +324,8 @@
   
   <entry>
     <title>【java学习笔记1】数据类型&amp;函数篇</title>
-    <link href="http://liyzy.github.io/2018/07/03/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91/"/>
-    <id>http://liyzy.github.io/2018/07/03/【java学习笔记1】/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-07-03T11:30:01.284Z</published>
     <updated>2018-10-06T11:54:26.989Z</updated>
     
@@ -344,8 +344,8 @@
   
   <entry>
     <title>数据库设计范式</title>
-    <link href="http://liyzy.github.io/2018/06/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/"/>
-    <id>http://liyzy.github.io/2018/06/27/数据库设计范式/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-06-27T06:40:33.845Z</published>
     <updated>2018-10-06T11:31:04.358Z</updated>
     
@@ -364,8 +364,8 @@
   
   <entry>
     <title>数据库练习题(基础)</title>
-    <link href="http://liyzy.github.io/2018/06/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%83%E4%B9%A0%E9%A2%98(%E6%AF%94%E8%BE%83%E5%9F%BA%E7%A1%80)/"/>
-    <id>http://liyzy.github.io/2018/06/13/数据库练习题(比较基础)/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-06-13T03:32:31.969Z</published>
     <updated>2018-10-06T10:21:35.169Z</updated>
     
@@ -384,8 +384,8 @@
   
   <entry>
     <title>【python learning 1】从Hello world!开始（print()函数解析）</title>
-    <link href="http://liyzy.github.io/2018/06/06/%E3%80%90python%20learning%E3%80%91hello%20world/"/>
-    <id>http://liyzy.github.io/2018/06/06/【python learning】hello world/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-06-06T10:40:37.079Z</published>
     <updated>2018-10-06T14:15:34.868Z</updated>
     
@@ -404,8 +404,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://liyzy.github.io/2018/06/04/hello-world/"/>
-    <id>http://liyzy.github.io/2018/06/04/hello-world/</id>
+    <link href="http://liyzy.github.io/posts/undefined.html"/>
+    <id>http://liyzy.github.io/posts/undefined.html</id>
     <published>2018-06-04T07:44:10.983Z</published>
     <updated>2018-10-06T13:51:07.418Z</updated>
     
