@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyzy.github.io/"/>
-  <updated>2018-11-28T02:59:20.964Z</updated>
+  <updated>2018-11-28T10:30:58.200Z</updated>
   <id>http://liyzy.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自上而下的语法分析</title>
+    <link href="http://liyzy.github.io/2018/11/28/Top-down-parsing.html/"/>
+    <id>http://liyzy.github.io/2018/11/28/Top-down-parsing.html/</id>
+    <published>2018-11-28T10:31:50.574Z</published>
+    <updated>2018-11-28T10:30:58.200Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><a id="more"></a><p>进行自上而下的语法分析，基于文法是LL(1)文法。分为递归下降的分析和预测分析。</p><h3 id="提取左公因子"><a href="#提取左公因子" class="headerlink" title="提取左公因子"></a>提取左公因子</h3><p>对产生式组<br>$A \rightarrow \alpha | \alpha b_1 | \alpha b_2 | \ldots | \alpha b_m | \gamma_1 | \gamma_2 | \ldots | \gamma_p$<br>用如下产生式组替换<br>$A \rightarrow \alpha A ^ { \prime } \left| \gamma _ { 1 } \right| \gamma _ { 2 } | \ldots | \gamma _ { p }$<br>$A ^ { \prime } \rightarrow \varepsilon | b _ 1| b _ 2 | \dots | b _ { \mathrm { m } }$</p><h3 id="消除左递归"><a href="#消除左递归" class="headerlink" title="消除左递归"></a>消除左递归</h3><p>对产生式组<br>$A \rightarrow A \alpha _ { 1 } | A \alpha _ { 2 } | \cdots | A \alpha _ { n } | \beta _ { 1 } | \beta _ { 2 } | \ldots | \beta _ { m }$<br>用如下产生式组替换<br>$A \rightarrow \beta _ { 1 } A ^ { \prime } | \beta _ { 2 } A ^ { \prime } | \ldots | \beta _ { m } A ^ { \prime }$<br>$A ^ { \prime } \rightarrow \alpha _ { 1 } \mathrm { A ^ { \prime } } | \alpha _ { 2 } \mathrm { A ^ { \prime } } |\ldots | \alpha _ { \mathrm { n } } \mathrm { A ^ { \prime } } | \varepsilon$<br><strong>Tips: 消除左递归并非一定产生等价的LL(1)文法。</strong><br>$S\rightarrow Aa \mid b, A\rightarrow SB, B\rightarrow ab$</p><ul><li>如果把A的产生式代入S的产生式得到等价文法是LL(1)的。</li><li>如果把S的产生式代入A的产生式得到等价文法不是LL(1)的。</li></ul><h3 id="LL-1-文法"><a href="#LL-1-文法" class="headerlink" title="LL(1)文法"></a>LL(1)文法</h3><p>第一个L代表从左到右扫描输入串，第二个L代表最左推导，1表示分析的每一步只需向前查看一个符号。<br>LL(1)文法具有无二义性、无左公因子、无左递归的性质。对于文法的任何非终结符，使用它匹配输入串时，能够根据所面临的输入符号准确的选择产生式，如果该产生式匹配成功，那么这个匹配不是虚假匹配，如果该产生式匹配不成功，则用其他的产生式也一定不会匹配成功。</p><h4 id="判断一个文法是否是LL-1-文法"><a href="#判断一个文法是否是LL-1-文法" class="headerlink" title="判断一个文法是否是LL(1)文法"></a>判断一个文法是否是LL(1)文法</h4><p>对于文法中的任何两个产生式$A\rightarrow\alpha\mid\beta$，满足：</p><ul><li>FISRT($\alpha$)$\bigcap$FISRT($\beta$)=$\varnothing$</li><li>如果$\beta\Rightarrow^*\varepsilon$，那么$FISRT(\alpha)\bigcap FOLLOW(\beta)=\varnothing$</li></ul><h3 id="非递归分析预测分析表的构建"><a href="#非递归分析预测分析表的构建" class="headerlink" title="非递归分析预测分析表的构建"></a>非递归分析预测分析表的构建</h3><ul><li>对文法的每个产生式$A\rightarrow\alpha$，执行第二步和第三步。</li><li>对FIRST($\alpha$)的每个终结符a，把$A\rightarrow\alpha$加入 M[A, a]（即加入表中A行a列）。</li><li>如果$\varepsilon$在FIRST($\alpha$)中，对FOLLOW(A)的每个终结符b（包括$）, 把$A\rightarrow\alpha$加入M[A, b]。</li><li>M的其它没有定义的条目都是error。</li></ul><p><br></p>]]></content>
+    
+    <summary type="html">
+    
+      自上而下语法分析，内容包括如何将文法转变为LL(1)文法，以及如何判断LL(1)文法，构造预测分析表
+    
+    </summary>
+    
+    
+      <category term="编译原理" scheme="http://liyzy.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>用例图中拓展(extend)和包含(include)的区别</title>
