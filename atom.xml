@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyzy.github.io/"/>
-  <updated>2018-11-28T10:30:58.200Z</updated>
+  <updated>2018-12-01T13:50:07.654Z</updated>
   <id>http://liyzy.github.io/</id>
   
   <author>
@@ -17,13 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>自上而下的语法分析</title>
-    <link href="http://liyzy.github.io/2018/11/28/Top-down-parsing.html/"/>
-    <id>http://liyzy.github.io/2018/11/28/Top-down-parsing.html/</id>
-    <published>2018-11-28T10:31:50.574Z</published>
-    <updated>2018-11-28T10:30:58.200Z</updated>
+    <title>自下而上的语法分析</title>
+    <link href="http://liyzy.github.io/2018/Bottom-up-parsing.html/"/>
+    <id>http://liyzy.github.io/2018/Bottom-up-parsing.html/</id>
+    <published>2018-12-01T13:50:25.295Z</published>
+    <updated>2018-12-01T13:50:07.654Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><a id="more"></a><p>进行自上而下的语法分析，基于文法是LL(1)文法。分为递归下降的分析和预测分析。</p><h3 id="提取左公因子"><a href="#提取左公因子" class="headerlink" title="提取左公因子"></a>提取左公因子</h3><p>对产生式组<br>$A \rightarrow \alpha | \alpha b_1 | \alpha b_2 | \ldots | \alpha b_m | \gamma_1 | \gamma_2 | \ldots | \gamma_p$<br>用如下产生式组替换<br>$A \rightarrow \alpha A ^ { \prime } \left| \gamma _ { 1 } \right| \gamma _ { 2 } | \ldots | \gamma _ { p }$<br>$A ^ { \prime } \rightarrow \varepsilon | b _ 1| b _ 2 | \dots | b _ { \mathrm { m } }$</p><h3 id="消除左递归"><a href="#消除左递归" class="headerlink" title="消除左递归"></a>消除左递归</h3><p>对产生式组<br>$A \rightarrow A \alpha _ { 1 } | A \alpha _ { 2 } | \cdots | A \alpha _ { n } | \beta _ { 1 } | \beta _ { 2 } | \ldots | \beta _ { m }$<br>用如下产生式组替换<br>$A \rightarrow \beta _ { 1 } A ^ { \prime } | \beta _ { 2 } A ^ { \prime } | \ldots | \beta _ { m } A ^ { \prime }$<br>$A ^ { \prime } \rightarrow \alpha _ { 1 } \mathrm { A ^ { \prime } } | \alpha _ { 2 } \mathrm { A ^ { \prime } } |\ldots | \alpha _ { \mathrm { n } } \mathrm { A ^ { \prime } } | \varepsilon$<br><strong>Tips: 消除左递归并非一定产生等价的LL(1)文法。</strong><br>$S\rightarrow Aa \mid b, A\rightarrow SB, B\rightarrow ab$</p><ul><li>如果把A的产生式代入S的产生式得到等价文法是LL(1)的。</li><li>如果把S的产生式代入A的产生式得到等价文法不是LL(1)的。</li></ul><h3 id="LL-1-文法"><a href="#LL-1-文法" class="headerlink" title="LL(1)文法"></a>LL(1)文法</h3><p>第一个L代表从左到右扫描输入串，第二个L代表最左推导，1表示分析的每一步只需向前查看一个符号。<br>LL(1)文法具有无二义性、无左公因子、无左递归的性质。对于文法的任何非终结符，使用它匹配输入串时，能够根据所面临的输入符号准确的选择产生式，如果该产生式匹配成功，那么这个匹配不是虚假匹配，如果该产生式匹配不成功，则用其他的产生式也一定不会匹配成功。</p><h4 id="判断一个文法是否是LL-1-文法"><a href="#判断一个文法是否是LL-1-文法" class="headerlink" title="判断一个文法是否是LL(1)文法"></a>判断一个文法是否是LL(1)文法</h4><p>对于文法中的任何两个产生式$A\rightarrow\alpha\mid\beta$，满足：</p><ul><li>FISRT($\alpha$)$\bigcap$FISRT($\beta$)=$\varnothing$</li><li>如果$\beta\Rightarrow^*\varepsilon$，那么$FISRT(\alpha)\bigcap FOLLOW(\beta)=\varnothing$</li></ul><h3 id="非递归分析预测分析表的构建"><a href="#非递归分析预测分析表的构建" class="headerlink" title="非递归分析预测分析表的构建"></a>非递归分析预测分析表的构建</h3><ul><li>对文法的每个产生式$A\rightarrow\alpha$，执行第二步和第三步。</li><li>对FIRST($\alpha$)的每个终结符a，把$A\rightarrow\alpha$加入 M[A, a]（即加入表中A行a列）。</li><li>如果$\varepsilon$在FIRST($\alpha$)中，对FOLLOW(A)的每个终结符b（包括$）, 把$A\rightarrow\alpha$加入M[A, b]。</li><li>M的其它没有定义的条目都是error。</li></ul><p><br></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><a id="more"></a><h2 id="句柄"><a href="#句柄" class="headerlink" title="句柄"></a>句柄</h2><p>右句型$\gamma$的句柄是一个产生式的右部$\beta$，并且该句柄$\beta$通过产生式$A\rightarrow\beta$归约后，得到的是最右推导中的前一个句型。<br>右句型：所有在最右推导中出现的句型都是右句型。<br>🌰$S \Rightarrow _ { r m }$ <strong>aABe</strong> $\Rightarrow _ { r m }$ aA<strong>d</strong>e $\Rightarrow _ { r m }$ a<strong>Abc</strong>de $\Rightarrow _ { r m }$ a<strong>b</strong>bcde<br>文法为<br>$S \rightarrow$ aABe<br>${ A \rightarrow A b c | b }$<br>$B \rightarrow d$<br>abbcde中的第一个b通过$A\rightarrow b$归约后得到aAbcde，是最右推导的前一个句型，所以第一个b是句柄。而第二个b通过$A\rightarrow b$归约后得到aAAcde，不是最右推导的前一个句型，所以第二个b不是句柄。（栗子中加粗部分为句柄）</p><ul><li>句柄的右边仅含终结符。</li><li>如果文法二义，那么句柄可能不唯一。</li></ul><h2 id="两个冲突"><a href="#两个冲突" class="headerlink" title="两个冲突"></a>两个冲突</h2><p>移进-归约冲突：既可以移进又可以归约时，无法决定。<br>归约-归约冲突：当不止一个产生式可以归约，无法决定对哪个产生式进行归约。</p><h2 id="活前缀"><a href="#活前缀" class="headerlink" title="活前缀"></a>活前缀</h2><p>活前缀：右句型的前缀，该前缀不超过最右句型句柄的右端。<br>在移进-归约分析中，出现在栈中的串都是活前缀。<br>🌰$\mathcal { S } \Rightarrow * _ { r m } \gamma A w \Rightarrow _ { r m } \gamma \beta w$<br>$\gamma \beta$的任意前缀（包括$\varepsilon$和$\gamma \beta$本身）都是活前缀，这里的$\beta$是句柄。</p><h2 id="LR分析表"><a href="#LR分析表" class="headerlink" title="LR分析表"></a>LR分析表</h2><p>L表示从左到右扫描输入串，R表示最右推导。分为LR(0)/SLR(1)、LR(1)、LALR三种。</p><h3 id="构造SLR分析表"><a href="#构造SLR分析表" class="headerlink" title="构造SLR分析表"></a>构造SLR分析表</h3><ul><li>拓广文法，即添加产生式$S ^ { \prime } \rightarrow S$</li><li>构建识别活前缀的DFA</li><li>根据DFA构建SLR分析表</li></ul><h4 id="构建识别活前缀的DFA"><a href="#构建识别活前缀的DFA" class="headerlink" title="构建识别活前缀的DFA"></a>构建识别活前缀的DFA</h4><p><strong>LR(0)闭包函数closure(I)</strong></p><ul><li>I中的所有项都属于closure(I)</li><li>如果$A \rightarrow \alpha \cdot B \beta$属于closure(I)，并且$B \rightarrow \gamma$是产生式，那么如果$B \rightarrow \cdot \gamma$还不在closure(I)中，则把它加入closure(I)中。</li><li>重复上面两个步骤，直至closure(I)不再变化。</li></ul><p><strong>LR(0)状态转换函数goto(I, X)</strong><br>I状态集中所有形如$[ A \rightarrow \alpha \cdot X \beta ]$的产生式对应的产生式$[ A \rightarrow \alpha X \cdot \beta ]$的<strong>LR(0)闭包</strong>。X为终结符或非终结符。<br>🌰$S \rightarrow$ aABe ；${ A \rightarrow A b c | b }$ ；$B \rightarrow d$<br>对于$I_0: S’ \rightarrow S$；$S \rightarrow \cdot aABe$<br>$I_1=goto(I_0, a):$ $S \rightarrow a \cdot ABe$；$A \rightarrow \cdot Abc$；$A \rightarrow \cdot b$</p><p><strong>识别文法G活前缀的DFA通过下面的方式构造：</strong></p><ul><li>令$C = \{closure(S’ \rightarrow S)\}$</li><li>对$C$中的每一个项目集应用转换函数goto(I, X)得到新的项目集$I_n$，并把$I_n$加入到$C$中。</li><li>重复第二步，直到$C$不再增大为止。</li></ul><h4 id="根据DFA构建SLR分析表"><a href="#根据DFA构建SLR分析表" class="headerlink" title="根据DFA构建SLR分析表"></a>根据DFA构建SLR分析表</h4><p><strong>状态i从$I_i$构造，它的action函数如下确定：</strong></p><ul><li>如果$[ A \rightarrow \alpha \cdot a \beta ]$在$I_i$中，并且goto($I_i$,a )=$I_j$，那么置action[i, a]为$s_j$。</li><li>如果$[ A \rightarrow \alpha \cdot ]$在$I_i$中，那么对FOLLOW(A)中的所有终结符a，置action[i, a]为$r_j$，$j$是产生式$A \rightarrow \alpha \cdot$的编号。</li><li>如果$\left[ \mathcal { S } ^ { \prime } \rightarrow \mathcal { S } \cdot \right]$在$I_i$中，那么置action[i,　💲]为接受acc。</li></ul><p>如果出现动作冲突，那么该文法就不是SLR(1)的。 </p><p><strong>构造状态i的goto函数：</strong><br>对所有的非终结符A，如果goto($I_i$,A)= $I_j$, 那么goto[i, A]=$j$。</p><p><strong>不能由上面两步定义的条目都为error。</strong></p><h4 id="SLR-1-文法的问题"><a href="#SLR-1-文法的问题" class="headerlink" title="SLR(1)文法的问题"></a>SLR(1)文法的问题</h4><p>每个SLR(1)文法都不是二义的，但是，有许多非二义的文法不是SLR(1)，文法描述能力弱。SLR(1)是在构造完DFA的LR(0)项目集之后才应用预测符号的，即对需要归约的产生式，当其遇到产生式左部非终结符的FOLLOW集中的终结符时才进行归约，而在LR(0)的构造中没有考虑预测。</p><h3 id="构造规范的LR分析表"><a href="#构造规范的LR分析表" class="headerlink" title="构造规范的LR分析表"></a>构造规范的LR分析表</h3><p>基本步骤同SLR一样，只在第二步和第三步时有所不同，只说不同的地方。</p><h4 id="构建识别活前缀的DFA-1"><a href="#构建识别活前缀的DFA-1" class="headerlink" title="构建识别活前缀的DFA"></a>构建识别活前缀的DFA</h4><p>使用LR(1)文法，1表示项目$[A \rightarrow \alpha \cdot \beta , a]$中搜索符的长度。<br><strong>LR(1)闭包函数closure(I)</strong></p><ul><li>I中的所有项都属于closure(I)</li><li>若$[A\rightarrow \alpha \cdot B \beta, a]$属于closure(I)，$B\rightarrow \gamma$是产生式，则对于每个终结符b$\in FIRST(\beta a)$，项$[B\rightarrow \cdot \gamma ,b]$也加入到closure(I)中。</li><li>重复上面两个步骤，直至closure(I)不再变化。</li></ul><p>搜索符b的集合是FOLLOW(B)的一个子集。</p><p><strong>LR(1)状态转换函数goto(I, X)</strong><br>I状态集中所有形如$[ A \rightarrow \alpha \cdot X \beta,b ]$的产生式对应的产生式$[ A \rightarrow \alpha X \cdot \beta,b ]$的<strong>LR(1)闭包</strong>。X为终结符或非终结符。注意这里的搜索符集b是直接由前面对应的项目抄过来的。</p><p><strong>识别文法G活前缀的DFA通过下面的方式构造：</strong></p><ul><li>令$C = \{closure([S’ \rightarrow S, doller])\}$注：这里的doller指💲，latex解析不正确这样代替一下…</li><li>对$C$中的每一个项目集应用转换函数goto(I, X)得到新的项目集$I_n$，并把$I_n$加入到$C$中。</li><li>重复第二步，直到$C$不再增大为止。</li></ul><h4 id="根据DFA构建SLR分析表-1"><a href="#根据DFA构建SLR分析表-1" class="headerlink" title="根据DFA构建SLR分析表"></a>根据DFA构建SLR分析表</h4><p>基本同SLR，不同点在于：在action函数中，如果有归约，SLR是根据左部非终结符的<strong>FOLLOW集</strong>决定进行归约；LR(1)是根据<strong>搜索符</strong>决定进行归约。</p><h4 id="LR-1-文法的问题"><a href="#LR-1-文法的问题" class="headerlink" title="LR(1)文法的问题"></a>LR(1)文法的问题</h4><p>LR(1)文法描述能力较强，但是由于状态数目多，分析表较大。</p><h3 id="构造LALR分析表"><a href="#构造LALR分析表" class="headerlink" title="构造LALR分析表"></a>构造LALR分析表</h3><p>LALR是在SLR(1)和LR(1)之间进行了文法描述能力与分析表紧凑程度之间做的折中。</p><h4 id="LALR的做法"><a href="#LALR的做法" class="headerlink" title="LALR的做法"></a>LALR的做法</h4><p>合并识别LR(1)文法的活前缀的DFA中的同心项目集。</p><h4 id="同心项目集"><a href="#同心项目集" class="headerlink" title="同心项目集"></a>同心项目集</h4><p>略去搜索符后相同的项目集。<br>🌰$B \rightarrow \cdot b B$ 和 $B \rightarrow \cdot b B ,b / a$</p><h4 id="合并同心集引起的冲突"><a href="#合并同心集引起的冲突" class="headerlink" title="合并同心集引起的冲突"></a>合并同心集引起的冲突</h4><p><strong>同心集的合并不会引起新的移进-归约冲突。</strong><br>🌰如果同心集中有移进-归约冲突$\left[ A \rightarrow \alpha \cdot, a / b \right]<script type="math/tex">[ B \rightarrow \beta \cdot a \gamma , c / d ]$，当面对输入符号a时不知道该移进还是归约。合并前的项目集应该有$\left[ A \rightarrow \alpha \cdot, x \right]</script>[ B \rightarrow \beta \cdot a \gamma , y ]$，肯定有个x为a，所以一定存在移进-归约冲突，说明合并之前就存在移进-归约冲突了。</p><p><strong>同心集的合并有可能产生新的归约-归约冲突。</strong><br>🌰合并前项目集$[A \rightarrow c \cdot, d]<script type="math/tex">[B \rightarrow c \cdot, e]$和$[A \rightarrow c \cdot, e]</script>[B \rightarrow c \cdot, d]$，合并后为<br>$[A \rightarrow c \cdot, e/d]$$[B \rightarrow c \cdot, d/e]$，此时就产生了新的归约-归约冲突。</p><h2 id="安利"><a href="#安利" class="headerlink" title="安利"></a>安利</h2><p>求LR分析表的工具：<br><a href="https://cyberzhg.github.io/toolbox/lr0" target="_blank" rel="noopener">LR(0)/SLR(1)</a>　　<a href="https://cyberzhg.github.io/toolbox/lr1" target="_blank" rel="noopener">SLR(1)</a>　　<a href="https://cyberzhg.github.io/toolbox/lalr" target="_blank" rel="noopener">LALR</a></p><p><br></p>]]></content>
+    
+    <summary type="html">
+    
+      自下而上语法分析，内容包括句柄、活前缀的概念，两种冲突，以及三种LR分析表的画法
+    
+    </summary>
+    
+    
+      <category term="编译原理" scheme="http://liyzy.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自上而下的语法分析</title>
+    <link href="http://liyzy.github.io/2018/Top-down-parsing.html/"/>
+    <id>http://liyzy.github.io/2018/Top-down-parsing.html/</id>
+    <published>2018-11-28T10:31:50.574Z</published>
+    <updated>2018-12-01T05:07:14.282Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><a id="more"></a><p>进行自上而下的语法分析，基于文法是LL(1)文法。分为递归下降的预测分析和非递归下降的预测分析。</p><h3 id="提取左公因子"><a href="#提取左公因子" class="headerlink" title="提取左公因子"></a>提取左公因子</h3><p>对产生式组<br>$A \rightarrow \alpha | \alpha b_1 | \alpha b_2 | \ldots | \alpha b_m | \gamma_1 | \gamma_2 | \ldots | \gamma_p$<br>用如下产生式组替换<br>$A \rightarrow \alpha A ^ { \prime } \left| \gamma _ { 1 } \right| \gamma _ { 2 } | \ldots | \gamma _ { p }$<br>$A ^ { \prime } \rightarrow \varepsilon | b _ 1| b _ 2 | \dots | b _ { \mathrm { m } }$</p><h3 id="消除左递归"><a href="#消除左递归" class="headerlink" title="消除左递归"></a>消除左递归</h3><p>对产生式组<br>$A \rightarrow A \alpha _ { 1 } | A \alpha _ { 2 } | \cdots | A \alpha _ { n } | \beta _ { 1 } | \beta _ { 2 } | \ldots | \beta _ { m }$<br>用如下产生式组替换<br>$A \rightarrow \beta _ { 1 } A ^ { \prime } | \beta _ { 2 } A ^ { \prime } | \ldots | \beta _ { m } A ^ { \prime }$<br>$A ^ { \prime } \rightarrow \alpha _ { 1 } \mathrm { A ^ { \prime } } | \alpha _ { 2 } \mathrm { A ^ { \prime } } |\ldots | \alpha _ { \mathrm { n } } \mathrm { A ^ { \prime } } | \varepsilon$<br><strong>Tips: 消除左递归并非一定产生等价的LL(1)文法。</strong><br>🌰$S\rightarrow Aa \mid b, A\rightarrow SB, B\rightarrow ab$</p><ul><li>如果把A的产生式代入S的产生式得到等价文法是LL(1)的。</li><li>如果把S的产生式代入A的产生式得到等价文法不是LL(1)的。</li></ul><h3 id="LL-1-文法"><a href="#LL-1-文法" class="headerlink" title="LL(1)文法"></a>LL(1)文法</h3><p>第一个L代表从左到右扫描输入串，第二个L代表最左推导，1表示分析的每一步只需向前查看一个符号。<br>LL(1)文法具有无二义性、无左公因子、无左递归的性质。对于文法的任何非终结符，使用它匹配输入串时，能够根据所面临的输入符号准确的选择产生式，如果该产生式匹配成功，那么这个匹配不是虚假匹配，如果该产生式匹配不成功，则用其他的产生式也一定不会匹配成功。</p><h4 id="判断一个文法是否是LL-1-文法"><a href="#判断一个文法是否是LL-1-文法" class="headerlink" title="判断一个文法是否是LL(1)文法"></a>判断一个文法是否是LL(1)文法</h4><p>对于文法中的任何两个产生式$A\rightarrow\alpha\mid\beta$，满足：</p><ul><li>FISRT($\alpha$)$\bigcap$FISRT($\beta$)=$\varnothing$</li><li>如果$\beta\Rightarrow^*\varepsilon$，那么$FISRT(\alpha)\bigcap FOLLOW(\beta)=\varnothing$</li></ul><h3 id="非递归分析预测分析表的构建"><a href="#非递归分析预测分析表的构建" class="headerlink" title="非递归分析预测分析表的构建"></a>非递归分析预测分析表的构建</h3><ul><li>对文法的每个产生式$A\rightarrow\alpha$，执行第二步和第三步。</li><li>对FIRST($\alpha$)的每个终结符a，把$A\rightarrow\alpha$加入 M[A, a]（即加入表中A行a列）。</li><li>如果$\varepsilon$在FIRST($\alpha$)中，对FOLLOW(A)的每个终结符b（包括💲）, 把$A\rightarrow\alpha$加入M[A, b]。</li><li>M的其它没有定义的条目都是error。</li></ul><p><br></p>]]></content>
     
     <summary type="html">
     
@@ -38,8 +58,8 @@
   
   <entry>
     <title>用例图中拓展(extend)和包含(include)的区别</title>
-    <link href="http://liyzy.github.io/2018/11/27/the-difference-between-include-and-extend-in-use-case-diagram.html/"/>
-    <id>http://liyzy.github.io/2018/11/27/the-difference-between-include-and-extend-in-use-case-diagram.html/</id>
+    <link href="http://liyzy.github.io/2018/the-difference-between-include-and-extend-in-use-case-diagram.html/"/>
+    <id>http://liyzy.github.io/2018/the-difference-between-include-and-extend-in-use-case-diagram.html/</id>
     <published>2018-11-27T10:02:30.533Z</published>
     <updated>2018-11-28T02:59:20.964Z</updated>
     
@@ -58,8 +78,8 @@
   
   <entry>
     <title>FISRT集和FOLLOW集</title>
-    <link href="http://liyzy.github.io/2018/11/25/first-set&amp;follow-set.html/"/>
-    <id>http://liyzy.github.io/2018/11/25/first-set&amp;follow-set.html/</id>
+    <link href="http://liyzy.github.io/2018/first-set&amp;follow-set.html/"/>
+    <id>http://liyzy.github.io/2018/first-set&amp;follow-set.html/</id>
     <published>2018-11-25T12:34:34.725Z</published>
     <updated>2018-11-26T11:41:26.532Z</updated>
     
@@ -78,8 +98,8 @@
   
   <entry>
     <title>由NFA转DFA以及DFA的化简</title>
-    <link href="http://liyzy.github.io/2018/11/25/NFA-transform-to-MinDFA.html/"/>
-    <id>http://liyzy.github.io/2018/11/25/NFA-transform-to-MinDFA.html/</id>
+    <link href="http://liyzy.github.io/2018/NFA-transform-to-MinDFA.html/"/>
+    <id>http://liyzy.github.io/2018/NFA-transform-to-MinDFA.html/</id>
     <published>2018-11-25T12:34:34.721Z</published>
     <updated>2018-11-26T11:41:34.040Z</updated>
     
@@ -98,8 +118,8 @@
   
   <entry>
     <title>Pyhton GUI编程之tkinter</title>
-    <link href="http://liyzy.github.io/2018/11/16/tkinter/"/>
-    <id>http://liyzy.github.io/2018/11/16/tkinter/</id>
+    <link href="http://liyzy.github.io/2018/tkinter/"/>
+    <id>http://liyzy.github.io/2018/tkinter/</id>
     <published>2018-11-16T12:47:28.403Z</published>
     <updated>2018-11-18T04:38:24.546Z</updated>
     
@@ -120,8 +140,8 @@
   
   <entry>
     <title>网络与信息安全复习</title>
-    <link href="http://liyzy.github.io/2018/11/04/%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0/"/>
-    <id>http://liyzy.github.io/2018/11/04/网络信息安全复习/</id>
+    <link href="http://liyzy.github.io/2018/%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0/"/>
+    <id>http://liyzy.github.io/2018/网络信息安全复习/</id>
     <published>2018-11-04T14:27:37.492Z</published>
     <updated>2018-11-26T10:33:59.768Z</updated>
     
@@ -140,8 +160,8 @@
   
   <entry>
     <title>【python learning】词法结构</title>
-    <link href="http://liyzy.github.io/2018/10/17/%E3%80%90python%20learning%E3%80%91%E8%AF%8D%E6%B3%95%E7%BB%93%E6%9E%84/"/>
-    <id>http://liyzy.github.io/2018/10/17/【python learning】词法结构/</id>
+    <link href="http://liyzy.github.io/2018/%E3%80%90python%20learning%E3%80%91%E8%AF%8D%E6%B3%95%E7%BB%93%E6%9E%84/"/>
+    <id>http://liyzy.github.io/2018/【python learning】词法结构/</id>
     <published>2018-10-17T07:05:28.324Z</published>
     <updated>2018-10-17T07:36:55.606Z</updated>
     
@@ -160,8 +180,8 @@
   
   <entry>
     <title>僕が死のうと思ったのは</title>
-    <link href="http://liyzy.github.io/2018/10/12/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF/"/>
-    <id>http://liyzy.github.io/2018/10/12/僕が死のうと思ったのは/</id>
+    <link href="http://liyzy.github.io/2018/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF/"/>
+    <id>http://liyzy.github.io/2018/僕が死のうと思ったのは/</id>
     <published>2018-10-12T13:04:24.154Z</published>
     <updated>2018-11-10T11:53:08.146Z</updated>
     
@@ -182,8 +202,8 @@
   
   <entry>
     <title>【java学习笔记】全系列内容提要篇</title>
-    <link href="http://liyzy.github.io/2018/10/06/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E5%85%A8%E7%B3%BB%E5%88%97%E5%86%85%E5%AE%B9%E6%8F%90%E8%A6%81%E7%AF%87/"/>
-    <id>http://liyzy.github.io/2018/10/06/【java学习笔记】全系列内容提要篇/</id>
+    <link href="http://liyzy.github.io/2018/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91%E5%85%A8%E7%B3%BB%E5%88%97%E5%86%85%E5%AE%B9%E6%8F%90%E8%A6%81%E7%AF%87/"/>
+    <id>http://liyzy.github.io/2018/【java学习笔记】全系列内容提要篇/</id>
     <published>2018-10-06T13:58:03.611Z</published>
     <updated>2018-10-06T14:16:57.650Z</updated>
     
@@ -202,8 +222,8 @@
   
   <entry>
     <title>双系统安装Ubuntu18.04</title>
-    <link href="http://liyzy.github.io/2018/10/01/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
-    <id>http://liyzy.github.io/2018/10/01/双系统安装/</id>
+    <link href="http://liyzy.github.io/2018/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
+    <id>http://liyzy.github.io/2018/双系统安装/</id>
     <published>2018-10-01T06:24:25.819Z</published>
     <updated>2018-10-06T15:10:11.648Z</updated>
     
@@ -222,8 +242,8 @@
   
   <entry>
     <title>词法分析器</title>
-    <link href="http://liyzy.github.io/2018/10/01/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/"/>
-    <id>http://liyzy.github.io/2018/10/01/词法分析/</id>
+    <link href="http://liyzy.github.io/2018/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/"/>
+    <id>http://liyzy.github.io/2018/词法分析/</id>
     <published>2018-10-01T06:18:20.686Z</published>
     <updated>2018-11-04T15:00:04.968Z</updated>
     
@@ -244,8 +264,8 @@
   
   <entry>
     <title>双系统卸载</title>
-    <link href="http://liyzy.github.io/2018/09/23/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%8D%B8%E8%BD%BD/"/>
-    <id>http://liyzy.github.io/2018/09/23/双系统卸载/</id>
+    <link href="http://liyzy.github.io/2018/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%8D%B8%E8%BD%BD/"/>
+    <id>http://liyzy.github.io/2018/双系统卸载/</id>
     <published>2018-09-23T12:38:58.017Z</published>
     <updated>2018-10-06T12:02:29.635Z</updated>
     
@@ -264,8 +284,8 @@
   
   <entry>
     <title>【python学习笔记1】数据类型篇</title>
-    <link href="http://liyzy.github.io/2018/09/22/%E3%80%90python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91/"/>
-    <id>http://liyzy.github.io/2018/09/22/【python学习笔记1】/</id>
+    <link href="http://liyzy.github.io/2018/%E3%80%90python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91/"/>
+    <id>http://liyzy.github.io/2018/【python学习笔记1】/</id>
     <published>2018-09-22T01:53:58.495Z</published>
     <updated>2018-10-17T07:11:12.986Z</updated>
     
@@ -284,8 +304,8 @@
   
   <entry>
     <title>利用ZXing工具生成二维码以及解析二维码</title>
-    <link href="http://liyzy.github.io/2018/09/06/%E5%88%A9%E7%94%A8ZXing%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81%E4%BB%A5%E5%8F%8A%E8%A7%A3%E6%9E%90%E4%BA%8C%E7%BB%B4%E7%A0%81/"/>
-    <id>http://liyzy.github.io/2018/09/06/利用ZXing工具生成二维码以及解析二维码/</id>
+    <link href="http://liyzy.github.io/2018/%E5%88%A9%E7%94%A8ZXing%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81%E4%BB%A5%E5%8F%8A%E8%A7%A3%E6%9E%90%E4%BA%8C%E7%BB%B4%E7%A0%81/"/>
+    <id>http://liyzy.github.io/2018/利用ZXing工具生成二维码以及解析二维码/</id>
     <published>2018-09-06T10:40:52.971Z</published>
     <updated>2018-10-06T09:27:12.460Z</updated>
     
@@ -304,8 +324,8 @@
   
   <entry>
     <title>【java学习笔记3】继承&amp;多态篇</title>
-    <link href="http://liyzy.github.io/2018/08/06/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03%E3%80%91/"/>
-    <id>http://liyzy.github.io/2018/08/06/【java学习笔记3】/</id>
+    <link href="http://liyzy.github.io/2018/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03%E3%80%91/"/>
+    <id>http://liyzy.github.io/2018/【java学习笔记3】/</id>
     <published>2018-08-06T05:36:10.024Z</published>
     <updated>2018-11-04T14:32:41.978Z</updated>
     
@@ -324,8 +344,8 @@
   
   <entry>
     <title>【java学习笔记2】数组&amp;运算符&amp;权限篇</title>
-    <link href="http://liyzy.github.io/2018/07/08/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02%E3%80%91/"/>
-    <id>http://liyzy.github.io/2018/07/08/【java学习笔记2】/</id>
+    <link href="http://liyzy.github.io/2018/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02%E3%80%91/"/>
+    <id>http://liyzy.github.io/2018/【java学习笔记2】/</id>
     <published>2018-07-08T09:53:51.036Z</published>
     <updated>2018-10-06T11:54:14.975Z</updated>
     
@@ -344,8 +364,8 @@
   
   <entry>
     <title>Gitee(码云)、Github同时配置ssh key</title>
-    <link href="http://liyzy.github.io/2018/07/06/Gitee(%E7%A0%81%E4%BA%91)%E3%80%81Github%E5%90%8C%E6%97%B6%E9%85%8D%E7%BD%AEssh%20key/"/>
-    <id>http://liyzy.github.io/2018/07/06/Gitee(码云)、Github同时配置ssh key/</id>
+    <link href="http://liyzy.github.io/2018/Gitee(%E7%A0%81%E4%BA%91)%E3%80%81Github%E5%90%8C%E6%97%B6%E9%85%8D%E7%BD%AEssh%20key/"/>
+    <id>http://liyzy.github.io/2018/Gitee(码云)、Github同时配置ssh key/</id>
     <published>2018-07-06T13:25:17.666Z</published>
     <updated>2018-10-06T07:15:04.641Z</updated>
     
@@ -364,8 +384,8 @@
   
   <entry>
     <title>【java学习笔记1】数据类型&amp;函数篇</title>
-    <link href="http://liyzy.github.io/2018/07/03/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91/"/>
-    <id>http://liyzy.github.io/2018/07/03/【java学习笔记1】/</id>
+    <link href="http://liyzy.github.io/2018/%E3%80%90java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91/"/>
+    <id>http://liyzy.github.io/2018/【java学习笔记1】/</id>
     <published>2018-07-03T11:30:01.284Z</published>
     <updated>2018-10-06T11:54:26.989Z</updated>
     
@@ -384,8 +404,8 @@
   
   <entry>
     <title>数据库设计范式</title>
-    <link href="http://liyzy.github.io/2018/06/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/"/>
-    <id>http://liyzy.github.io/2018/06/27/数据库设计范式/</id>
+    <link href="http://liyzy.github.io/2018/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/"/>
+    <id>http://liyzy.github.io/2018/数据库设计范式/</id>
     <published>2018-06-27T06:40:33.845Z</published>
     <updated>2018-10-06T11:31:04.358Z</updated>
     
@@ -404,8 +424,8 @@
   
   <entry>
     <title>数据库练习题(基础)</title>
-    <link href="http://liyzy.github.io/2018/06/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%83%E4%B9%A0%E9%A2%98(%E6%AF%94%E8%BE%83%E5%9F%BA%E7%A1%80)/"/>
-    <id>http://liyzy.github.io/2018/06/13/数据库练习题(比较基础)/</id>
+    <link href="http://liyzy.github.io/2018/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%83%E4%B9%A0%E9%A2%98(%E6%AF%94%E8%BE%83%E5%9F%BA%E7%A1%80)/"/>
+    <id>http://liyzy.github.io/2018/数据库练习题(比较基础)/</id>
     <published>2018-06-13T03:32:31.969Z</published>
     <updated>2018-10-06T10:21:35.169Z</updated>
     
@@ -424,8 +444,8 @@
   
   <entry>
     <title>【python learning 1】从Hello world!开始（print()函数解析）</title>
-    <link href="http://liyzy.github.io/2018/06/06/%E3%80%90python%20learning%E3%80%91hello%20world/"/>
-    <id>http://liyzy.github.io/2018/06/06/【python learning】hello world/</id>
+    <link href="http://liyzy.github.io/2018/%E3%80%90python%20learning%E3%80%91hello%20world/"/>
+    <id>http://liyzy.github.io/2018/【python learning】hello world/</id>
     <published>2018-06-06T10:40:37.079Z</published>
     <updated>2018-10-06T14:15:34.868Z</updated>
     
@@ -444,8 +464,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://liyzy.github.io/2018/06/04/hello-world/"/>
-    <id>http://liyzy.github.io/2018/06/04/hello-world/</id>
+    <link href="http://liyzy.github.io/2018/hello-world/"/>
+    <id>http://liyzy.github.io/2018/hello-world/</id>
     <published>2018-06-04T07:44:10.983Z</published>
     <updated>2018-10-06T13:51:07.418Z</updated>
     
