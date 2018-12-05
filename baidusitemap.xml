@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
-    <lastmod>2018-12-01T14:06:43.744Z</lastmod>
+    <lastmod>2018-12-05T12:10:34.957Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/NFA-transform-to-MinDFA.html/</loc>
+    <lastmod>2018-12-05T12:10:34.957Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
-    <lastmod>2018-12-01T05:07:14.282Z</lastmod>
+    <lastmod>2018-12-05T12:10:34.957Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/Syntax-Directed-Definition.html/</loc>
+    <lastmod>2018-12-05T12:06:47.134Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/the-difference-between-include-and-extend-in-use-case-diagram.html/</loc>
     <lastmod>2018-11-28T02:59:20.964Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/NFA-transform-to-MinDFA.html/</loc>
-    <lastmod>2018-11-26T11:41:34.040Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/first-set&follow-set.html/</loc>
     <lastmod>2018-11-26T11:41:26.532Z</lastmod>
