@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://liyzy.github.io/2018/software-engineering-1.html/</loc>
+    <loc>http://liyzy.github.io/2018/feasibility-study.html/</loc>
     
-    <lastmod>2018-12-25T07:41:14.089Z</lastmod>
+    <lastmod>2018-12-25T09:33:19.573Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://liyzy.github.io/2018/software-engineering-outline.html/</loc>
+    
+    <lastmod>2018-12-25T09:33:12.571Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://liyzy.github.io/2018/Organization-and-Management-of-Runtime-Storage-Space.html/</loc>
+    
+    <lastmod>2018-12-25T08:54:59.710Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://liyzy.github.io/2018/the-difference-between-include-and-extend-in-use-case-diagram.html/</loc>
+    
+    <lastmod>2018-12-25T08:33:11.674Z</lastmod>
     
   </url>
   
@@ -26,13 +47,6 @@
     <loc>http://liyzy.github.io/2018/Computation-of-L-attribute-definition.html/</loc>
     
     <lastmod>2018-12-09T12:37:53.066Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://liyzy.github.io/2018/Organization-and-Management-of-Runtime-Storage-Space.html/</loc>
-    
-    <lastmod>2018-12-09T12:24:35.798Z</lastmod>
     
   </url>
   
@@ -61,13 +75,6 @@
     <loc>http://liyzy.github.io/2018/Syntax-Directed-Definition.html/</loc>
     
     <lastmod>2018-12-05T12:06:47.134Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://liyzy.github.io/2018/the-difference-between-include-and-extend-in-use-case-diagram.html/</loc>
-    
-    <lastmod>2018-11-28T02:59:20.964Z</lastmod>
     
   </url>
   
