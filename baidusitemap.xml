@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://liyzy.github.io/2018/software-engineering-1.html/</loc>
+    <lastmod>2018-12-25T07:41:14.089Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/NFA-transform-to-MinDFA.html/</loc>
+    <lastmod>2018-12-10T11:05:47.797Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/Intermediate-language-representation.html/</loc>
+    <lastmod>2018-12-10T10:10:37.059Z</lastmod>
+  </url>  <url>
     <loc>http://liyzy.github.io/2018/Computation-of-L-attribute-definition.html/</loc>
-    <lastmod>2018-12-09T12:27:06.950Z</lastmod>
+    <lastmod>2018-12-09T12:37:53.066Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/Organization-and-Management-of-Runtime-Storage-Space.html/</loc>
     <lastmod>2018-12-09T12:24:35.798Z</lastmod>
@@ -11,9 +20,6 @@
     <lastmod>2018-12-09T07:15:55.629Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
-    <lastmod>2018-12-05T12:10:34.957Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/NFA-transform-to-MinDFA.html/</loc>
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
