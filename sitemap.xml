@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://liyzy.github.io/2018/cost-of-capital.html/</loc>
+    
+    <lastmod>2018-12-31T14:05:06.488Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://liyzy.github.io/2018/interest-rate.html/</loc>
     
-    <lastmod>2018-12-31T08:38:00.818Z</lastmod>
+    <lastmod>2018-12-31T08:47:49.702Z</lastmod>
     
   </url>
   
@@ -65,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
     
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
     
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
     
