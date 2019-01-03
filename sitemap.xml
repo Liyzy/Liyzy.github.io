@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://liyzy.github.io/2019/economic-equivalence.html/</loc>
+    
+    <lastmod>2019-01-03T12:46:51.049Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://liyzy.github.io/2018/cost-of-capital.html/</loc>
     
-    <lastmod>2018-12-31T14:05:06.488Z</lastmod>
+    <lastmod>2019-01-03T10:45:07.010Z</lastmod>
     
   </url>
   
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
     
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
     
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
     
