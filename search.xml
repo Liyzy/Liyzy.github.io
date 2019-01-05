@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Payback period and AE analysis]]></title>
+    <url>%2F2019%2Fpayback-period-and-others.html%2F</url>
+    <content type="text"><![CDATA[Payback periodConventional Payback Period(静态回收期)Formula静态回收期=累计净现金流量开始出现正值的年份数 - 1 + [上年累计净现金流量的绝对值/当年净现金流量] WeaknessDoes not consider the time value of money. Discounted Payback Period(动态回收期)Formula动态回收期=累计净现金流量折现值开始出现正值的年份数 - 1 + [上年累计净现金流量折现值的绝对值/当年净现金流量折现值] WeaknessCash flows occurring after discounted payback period(DPP) are ignored. CalculateMethod1:Method2: Capitalized Equivalent Worth(等值资本化)A special case of the PW criterion is useful when the life of a proposed project is perpetual or the service life is extremely long.The capitalized cost represents the amount of money that must be invested today in order to yield a certain return A at the end of each and every period forever.一次性投入以在以后的每个阶段(例如每年、每月等)产生一个确定的回报A。 Formula$C E ( i ) = P W ( i ) = A ( P / A , i , N ) = A / i \ (n\rightarrow \infty)$ Annual equivalent worth(年金等值分析)在评估项目时，如果使用现值分析(PW)应当保证两个项目的分析期(项目存活周期)相同。如果不同，可以采用最小公倍数法统一分析期，但这种方法很麻烦。这种情况下，可以使用年金等值分析，计算每一年的平均花费，然后进行比较。二者的关系是$\mathrm { AE } ( \mathrm { i } ) = \mathrm { PW } ( \mathrm { i } ) ( \mathrm { A } / \mathrm { P } , \mathrm { i } , \mathrm { N } )$。 Capital–Recovery Cost(资本重置费用)$\begin{aligned} \mathrm { CR } ( i ) &amp; = I ( A / P , i , N ) - S ( A / F , i , N ) \\ &amp; = ( I - S ) ( A / P , i , N ) + i S \end{aligned}$$I$为一开始购进设备的花费，$S$为设备的残值。]]></content>
+      <tags>
+        <tag>工程经济学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Economic Equivalence Computation]]></title>
     <url>%2F2019%2Feconomic-equivalence.html%2F</url>
     <content type="text"><![CDATA[Single-Payment SeriesCompound-Amount Factor(复利系数)$F = P ( 1 + i ) ^ { N } = P ( F / P , i , N )$ Present-Worth Factor(现值系数)$P = F [1 / ( 1 + i )] ^ { N } = F ( P / F , i , N )$ Equal-Payment SeriesCompound-Amount Factor(复利系数)$F = A ( F / A , i , N )$ Sinking-Fund Factor(偿债基金系数)$A = F ( A / F , i , N )$ Capital-Recovery Factor(投资回收系数)$A = P ( A / P , i , N )$ Present-Worth Factor(现值系数)$P = A ( P / A , i , N )$ Gradient Series(梯度序列)Linear Gradient Series(线性梯度系列)$P = G ( P / G , i , N )$ Geometric Gradient Series(几何梯度系列)$P = A_1 ( P / A_1 , g, i , N )$ Composite cash flow此处插入图片（后期）]]></content>
