@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://liyzy.github.io/2019/system-design.html/</loc>
+    
+    <lastmod>2019-01-08T09:52:21.080Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://liyzy.github.io/2019/requirement-analysis.html/</loc>
     
     <lastmod>2019-01-08T06:11:49.311Z</lastmod>
@@ -100,14 +107,14 @@
   </url>
   
   <url>
-    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
     
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
     
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
     
