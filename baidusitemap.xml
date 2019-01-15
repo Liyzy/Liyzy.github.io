@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://liyzy.github.io/2018/%E3%80%90python%20learning%E3%80%91%E8%AF%8D%E6%B3%95%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2019-01-15T06:59:49.024Z</lastmod>
+    <loc>http://liyzy.github.io/2019/the-zen-of-python.html/</loc>
+    <lastmod>2019-01-15T07:19:46.988Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2019/The%20Zen%20of%20python/</loc>
-    <lastmod>2019-01-15T06:59:28.754Z</lastmod>
+    <loc>http://liyzy.github.io/2018/Pyhton-Lexical-Structure.html/</loc>
+    <lastmod>2019-01-15T07:19:06.915Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/tkinter/</loc>
     <lastmod>2019-01-14T08:05:30.831Z</lastmod>
@@ -64,10 +64,10 @@
     <loc>http://liyzy.github.io/2018/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2018-12-09T07:15:55.629Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/Syntax-Directed-Definition.html/</loc>
