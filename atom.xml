@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyzy.github.io/"/>
-  <updated>2019-01-15T07:19:46.988Z</updated>
+  <updated>2019-01-16T09:55:41.698Z</updated>
   <id>http://liyzy.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>科学上网</title>
+    <link href="http://liyzy.github.io/2019/ss-vps.html/"/>
+    <id>http://liyzy.github.io/2019/ss-vps.html/</id>
+    <published>2019-01-16T09:17:20.968Z</published>
+    <updated>2019-01-16T09:55:41.698Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><a id="more"></a><h3 id="购买vps"><a href="#购买vps" class="headerlink" title="购买vps"></a>购买vps</h3><p>vultr</p><h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><h4 id="ssh连接vps"><a href="#ssh连接vps" class="headerlink" title="ssh连接vps"></a>ssh连接vps</h4><p>工具有很多，选用Xshell 6，新建会话，主机填写服务器的IP，端口22不要改(SSH端口)。在用户身份验证中填写购买的服务器主机的username和password。点击连接。</p><ul><li>安装<a href="https://xshell.en.softonic.com/" target="_blank" rel="noopener">Xshell</a>时报错：<code>缺少mfc110.dll</code>。解决方法：安装32位(x86)的<a href="http://www.microsoft.com/zh-CN/download/details.aspx?id=30679" target="_blank" rel="noopener">vcredist</a>，之后重新安装。</li><li>连接总是失败，多半是被墙了。可以测试端口开放性，如果是vultr，直接新建一个好了，反正小时计费。注意要先建新的，再删旧的，避免IP一样。</li></ul><h4 id="服务器上安装shadowsocks"><a href="#服务器上安装shadowsocks" class="headerlink" title="服务器上安装shadowsocks"></a>服务器上安装shadowsocks</h4><p>运行下面3条命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</span><br></pre></td></tr></table></figure></p><p>按提示输入密码、端口、加密方式。<br>密码、端口和加密方式是后期在PC端、iOS端或Android端shadowsocks里要用的。等待数分钟后SS配置成功。</p><h4 id="PC上配置shadowsocks"><a href="#PC上配置shadowsocks" class="headerlink" title="PC上配置shadowsocks"></a>PC上配置shadowsocks</h4><p>服务器地址就是买的vps的IP地址。端口、密码、加密方式是上一步的内容。</p><h4 id="Chrome插件"><a href="#Chrome插件" class="headerlink" title="Chrome插件"></a>Chrome插件</h4><p><a href="https://github.com/FelisCatus/SwitchyOmega" target="_blank" rel="noopener">SwitchyOmega</a><br>代理服务器设置：</p><ul><li>代理协议：socks5</li><li>代理服务器：127.0.0.1</li><li>代理端口：1080(和shadowsocks保持一致)</li></ul><h3 id="用到的软件合集"><a href="#用到的软件合集" class="headerlink" title="用到的软件合集"></a>用到的软件合集</h3><ul><li>链接: <a href="https://pan.baidu.com/s/1hekR-OypPEv82JonSko-NQ" target="_blank" rel="noopener">???</a></li><li>提取码: <code>sufm</code></li></ul><p><br></p>]]></content>
+    
+    <summary type="html">
+    
+      科学上网记录
+    
+    </summary>
+    
+    
+      <category term="vps" scheme="http://liyzy.github.io/tags/vps/"/>
+    
+  </entry>
   
   <entry>
     <title>The Zen of Pyhton(Python之禅)</title>
