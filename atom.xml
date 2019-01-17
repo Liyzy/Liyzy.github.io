@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyzy.github.io/"/>
-  <updated>2019-01-17T02:08:39.323Z</updated>
+  <updated>2019-01-17T09:33:59.609Z</updated>
   <id>http://liyzy.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo问题记录(持续更新...)</title>
+    <link href="http://liyzy.github.io/2019/hexo/"/>
+    <id>http://liyzy.github.io/2019/hexo/</id>
+    <published>2019-01-17T09:29:58.940Z</published>
+    <updated>2019-01-17T09:33:59.609Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><p></p><br><a id="more"></a><p></p><h4 id="大写开头的标签出现404"><a href="#大写开头的标签出现404" class="headerlink" title="大写开头的标签出现404"></a>大写开头的标签出现404</h4><p>这个问题实际是由于Windows平台上的Git，默认设置了大小写不敏感导致的。<br>进入.deploy_git文件夹，修改.git下的 config 文件，将 ignorecase=true 改为 ignorecase=false</p>]]></content>
+    
+    <summary type="html">
+    
+      折腾hexo过程中出现的各种问题的记录
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://liyzy.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>科学上网</title>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://liyzy.github.io/2019/hexo/</loc>
+    
+    <lastmod>2019-01-17T09:33:59.609Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://liyzy.github.io/2018/%E3%80%90python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91/</loc>
     
     <lastmod>2019-01-17T02:36:09.676Z</lastmod>
@@ -149,14 +156,14 @@
   </url>
   
   <url>
-    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
     
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
     
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
     
