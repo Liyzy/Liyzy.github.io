@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://liyzy.github.io/2018/%E3%80%90python%20learning%E3%80%91hello%20world/</loc>
+    <lastmod>2019-01-17T02:09:46.651Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/%E3%80%90python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91/</loc>
+    <lastmod>2019-01-17T02:09:46.651Z</lastmod>
+  </url>  <url>
     <loc>http://liyzy.github.io/2019/ss-vps.html/</loc>
-    <lastmod>2019-01-16T11:10:02.411Z</lastmod>
+    <lastmod>2019-01-17T02:08:39.323Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2019/Untitled-1/</loc>
+    <lastmod>2019-01-17T02:02:52.766Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2019/the-zen-of-python.html/</loc>
     <lastmod>2019-01-15T07:19:46.988Z</lastmod>
@@ -12,12 +21,6 @@
   </url>  <url>
     <loc>http://liyzy.github.io/2018/tkinter/</loc>
     <lastmod>2019-01-14T08:05:30.831Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/%E3%80%90python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E3%80%91/</loc>
-    <lastmod>2019-01-14T08:05:28.031Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/%E3%80%90python%20learning%E3%80%91hello%20world/</loc>
-    <lastmod>2019-01-14T07:01:55.568Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2019/system-design.html/</loc>
     <lastmod>2019-01-08T09:52:21.080Z</lastmod>
@@ -64,10 +67,10 @@
     <loc>http://liyzy.github.io/2018/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2018-12-09T07:15:55.629Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
     <lastmod>2018-12-05T12:10:34.957Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/Syntax-Directed-Definition.html/</loc>

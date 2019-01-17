@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2FUntitled-1%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[科学上网]]></title>
     <url>%2F2019%2Fss-vps.html%2F</url>
     <content type="text"><![CDATA[购买vpsvultr 部署ssh连接vps工具有很多，选用Xshell 6，新建会话，主机填写服务器的IP，端口22不要改(SSH端口)。在用户身份验证中填写购买的服务器主机的username和password。点击连接。 安装Xshell时报错：缺少mfc110.dll。解决方法：安装32位(x86)的vcredist，之后重新安装。 连接总是失败，多半是被墙了。可以测试端口开放性，如果是vultr，直接新建一个好了，反正小时计费。注意要先建新的，再删旧的，避免IP一样。 服务器上安装shadowsocks运行下面3条命令：123wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.shchmod +x shadowsocks.sh./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log 按提示输入密码、端口、加密方式。密码、端口和加密方式是后期在PC端、iOS端或Android端shadowsocks里要用的。等待数分钟后SS配置成功。 PC上配置shadowsocks服务器地址就是买的vps的IP地址。端口、密码、加密方式是上一步的内容。 Chrome插件SwitchyOmega代理服务器设置： 代理协议：socks5 代理服务器：127.0.0.1 代理端口：1080(和shadowsocks保持一致) 用到的软件合集 链接: ??? 提取码: 3r8c]]></content>
       <tags>
+        <tag>SSH</tag>
         <tag>vps</tag>
+        <tag>shadowsocks</tag>
       </tags>
   </entry>
   <entry>
