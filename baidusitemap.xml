@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://liyzy.github.io/2019/python-collections/</loc>
+    <lastmod>2019-01-24T03:22:41.562Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/Pyhton-Lexical-Structure.html/</loc>
+    <lastmod>2019-01-20T01:59:00.201Z</lastmod>
+  </url>  <url>
     <loc>http://liyzy.github.io/2019/hexo/</loc>
     <lastmod>2019-01-17T09:33:59.609Z</lastmod>
   </url>  <url>
@@ -15,9 +21,6 @@
   </url>  <url>
     <loc>http://liyzy.github.io/2019/the-zen-of-python.html/</loc>
     <lastmod>2019-01-15T07:19:46.988Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/Pyhton-Lexical-Structure.html/</loc>
-    <lastmod>2019-01-15T07:19:06.915Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/tkinter/</loc>
     <lastmod>2019-01-14T08:05:30.831Z</lastmod>
