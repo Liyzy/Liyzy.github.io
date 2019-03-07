@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://liyzy.github.io/2018/java-learning-content.html/</loc>
+    <lastmod>2019-03-07T09:40:51.066Z</lastmod>
+  </url>  <url>
     <loc>http://liyzy.github.io/2018/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF/</loc>
     <lastmod>2019-03-07T09:33:40.003Z</lastmod>
   </url>  <url>
@@ -117,8 +120,5 @@
   </url>  <url>
     <loc>http://liyzy.github.io/2018/java-learning-3.html/</loc>
     <lastmod>2019-03-07T07:44:20.641Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/java-learning-content.html/</loc>
-    <lastmod>2019-03-07T07:27:09.452Z</lastmod>
   </url>
 </urlset>
