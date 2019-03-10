@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyzy.github.io/"/>
-  <updated>2019-03-07T08:23:49.242Z</updated>
+  <updated>2019-03-10T05:22:03.020Z</updated>
   <id>http://liyzy.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二倍角公式</title>
+    <link href="http://liyzy.github.io/2019/the-double-angle-formula.html/"/>
+    <id>http://liyzy.github.io/2019/the-double-angle-formula.html/</id>
+    <published>2019-03-10T04:37:12.769Z</published>
+    <updated>2019-03-10T05:22:03.020Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><a id="more"></a><h2 id="二倍角公式"><a href="#二倍角公式" class="headerlink" title="二倍角公式"></a>二倍角公式</h2><p>正弦形式<br>$\sin 2 \alpha = 2 \sin \alpha \cos \alpha$<br>余弦形式<br>$\cos 2 \alpha = 2 \cos ^ { 2 } \alpha - 1 = 1 - 2 \sin ^ { 2 } \alpha$<br>$= \cos ^ { 2 } \alpha - \sin ^ { 2 } \alpha = \frac { 1 - \tan ^ { 2 } \alpha } { 1 + \tan ^ { 2 } \alpha }$<br>正切形式<br>$\tan 2 \alpha = \frac { 2 \tan \alpha } { 1 - \tan ^ { 2 } \alpha } = \frac { 2 \cot \alpha } { \cot ^ { 2 } \alpha - 1 } = \frac { 2 } { \cot \alpha - \tan \alpha }$<br>🔖在正弦和余弦二倍角公式中，角$\alpha$可以为任意角，但正切二倍角公式中，只有当$\alpha \neq \frac { \pi } { 2 } + k \pi$及$\alpha \neq \frac { \pi } { 4 } + \frac { k \pi } { 2 } ( k \in Z )$时才成立；</p><h2 id="升（降）幂公式"><a href="#升（降）幂公式" class="headerlink" title="升（降）幂公式"></a>升（降）幂公式</h2><p>$\cos ^ { 2 } \alpha = \frac { 1 + \cos 2 \alpha } { 2 } , \sin ^ { 2 } \alpha = \frac { 1 - \cos 2 \alpha } { 2 }$<br>$1 + \cos 2 \alpha = 2 \cos ^ { 2 } \alpha , 1 - \cos 2 \alpha = 2 \sin ^ { 2 } \alpha , 1 \pm \sin 2 \alpha = ( \sin \alpha \pm \cos \alpha ) ^ { 2 }$</p>]]></content>
+    
+    <summary type="html">
+    
+      二倍角公式的正弦形式、余弦形式、正切形式和升降幂公式。
+    
+    </summary>
+    
+    
+      <category term="工数" scheme="http://liyzy.github.io/tags/%E5%B7%A5%E6%95%B0/"/>
+    
+      <category term="考研" scheme="http://liyzy.github.io/tags/%E8%80%83%E7%A0%94/"/>
+    
+  </entry>
   
   <entry>
     <title>Python内置模块Collections</title>
