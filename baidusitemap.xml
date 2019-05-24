@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://liyzy.github.io/2018/software-engineering-outline.html/</loc>
+    <lastmod>2019-05-24T09:41:51.178Z</lastmod>
+  </url>  <url>
     <loc>http://liyzy.github.io/2019/sql-oracle-database.html/</loc>
     <lastmod>2019-04-26T12:01:23.378Z</lastmod>
   </url>  <url>
@@ -90,9 +93,6 @@
   </url>  <url>
     <loc>http://liyzy.github.io/2018/feasibility-study.html/</loc>
     <lastmod>2019-03-07T08:35:48.410Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/software-engineering-outline.html/</loc>
-    <lastmod>2019-03-07T08:35:45.512Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2019/payback-period-and-others.html/</loc>
     <lastmod>2019-03-07T08:25:21.073Z</lastmod>
