@@ -179,7 +179,7 @@
 <meta property="og:site_name" content="李三岁他很皮">
 <meta property="og:description" content="插入排序、">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-21T04:21:24.615Z">
+<meta property="og:updated_time" content="2019-07-29T13:30:19.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序">
 <meta name="twitter:description" content="插入排序、">
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-21 12:21:24" itemprop="dateModified" datetime="2019-06-21T12:21:24+08:00">2019-06-21</time>
+                <time title="修改时间：2019-07-29 21:30:19" itemprop="dateModified" datetime="2019-07-29T21:30:19+08:00">2019-07-29</time>
               
             
           </span>
@@ -509,7 +509,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2k</span>
+                <span title="本文字数">2.2k</span>
               
 
               
@@ -544,7 +544,7 @@
 <li>空间代价</li>
 <li>算法本身的复杂程度</li>
 </ul>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h3><p>思想：将一个记录插入到已排好序的有序表中，从而得到一个新的有序表。<br>步骤：假设待排序列为data。data[0]已经是有序的了；将data[1]插入到有序序列{data[0]}中；第p+1次排序时，将data[p+1]插入到有序序列{data[0],data[1],…,data[p]}中，先用临时变量temp存储data[p+1]的值，然后将data[p]和temp进行比较，如果后者比较小，则将data[p]移动到data[p+1]的位置，继续将data[p-1]与temp比较，如果后者小，则将data[p-1]移动到data[p]的位置，重复以上比较过程，直到找到temp的插入位置。“<strong>从后向前，边比边移。</strong>”<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">void</span> <span class="title">InsertionSort</span>(<span class="title">T</span> <span class="title">data</span>[], <span class="title">int</span> <span class="title">n</span>) &#123;</span>  <span class="comment">//不减序排列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        T temp = data[i];</span><br><span class="line">        <span class="keyword">int</span> j = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (data[j] &gt; temp)</span><br><span class="line">                data[j + <span class="number">1</span>] = data[j];</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        data[j + <span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> data[<span class="number">8</span>] = &#123;<span class="number">45</span>, <span class="number">34</span>, <span class="number">78</span>, <span class="number">12</span>, <span class="number">34</span>, <span class="number">32</span>, <span class="number">29</span>, <span class="number">64</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : data)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    InsertionSort(data, <span class="number">8</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : data)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h3><p>思想：将一个记录插入到已排好序的有序表中，从而得到一个新的有序表。<br>步骤：假设待排序列为data。data[0]已经是有序的了；将data[1]插入到有序序列{data[0]}中；第p+1次排序时，将data[p+1]插入到有序序列{data[0],data[1],…,data[p]}中，先用临时变量temp存储data[p+1]的值，然后将data[p]和temp进行比较，如果后者比较小，则将data[p]移动到data[p+1]的位置，继续将data[p-1]与temp比较，如果后者小，则将data[p-1]移动到data[p]的位置，重复以上比较过程，直到找到temp的插入位置。“<strong>从后向前，边比边移。</strong>”<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">void</span> <span class="title">InsertionSort</span>(<span class="title">T</span> <span class="title">data</span>[], <span class="title">int</span> <span class="title">n</span>) &#123;</span>  <span class="comment">//不减序排列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        T temp = data[i];</span><br><span class="line">        <span class="keyword">int</span> j;</span><br><span class="line">        <span class="keyword">for</span> (j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span> &amp;&amp; data[j] &gt; temp; j--) &#123;</span><br><span class="line">            data[j + <span class="number">1</span>] = data[j];</span><br><span class="line">        &#125;</span><br><span class="line">        data[j + <span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>稳定</li>
 <li>空间代价$O(1)$</li>
@@ -552,7 +552,7 @@
 </ul>
 <p>直接插入排序的两个性质：</p>
 <ul>
-<li>在最好情况（序列本身已是有序的）下时间代价为Θ(n)</li>
+<li>在最好情况（序列本身已是有序的）下时间代价为$O(n)$</li>
 <li>对于短序列，直接插入排序比较有效</li>
 </ul>
 <h3 id="折半插入排序"><a href="#折半插入排序" class="headerlink" title="折半插入排序"></a>折半插入排序</h3><p>思想：在插入第i个记录时，前面的记录已经是有序的了，可以用二分法查找第i个记录的正确位置。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">void</span> <span class="title">BinaryInsertionSort</span>(<span class="title">T</span> <span class="title">data</span>[], <span class="title">int</span> <span class="title">n</span>) &#123;</span></span><br><span class="line">    <span class="keyword">int</span> left, right, mid;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        T temp = data[i];</span><br><span class="line">        left = <span class="number">0</span>, right = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (data[mid] &gt; temp)</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i - <span class="number">1</span>; j &gt;= left; j--)</span><br><span class="line">            data[j + <span class="number">1</span>] = data[j];</span><br><span class="line">        data[left] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -560,7 +560,14 @@
 <li>折半插入排序的时间复杂度仍为$O(n^2)$</li>
 <li>折半插入算法与直接插入算法的元素移动一样是顺序的，因此该方法也是<strong>稳定</strong>的。</li>
 </ul>
-<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3>
+<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>直接插入排序只允许相邻的元素交换,希尔排序将原序列根据不同的步长(“间隙”)划分成许多小的序列,然后每一个小序列内进行直接插入排序,这样就允许了原序列的远程元素间的交换。逐步缩小步长,让其最终为1,最终序列有序。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">void</span> <span class="title">ShellSort</span>(<span class="title">T</span> <span class="title">data</span>[], <span class="title">int</span> <span class="title">n</span>) &#123;</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> gap = n / <span class="number">2</span>; gap &gt; <span class="number">0</span>; gap /= <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="comment">// 直接插入排序</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = gap; i &lt; n; i++) &#123;</span><br><span class="line">            T temp = data[i];</span><br><span class="line">            <span class="keyword">int</span> j;</span><br><span class="line">            <span class="keyword">for</span> (j = i; j &gt;= gap &amp;&amp; data[j - gap] &gt; temp; j -= gap) &#123;</span><br><span class="line">                data[j] = data[j - gap];</span><br><span class="line">            &#125;</span><br><span class="line">            data[j] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>希尔排序空间复杂度为$O(1)$</p>
+<p>希尔排序时间复杂度与增量序列有关:</p>
+<ul>
+<li>当增量序列为$K=2^x$时,时间复杂度为$O(n^2)$</li>
+</ul>
+
       
     </div>
 
@@ -742,7 +749,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">52</span>
+                    <span class="site-state-item-count">54</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -809,7 +816,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -968,7 +981,7 @@ show_date_time();
 <script type="text/javascript" src="https://api.imjad.cn/hitokoto/?cat=a&charset=utf-8&length=50&encode=js&fun=sync&source="></script><div id="hitokoto"><script>hitokoto()</script></div>
 </div>
 
-<div class="copyright">&copy 2018 – <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy 2018 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -982,7 +995,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">163k
+    <span title="站点总字数">173k
       字 
     </span>
   
