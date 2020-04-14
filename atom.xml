@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyzy.github.io/"/>
-  <updated>2020-04-10T08:06:27.105Z</updated>
+  <updated>2020-04-14T09:33:22.842Z</updated>
   <id>http://liyzy.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringBoot项目部署到服务器</title>
+    <link href="http://liyzy.github.io/2020/springboot-deploy.html/"/>
+    <id>http://liyzy.github.io/2020/springboot-deploy.html/</id>
+    <published>2020-04-14T09:33:22.507Z</published>
+    <updated>2020-04-14T09:33:22.842Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><p></p><br><a id="more"></a><p></p><h4 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h4><p>在本地，使用Maven在命令行输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package</span><br></pre></td></tr></table></figure></p><p>如果使用IDEA的话，点击右侧的Maven选项卡，选择execute maven goal，输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clean package</span><br></pre></td></tr></table></figure><p>它自己前面有固定的mvn，所以命令还是一样的，省去输入mvn而已。</p><h4 id="安装java环境"><a href="#安装java环境" class="headerlink" title="安装java环境"></a>安装java环境</h4><p>运行jar包，肯定要求服务器端有java环境</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 版本自己选择</span><br><span class="line">$ apt install openjdk-8-jdk</span><br></pre></td></tr></table></figure><h4 id="上传jar包"><a href="#上传jar包" class="headerlink" title="上传jar包"></a>上传jar包</h4><p>和Vue项目部署到服务器上中上传文件的方式相同，使用scp命令或者xftp软件。</p><h4 id="运行jar包"><a href="#运行jar包" class="headerlink" title="运行jar包"></a>运行jar包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ nohup java -jar test.jar &gt;temp.txt &amp;</span><br><span class="line"></span><br><span class="line"># 这种方法会把日志文件输入到你指定的文件中，没有则会自动创建。进程会在后台运行。</span><br></pre></td></tr></table></figure><p>这样SpringBoot项目就可以在指定的端口跑起来了。</p>]]></content>
+    
+    <summary type="html">
+    
+      将springboot项目部署到服务器
+    
+    </summary>
+    
+    
+      <category term="springboot" scheme="http://liyzy.github.io/tags/springboot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue项目部署到服务器上</title>
+    <link href="http://liyzy.github.io/2020/vue-nginx-deploy.html/"/>
+    <id>http://liyzy.github.io/2020/vue-nginx-deploy.html/</id>
+    <published>2020-04-13T07:58:56.891Z</published>
+    <updated>2020-04-14T09:33:25.799Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><p></p><br><a id="more"></a><p></p><h4 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 安装nginx</span><br><span class="line">sudo apt install nginx</span><br><span class="line"></span><br><span class="line"># 启动nginx服务，此时访问服务器网址可以看到nginx的欢迎页</span><br><span class="line"># 如果是云服务器，需要打开http和https的端口</span><br><span class="line">service nginx restart</span><br><span class="line"></span><br><span class="line"># 查看当前nginx的版本</span><br><span class="line">nginx -v</span><br></pre></td></tr></table></figure><h4 id="修改Nginx配置文件"><a href="#修改Nginx配置文件" class="headerlink" title="修改Nginx配置文件"></a>修改Nginx配置文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure><p>在 <code>http{}</code> 中配置一个<code>server{}</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 8080;                                  # 项目跑在哪个端口</span><br><span class="line">    server_name 118.178.187.5;                    # 当前服务器ip</span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /home/dist/;                       # dist文件的位置(这是直接放在home目录下) </span><br><span class="line">         try_files $uri $uri/ /index.html;        # 重定向,内部文件的指向(照写)</span><br><span class="line">    &#125;</span><br><span class="line">    location /api &#123;                               # 当请求跨域时配置端口转发</span><br><span class="line">        proxy_pass http://118.178.187.5:8848/api; # 转发地址，意思是当访问8080端口时，会转发到8848端口</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>测试配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure></p><p>重新加载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure></p><h4 id="Vue项目打包"><a href="#Vue项目打包" class="headerlink" title="Vue项目打包"></a>Vue项目打包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 在项目文件夹中会生成dist文件夹</span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure><h4 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h4><p>使用scp</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 上传文件</span><br><span class="line">scp local_file remote_username@remote_ip:remote_folder  # 上传到指定文件夹，文件名不变</span><br><span class="line">scp local_file remote_username@remote_ip:remote_file    # 指定了文件名</span><br><span class="line"></span><br><span class="line"># 上传文件夹</span><br><span class="line">scp -r local_folder remote_username@remote_ip:remote_folder</span><br></pre></td></tr></table></figure><p>具体实例：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r dist root@118.178.187.5:/home/dist</span><br></pre></td></tr></table></figure><p>也可以使用xftp软件。</p><h4 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br></pre></td></tr></table></figure><p>访问<code>ip:port</code>，应该成功访问页面。</p>]]></content>
+    
+    <summary type="html">
+    
+      将Vue项目部署到服务器，使用Nginx，包括Nginx的配置和本地与服务器间文件的传输
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://liyzy.github.io/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringBoot项目开发</title>

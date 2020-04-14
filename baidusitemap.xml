@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://liyzy.github.io/2020/vue-nginx-deploy.html/</loc>
+    <lastmod>2020-04-14T09:33:25.799Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2020/springboot-deploy.html/</loc>
+    <lastmod>2020-04-14T09:33:22.842Z</lastmod>
+  </url>  <url>
     <loc>http://liyzy.github.io/2020/springboot.html/</loc>
     <lastmod>2020-04-10T08:06:27.105Z</lastmod>
   </url>  <url>
@@ -19,37 +25,37 @@
     <loc>http://liyzy.github.io/2018/Review-of-Network-Information-Security.html/</loc>
     <lastmod>2019-06-21T04:21:24.646Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/Organization-and-Management-of-Runtime-Storage-Space.html/</loc>
-    <lastmod>2019-06-21T04:21:24.631Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2019/oracle-database-prictise-1.html/</loc>
+    <loc>http://liyzy.github.io/2018/QRcode.html/</loc>
     <lastmod>2019-06-21T04:21:24.631Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2019/python-collection.html/</loc>
     <lastmod>2019-06-21T04:21:24.631Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/QRcode.html/</loc>
+    <loc>http://liyzy.github.io/2019/oracle-database-prictise-1.html/</loc>
+    <lastmod>2019-06-21T04:21:24.631Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/Organization-and-Management-of-Runtime-Storage-Space.html/</loc>
     <lastmod>2019-06-21T04:21:24.631Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/python-data-structure.html/</loc>
     <lastmod>2019-06-21T04:21:24.631Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2019/oracle-database-prictise-2.html/</loc>
+    <loc>http://liyzy.github.io/2019/sql-oracle-database.html/</loc>
     <lastmod>2019-06-21T04:21:24.615Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2019/sql-oracle-database.html/</loc>
+    <loc>http://liyzy.github.io/2018/Dual-System-Installation.html/</loc>
     <lastmod>2019-06-21T04:21:24.615Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/lexical-analysis.html/</loc>
     <lastmod>2019-06-21T04:21:24.615Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/database-design-paradigm.html/</loc>
-    <lastmod>2019-06-21T04:21:24.615Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2019/oracle-database-prictise-4.html/</loc>
+    <loc>http://liyzy.github.io/2019/system-design.html/</loc>
     <lastmod>2019-06-21T04:21:24.615Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2019/oracle-database-prictise-3.html/</loc>
+    <lastmod>2019-06-21T04:21:24.615Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/database-design-paradigm.html/</loc>
     <lastmod>2019-06-21T04:21:24.615Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2019/the-double-angle-formula.html/</loc>
@@ -61,14 +67,17 @@
     <loc>http://liyzy.github.io/2018/Dual-system-unloading.html/</loc>
     <lastmod>2019-06-21T04:21:24.615Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/Dual-System-Installation.html/</loc>
+    <loc>http://liyzy.github.io/2019/oracle-database-prictise-2.html/</loc>
     <lastmod>2019-06-21T04:21:24.615Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2019/system-design.html/</loc>
+    <loc>http://liyzy.github.io/2019/oracle-database-prictise-4.html/</loc>
     <lastmod>2019-06-21T04:21:24.615Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/software-engineering-outline.html/</loc>
     <lastmod>2019-06-21T04:21:24.615Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/java-learning-1.html/</loc>
+    <lastmod>2019-06-21T04:21:24.599Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/java-learning-content.html/</loc>
     <lastmod>2019-06-21T04:21:24.599Z</lastmod>
@@ -76,55 +85,55 @@
     <loc>http://liyzy.github.io/2018/Pyhton-Lexical-Structure.html/</loc>
     <lastmod>2019-06-21T04:21:24.599Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2019/oracle-design-and-store.html/</loc>
-    <lastmod>2019-06-21T04:21:24.599Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2019/payback-period-and-others.html/</loc>
-    <lastmod>2019-06-21T04:21:24.599Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/tkinter.html/</loc>
-    <lastmod>2019-06-21T04:21:24.599Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/java-learning-1.html/</loc>
+    <loc>http://liyzy.github.io/2018/java-learning-3.html/</loc>
     <lastmod>2019-06-21T04:21:24.599Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/java-learning-2.html/</loc>
     <lastmod>2019-06-21T04:21:24.599Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/java-learning-3.html/</loc>
+    <loc>http://liyzy.github.io/2019/oracle-design-and-store.html/</loc>
+    <lastmod>2019-06-21T04:21:24.599Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/tkinter.html/</loc>
+    <lastmod>2019-06-21T04:21:24.599Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2019/payback-period-and-others.html/</loc>
     <lastmod>2019-06-21T04:21:24.599Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/Python-hello-world.html/</loc>
     <lastmod>2019-06-21T04:21:24.599Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/first-set&follow-set.html/</loc>
-    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2019/basic-html-tags.html/</loc>
-    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2019/hexo.html/</loc>
-    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/hello-world.html/</loc>
-    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/cost-of-capital.html/</loc>
-    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/the-difference-between-include-and-extend-in-use-case-diagram.html/</loc>
-    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
+    <loc>http://liyzy.github.io/2018/github-gitee-ssh-key.html/</loc>
     <lastmod>2019-06-21T04:21:24.584Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/interest-rate.html/</loc>
     <lastmod>2019-06-21T04:21:24.584Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/Syntax-Directed-Definition.html/</loc>
+    <loc>http://liyzy.github.io/2019/basic-html-tags.html/</loc>
+    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/cost-of-capital.html/</loc>
+    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/hello-world.html/</loc>
+    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2019/hexo.html/</loc>
+    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/Top-down-parsing.html/</loc>
+    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2019/the-zen-of-python.html/</loc>
     <lastmod>2019-06-21T04:21:24.584Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2019/requirement-analysis.html/</loc>
+    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/Syntax-Directed-Definition.html/</loc>
+    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/Intermediate-language-representation.html/</loc>
     <lastmod>2019-06-21T04:21:24.584Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2018/feasibility-study.html/</loc>
@@ -136,31 +145,28 @@
     <loc>http://liyzy.github.io/2018/mysql-navicat-install-record.html/</loc>
     <lastmod>2019-06-21T04:21:24.584Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/Intermediate-language-representation.html/</loc>
+    <loc>http://liyzy.github.io/2018/first-set&follow-set.html/</loc>
     <lastmod>2019-06-21T04:21:24.584Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/github-gitee-ssh-key.html/</loc>
+    <loc>http://liyzy.github.io/2018/the-difference-between-include-and-extend-in-use-case-diagram.html/</loc>
     <lastmod>2019-06-21T04:21:24.584Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2019/the-zen-of-python.html/</loc>
-    <lastmod>2019-06-21T04:21:24.584Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2019/economic-equivalence.html/</loc>
-    <lastmod>2019-06-21T04:21:24.577Z</lastmod>
-  </url>  <url>
-    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
-    <lastmod>2019-06-21T04:21:24.577Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2019/CSS-basic.html/</loc>
     <lastmod>2019-06-21T04:21:24.577Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2018/Computation-of-L-attribute-definition.html/</loc>
+    <loc>http://liyzy.github.io/2019/depreciation.html/</loc>
     <lastmod>2019-06-21T04:21:24.577Z</lastmod>
   </url>  <url>
     <loc>http://liyzy.github.io/2019/CSS-positioning.html/</loc>
     <lastmod>2019-06-21T04:21:24.577Z</lastmod>
   </url>  <url>
-    <loc>http://liyzy.github.io/2019/depreciation.html/</loc>
+    <loc>http://liyzy.github.io/2018/Computation-of-L-attribute-definition.html/</loc>
+    <lastmod>2019-06-21T04:21:24.577Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2018/Bottom-up-parsing.html/</loc>
+    <lastmod>2019-06-21T04:21:24.577Z</lastmod>
+  </url>  <url>
+    <loc>http://liyzy.github.io/2019/economic-equivalence.html/</loc>
     <lastmod>2019-06-21T04:21:24.577Z</lastmod>
   </url>
 </urlset>

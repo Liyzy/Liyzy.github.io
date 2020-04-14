@@ -171,18 +171,18 @@
 
 
 
-  <meta name="description" content="使用tkinter编程时遇到的一些问题和解决方法">
-<meta name="keywords" content="Python,tkinter">
+  <meta name="description" content="将Vue项目部署到服务器，使用Nginx，包括Nginx的配置和本地与服务器间文件的传输">
+<meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pyhton GUI编程之tkinter">
-<meta property="og:url" content="http://liyzy.github.io/2018/tkinter.html/index.html">
+<meta property="og:title" content="Vue项目部署到服务器上">
+<meta property="og:url" content="http://liyzy.github.io/2020/vue-nginx-deploy.html/index.html">
 <meta property="og:site_name" content="李三岁他很皮">
-<meta property="og:description" content="使用tkinter编程时遇到的一些问题和解决方法">
+<meta property="og:description" content="将Vue项目部署到服务器，使用Nginx，包括Nginx的配置和本地与服务器间文件的传输">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-21T04:21:24.599Z">
+<meta property="og:updated_time" content="2020-04-14T09:33:25.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pyhton GUI编程之tkinter">
-<meta name="twitter:description" content="使用tkinter编程时遇到的一些问题和解决方法">
+<meta name="twitter:title" content="Vue项目部署到服务器上">
+<meta name="twitter:description" content="将Vue项目部署到服务器，使用Nginx，包括Nginx的配置和本地与服务器间文件的传输">
 
 
 
@@ -191,7 +191,7 @@
 
 
 
-  <link rel="canonical" href="http://liyzy.github.io/2018/tkinter.html/"/>
+  <link rel="canonical" href="http://liyzy.github.io/2020/vue-nginx-deploy.html/"/>
 
 
 
@@ -201,7 +201,7 @@
   };
 </script>
 
-  <title>Pyhton GUI编程之tkinter | 李三岁他很皮</title>
+  <title>Vue项目部署到服务器上 | 李三岁他很皮</title>
   
 
 
@@ -405,7 +405,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liyzy.github.io/2018/tkinter.html/">
+    <link itemprop="mainEntityOfPage" href="http://liyzy.github.io/2020/vue-nginx-deploy.html/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lihui">
@@ -422,7 +422,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Pyhton GUI编程之tkinter
+          <h1 class="post-title" itemprop="name headline">Vue项目部署到服务器上
               
             
           </h1>
@@ -447,7 +447,7 @@
                 
               
 
-              <time title="创建时间：2018-11-16 20:47:28" itemprop="dateCreated datePublished" datetime="2018-11-16T20:47:28+08:00">2018-11-16</time>
+              <time title="创建时间：2020-04-13 15:58:56" itemprop="dateCreated datePublished" datetime="2020-04-13T15:58:56+08:00">2020-04-13</time>
             
 
             
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-21 12:21:24" itemprop="dateModified" datetime="2019-06-21T12:21:24+08:00">2019-06-21</time>
+                <time title="修改时间：2020-04-14 17:33:25" itemprop="dateModified" datetime="2020-04-14T17:33:25+08:00">2020-04-14</time>
               
             
           </span>
@@ -478,8 +478,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/tkinter.html/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/tkinter.html/" itemprop="commentCount"></span>
+                <a href="/2020/vue-nginx-deploy.html/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2020/vue-nginx-deploy.html/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -509,7 +509,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.4k</span>
+                <span title="本文字数">1.1k</span>
               
 
               
@@ -519,7 +519,7 @@
           
 
           
-              <div class="post-description">使用tkinter编程时遇到的一些问题和解决方法</div>
+              <div class="post-description">将Vue项目部署到服务器，使用Nginx，包括Nginx的配置和本地与服务器间文件的传输</div>
           
 
         </div>
@@ -535,73 +535,27 @@
       
 
       
-        <p></p>
-
-<a id="more"></a>
-<h2 id="tkinter控件使用图片问题"><a href="#tkinter控件使用图片问题" class="headerlink" title="tkinter控件使用图片问题"></a>tkinter控件使用图片问题</h2><p><code>_tkinter.TclError: couldn&#39;t recognize data in image file &quot;xxx&quot;</code><br>参考<a href="http://effbot.org/tkinterbook/photoimage.htm" target="_blank" rel="noopener">The Tkinter PhotoImage Class</a>，PhotoImage for images in PGM, PPM, GIF and PNG formats. The latter is supported starting with Tk 8.6.想要使用其他类型的图片需要使用PIL(Python Imaging Library)处理。<br>首先安装Pillow<br><code>pip install Pillow</code><br>然后<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image, ImageTk</span><br><span class="line">image = Image.open(<span class="string">"you image path"</span>)</span><br><span class="line">photo = ImageTk.PhotoImage(image)</span><br><span class="line">label = Label(image=photo)</span><br><span class="line">label.image = photo <span class="comment"># keep a reference!</span></span><br><span class="line">label.pack()</span><br></pre></td></tr></table></figure></p>
-<h2 id="设置窗口标题"><a href="#设置窗口标题" class="headerlink" title="设置窗口标题"></a>设置窗口标题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root.title(<span class="string">"yZip 1.0.0"</span>) <span class="comment"># 窗口标题</span></span><br></pre></td></tr></table></figure>
-<h2 id="设置窗口居中显示"><a href="#设置窗口居中显示" class="headerlink" title="设置窗口居中显示"></a>设置窗口居中显示</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># maxsize()获得当前显示器分辨率</span></span><br><span class="line">nScreenWid, nScreenHei = root.maxsize()  </span><br><span class="line"><span class="comment"># 窗口应有大小，若使用winfo_width()则返回当前窗口大小，如果还未调用mainloop(),则返回0</span></span><br><span class="line">nCurWid = root.winfo_reqwidth()  </span><br><span class="line">nCurHeight = root.winfo_reqheight()</span><br><span class="line"><span class="comment"># &#123;&#125;x&#123;&#125;设置窗口初始大小，如果没有这个设置，窗口会随着组件大小的变化而变化;&#123;&#125;+&#123;&#125;表示窗口距离屏幕左上角的位置</span></span><br><span class="line">root.geometry(<span class="string">"&#123;&#125;x&#123;&#125;+&#123;&#125;+&#123;&#125;"</span>.format(nCurWid, nCurHeight, </span><br><span class="line">              (nScreenWid - nCurWid)//<span class="number">2</span>, (nScreenHei - nCurHeight)//<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
-<h2 id="设置窗口背景颜色"><a href="#设置窗口背景颜色" class="headerlink" title="设置窗口背景颜色"></a>设置窗口背景颜色</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root.configure(background=<span class="string">'RoyalBlue'</span>)  <span class="comment"># 窗口背景颜色</span></span><br></pre></td></tr></table></figure>
-<h2 id="设置窗口置顶"><a href="#设置窗口置顶" class="headerlink" title="设置窗口置顶"></a>设置窗口置顶</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root.wm_attributes(<span class="string">'-topmost'</span>, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="禁止窗口最大化"><a href="#禁止窗口最大化" class="headerlink" title="禁止窗口最大化"></a>禁止窗口最大化</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root = Tk()</span><br><span class="line">root.resizable(<span class="keyword">False</span>, <span class="keyword">False</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="创建下拉菜单Combobox"><a href="#创建下拉菜单Combobox" class="headerlink" title="创建下拉菜单Combobox"></a>创建下拉菜单Combobox</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下拉选择菜单</span></span><br><span class="line">ziptype = StringVar()  <span class="comment"># 窗体自带的文本，新建一个值</span></span><br><span class="line">typeChoices = Combobox(frame2, width=<span class="number">12</span>, textvariable=ziptype)</span><br><span class="line">typeChoices[<span class="string">'values'</span>] = (<span class="string">'zip'</span>, <span class="string">'7z'</span>, <span class="string">'tar'</span>)  <span class="comment"># 设置下拉列表的值</span></span><br><span class="line">typeChoices.grid(row=<span class="number">3</span>, column=<span class="number">1</span>, sticky=NW)</span><br><span class="line">typeChoices.current(<span class="number">0</span>)  <span class="comment"># 设置下拉列表默认显示的值，0为 numberChosen['values'] 的下标值</span></span><br></pre></td></tr></table></figure>
-<h2 id="创建输入框Entry"><a href="#创建输入框Entry" class="headerlink" title="创建输入框Entry"></a>创建输入框Entry</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sv1 = StringVar()  <span class="comment"># 可以使用sv1.get()获得输入框的内容，当在初始化时定义了textvariable=sv1</span></span><br><span class="line"></span><br><span class="line">entryKey = Entry(frame3, width=<span class="number">20</span>, bg=<span class="string">"white"</span>, fg=<span class="string">"black"</span>,</span><br><span class="line">                 show=<span class="string">'*'</span>, state=DISABLED, textvariable=sv1,  <span class="comment"># 初始状态设为不可用</span></span><br><span class="line">                 validate=<span class="string">"focusout"</span>,  <span class="comment"># validate密码格式验证在该输入框失去焦点后</span></span><br><span class="line">                 invalidcommand=invalid,  <span class="comment"># 密码格式不正确即validatecommand返回False时调用invalid</span></span><br><span class="line">                 validatecommand=(self.top.register(validateKey), <span class="string">'%P'</span>))  <span class="comment"># 密码格式验证函数，这里只需验证第一个输入框即可</span></span><br><span class="line">entryKey.grid(row=<span class="number">5</span>, column=<span class="number">1</span>, padx=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="创建复选框Checkbutton"><a href="#创建复选框Checkbutton" class="headerlink" title="创建复选框Checkbutton"></a>创建复选框Checkbutton</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">check = IntVar()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">testCheckButton</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"var is "</span> + str(check.get()))</span><br><span class="line"></span><br><span class="line">c = Checkbutton(frame2, text=<span class="string">"输入密码："</span>, font=<span class="string">"YaHei, 10"</span>,</span><br><span class="line">                variable=check, command=testCheckButton)</span><br><span class="line">c.grid(row=<span class="number">5</span>, column=<span class="number">0</span>, sticky=NW)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">check变量具有值0或者1</span></span><br><span class="line"><span class="string">可以用check.get()获得check的值，即Checkbutton的状态（0为未勾选，1为勾选）</span></span><br><span class="line"><span class="string">当初始时设置了variable=check</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
-<h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter</span><br><span class="line"><span class="comment"># 一般情况下的事件绑定</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handler</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">'''事件处理函数'''</span></span><br><span class="line">    <span class="keyword">print</span> (<span class="string">"handler"</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    root = tkinter.Tk()</span><br><span class="line">    btn = tkinter.Button(text=<span class="string">u'按钮'</span>, command=handler)</span><br><span class="line">    btn.pack()</span><br><span class="line">    root.mainloop()</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter</span><br><span class="line"><span class="comment"># handler()函数需要参数的情况下使用lambda</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handler</span><span class="params">(a, b, c)</span>:</span></span><br><span class="line">    <span class="string">'''事件处理函数'''</span></span><br><span class="line">    <span class="keyword">print</span> (<span class="string">"handler"</span>, a, b, c)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    root = tkinter.Tk()</span><br><span class="line">    btn = tkinter.Button(text=<span class="string">u'按钮'</span>, command=<span class="keyword">lambda</span> : handler(a=<span class="number">1</span>, b=<span class="number">2</span>, c=<span class="number">3</span>))</span><br><span class="line">    btn.pack()</span><br><span class="line">    root.mainloop()</span><br></pre></td></tr></table></figure>
-<h2 id="创建消息框messagebox"><a href="#创建消息框messagebox" class="headerlink" title="创建消息框messagebox"></a>创建消息框messagebox</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter</span><br><span class="line"><span class="keyword">import</span> tkinter.messagebox </span><br><span class="line"></span><br><span class="line">tkinter.messagebox.showinfo(<span class="string">'提示'</span>, <span class="string">'明天有雨'</span>)       <span class="comment"># 提示信息</span></span><br><span class="line">tkinter.messagebox.showwarning(<span class="string">'警告'</span>,<span class="string">'木马文件'</span>)     <span class="comment"># 警告信息</span></span><br><span class="line">tkinter.messagebox.showerror(<span class="string">'错误'</span>,<span class="string">'密码不匹配'</span>)     <span class="comment"># 错误信息</span></span><br><span class="line">tkinter.messagebox.askokcancel(<span class="string">'询问'</span>,<span class="string">'继续?'</span>)           <span class="comment"># 是否继续某操作</span></span><br><span class="line">tkinter.messagebox.asktrycancel(<span class="string">'询问'</span>,<span class="string">'再次尝试?'</span>)      <span class="comment"># 是否再次尝试某操作</span></span><br><span class="line">tkinter.messagebox.askquestion(<span class="string">'问题'</span>,<span class="string">'你喜欢音乐么？'</span>)   <span class="comment"># 询问一个 是/否 问题</span></span><br><span class="line">tkinter.messagebox.askyesno(<span class="string">'问题'</span>,<span class="string">'你喜欢音乐么？'</span>)      <span class="comment"># 询问一个 是/否 问题</span></span><br></pre></td></tr></table></figure>
-<h2 id="画布工具Canvas"><a href="#画布工具Canvas" class="headerlink" title="画布工具Canvas"></a>画布工具Canvas</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">canvas = tk.Canvas(root, bg=<span class="string">'gray'</span>, height=<span class="number">200</span>, width=<span class="number">100</span>)</span><br><span class="line"> </span><br><span class="line">image_file = tk.PhotoImage(file=<span class="string">'tkinter.gif'</span>)</span><br><span class="line">image = canvas.create_image(<span class="number">10</span>, <span class="number">10</span>, anchor=<span class="string">'nw'</span>, image=image_file)</span><br><span class="line"> </span><br><span class="line">x0, y0, x1, y1 = <span class="number">20</span>, <span class="number">20</span>, <span class="number">40</span>, <span class="number">40</span></span><br><span class="line"><span class="comment"># 从坐标(20,20)到(40,40)画一条直线。</span></span><br><span class="line">line = canvas.create_line(x0, y0, x1, y1)   </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 从0度到180度画一个扇形</span></span><br><span class="line">arc = canvas.create_arc(x0+<span class="number">30</span>, y0+<span class="number">30</span>, x1+<span class="number">30</span>, y1+<span class="number">30</span>, start=<span class="number">0</span>, extent=<span class="number">180</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 创建一个矩形</span></span><br><span class="line">rect = canvas.create_rectangle(<span class="number">100</span>, <span class="number">30</span>, <span class="number">100</span>+<span class="number">20</span>, <span class="number">30</span>+<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个填充色为red的圆</span></span><br><span class="line">oval = canvas.create_oval(x0, y0, x1, y1, fill=<span class="string">'red'</span>)</span><br><span class="line"> </span><br><span class="line">canvas.pack()</span><br></pre></td></tr></table></figure>
-<h2 id="列表Treeview"><a href="#列表Treeview" class="headerlink" title="列表Treeview"></a>列表Treeview</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">columns = (<span class="string">"文件名"</span>, <span class="string">"文件大小"</span>, <span class="string">"文件夹路径"</span>)</span><br><span class="line">treeview = Treeview(frame1, height=<span class="number">18</span>, show=<span class="string">"headings"</span>,</span><br><span class="line">                    columns=columns, yscrollcommand=scrollBar.set)</span><br><span class="line"><span class="comment"># 设置每列宽度和对齐方式</span></span><br><span class="line">treeview.column(<span class="string">"文件名"</span>, width=<span class="number">200</span>, anchor=<span class="string">'center'</span>)</span><br><span class="line">treeview.column(<span class="string">"文件大小"</span>, width=<span class="number">200</span>, anchor=<span class="string">'center'</span>)</span><br><span class="line">treeview.column(<span class="string">"文件夹路径"</span>, width=<span class="number">380</span>, anchor=<span class="string">'center'</span>)</span><br><span class="line"><span class="comment"># 设置每列表头标题文本</span></span><br><span class="line">treeview.heading(<span class="string">"文件名"</span>, text=<span class="string">"文件名"</span>)</span><br><span class="line">treeview.heading(<span class="string">"文件大小"</span>, text=<span class="string">"文件大小"</span>)</span><br><span class="line">treeview.heading(<span class="string">"文件夹路径"</span>, text=<span class="string">"文件夹路径"</span>)</span><br><span class="line">treeview.pack()</span><br><span class="line"><span class="comment"># 插入</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">SelectFiles</span><span class="params">(treeview)</span>:</span></span><br><span class="line">    fnames = askopenfilenames()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(fnames)):</span><br><span class="line">        basename = os.path.basename(fnames[i])</span><br><span class="line">        size = os.path.getsize(fnames[i])</span><br><span class="line">        treeview.insert(<span class="string">""</span>, <span class="string">"end"</span>, values=[basename, size, fnames[i]])</span><br><span class="line"><span class="comment"># 删除选中条目</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">DeleteFilesFromTreeview</span><span class="params">(treeview)</span>:</span></span><br><span class="line">    selected_files = treeview.selection()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(selected_files)):</span><br><span class="line">        treeview.delete(selected_files[i])</span><br><span class="line"><span class="comment"># 得到所有的条目值</span></span><br><span class="line">children = treeview.get_children()</span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> children:</span><br><span class="line">    print(treeview.item(c)[<span class="string">"values"</span>][<span class="number">0</span>])  <span class="comment"># 要得到第二列值则改为treeview.item(c)["values"][1]</span></span><br></pre></td></tr></table></figure>
-<h2 id="字符串类型的一串数字格式化输出"><a href="#字符串类型的一串数字格式化输出" class="headerlink" title="字符串类型的一串数字格式化输出"></a>字符串类型的一串数字格式化输出</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 格式化输出</span></span><br><span class="line"><span class="keyword">if</span> <span class="number">0</span> &lt; size &lt; <span class="number">1024</span> * <span class="number">1024</span>:</span><br><span class="line">    size = <span class="string">"%(size).1f"</span> % &#123;<span class="string">'size'</span>: size / <span class="number">1024</span>&#125; + <span class="string">"KB"</span></span><br><span class="line"><span class="keyword">elif</span> size &lt; <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">1024</span>:</span><br><span class="line">    size = <span class="string">"%(size).2f"</span> % &#123;<span class="string">'size'</span>: size / (<span class="number">1024</span> * <span class="number">1024</span>)&#125; + <span class="string">"MB"</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    size = <span class="string">"%(size).2f"</span> % &#123;<span class="string">'size'</span>: size / (<span class="number">1024</span> * <span class="number">1024</span> * <span class="number">1024</span>)&#125; + <span class="string">"GB"</span></span><br></pre></td></tr></table></figure>
-<h2 id="窗口隐藏（或最小化）与显示"><a href="#窗口隐藏（或最小化）与显示" class="headerlink" title="窗口隐藏（或最小化）与显示"></a>窗口隐藏（或最小化）与显示</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 隐藏窗口</span></span><br><span class="line">mainwindow.withdraw()    </span><br><span class="line"><span class="comment"># 显示窗口</span></span><br><span class="line">mainwindow.update()</span><br><span class="line">mainwindow.deiconify()</span><br><span class="line"><span class="comment"># 最小化窗口</span></span><br><span class="line">mainwindow.iconify()</span><br><span class="line"><span class="comment"># 显示窗口</span></span><br><span class="line">mainwindow.deiconify()</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://effbot.org/tkinterbook/pack.htm" target="_blank" rel="noopener">effbot.org</a><br><a href="https://tkdocs.com/tutorial/tree.html" target="_blank" rel="noopener">TKDocs</a></p>
-<p><br></p>
+        <p></p><p></p><br><a id="more"></a><p></p>
+<h4 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 安装nginx</span><br><span class="line">sudo apt install nginx</span><br><span class="line"></span><br><span class="line"># 启动nginx服务，此时访问服务器网址可以看到nginx的欢迎页</span><br><span class="line"># 如果是云服务器，需要打开http和https的端口</span><br><span class="line">service nginx restart</span><br><span class="line"></span><br><span class="line"># 查看当前nginx的版本</span><br><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
+<h4 id="修改Nginx配置文件"><a href="#修改Nginx配置文件" class="headerlink" title="修改Nginx配置文件"></a>修改Nginx配置文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+<p>在 <code>http{}</code> 中配置一个<code>server{}</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 8080;                                  # 项目跑在哪个端口</span><br><span class="line">    server_name 118.178.187.5;                    # 当前服务器ip</span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /home/dist/;                       # dist文件的位置(这是直接放在home目录下) </span><br><span class="line">         try_files $uri $uri/ /index.html;        # 重定向,内部文件的指向(照写)</span><br><span class="line">    &#125;</span><br><span class="line">    location /api &#123;                               # 当请求跨域时配置端口转发</span><br><span class="line">        proxy_pass http://118.178.187.5:8848/api; # 转发地址，意思是当访问8080端口时，会转发到8848端口</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure></p>
+<p>重新加载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure></p>
+<h4 id="Vue项目打包"><a href="#Vue项目打包" class="headerlink" title="Vue项目打包"></a>Vue项目打包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 在项目文件夹中会生成dist文件夹</span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+<h4 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h4><p>使用scp</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 上传文件</span><br><span class="line">scp local_file remote_username@remote_ip:remote_folder  # 上传到指定文件夹，文件名不变</span><br><span class="line">scp local_file remote_username@remote_ip:remote_file    # 指定了文件名</span><br><span class="line"></span><br><span class="line"># 上传文件夹</span><br><span class="line">scp -r local_folder remote_username@remote_ip:remote_folder</span><br></pre></td></tr></table></figure>
+<p>具体实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r dist root@118.178.187.5:/home/dist</span><br></pre></td></tr></table></figure>
+<p>也可以使用xftp软件。</p>
+<h4 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br></pre></td></tr></table></figure>
+<p>访问<code>ip:port</code>，应该成功访问页面。</p>
 
       
     </div>
 
     
       
-
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2019/python-collection.html/" rel="bookmark">Python内置模块Collections</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2019/the-zen-of-python.html/" rel="bookmark">The Zen of Pyhton(Python之禅)</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2018/Pyhton-Lexical-Structure.html/" rel="bookmark">【Python learning】词法结构</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2018/python-data-structure.html/" rel="bookmark">【Python学习笔记1】数据结构篇</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2018/Python-hello-world.html/" rel="bookmark">【Python learning 1】从Hello world!开始（print()函数解析）</a></div>
-      
-    </li>
-  
-  </ul>
 
 
     
@@ -660,7 +614,7 @@
     <strong>本文作者： </strong>lihui</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://liyzy.github.io/2018/tkinter.html/" title="Pyhton GUI编程之tkinter">http://liyzy.github.io/2018/tkinter.html/</a>
+    <a href="http://liyzy.github.io/2020/vue-nginx-deploy.html/" title="Vue项目部署到服务器上">http://liyzy.github.io/2020/vue-nginx-deploy.html/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -673,9 +627,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
-          
-            <a href="/tags/tkinter/" rel="tag"><i class="fa fa-tag"></i> tkinter</a>
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
         </div>
       
@@ -688,8 +640,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/NFA-transform-to-MinDFA.html/" rel="next" title="由NFA转DFA以及DFA的化简">
-                <i class="fa fa-chevron-left"></i> 由NFA转DFA以及DFA的化简
+              <a href="/2020/springboot-deploy.html/" rel="next" title="SpringBoot项目部署到服务器">
+                <i class="fa fa-chevron-left"></i> SpringBoot项目部署到服务器
               </a>
             
           </div>
@@ -698,8 +650,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/Review-of-Network-Information-Security.html/" rel="prev" title="网络与信息安全复习">
-                网络与信息安全复习 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/springboot.html/" rel="prev" title="SpringBoot项目开发">
+                SpringBoot项目开发 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -991,7 +943,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tkinter控件使用图片问题"><span class="nav-number">1.</span> <span class="nav-text">tkinter控件使用图片问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置窗口标题"><span class="nav-number">2.</span> <span class="nav-text">设置窗口标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置窗口居中显示"><span class="nav-number">3.</span> <span class="nav-text">设置窗口居中显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置窗口背景颜色"><span class="nav-number">4.</span> <span class="nav-text">设置窗口背景颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置窗口置顶"><span class="nav-number">5.</span> <span class="nav-text">设置窗口置顶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#禁止窗口最大化"><span class="nav-number">6.</span> <span class="nav-text">禁止窗口最大化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建下拉菜单Combobox"><span class="nav-number">7.</span> <span class="nav-text">创建下拉菜单Combobox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建输入框Entry"><span class="nav-number">8.</span> <span class="nav-text">创建输入框Entry</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建复选框Checkbutton"><span class="nav-number">9.</span> <span class="nav-text">创建复选框Checkbutton</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件绑定"><span class="nav-number">10.</span> <span class="nav-text">事件绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建消息框messagebox"><span class="nav-number">11.</span> <span class="nav-text">创建消息框messagebox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#画布工具Canvas"><span class="nav-number">12.</span> <span class="nav-text">画布工具Canvas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表Treeview"><span class="nav-number">13.</span> <span class="nav-text">列表Treeview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串类型的一串数字格式化输出"><span class="nav-number">14.</span> <span class="nav-text">字符串类型的一串数字格式化输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#窗口隐藏（或最小化）与显示"><span class="nav-number">15.</span> <span class="nav-text">窗口隐藏（或最小化）与显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">16.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Nginx"><span class="nav-number">1.</span> <span class="nav-text">安装Nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改Nginx配置文件"><span class="nav-number">2.</span> <span class="nav-text">修改Nginx配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue项目打包"><span class="nav-number">3.</span> <span class="nav-text">Vue项目打包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上传文件"><span class="nav-number">4.</span> <span class="nav-text">上传文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重启服务"><span class="nav-number">5.</span> <span class="nav-text">重启服务</span></a></li></ol></div>
             
 
           </div>
